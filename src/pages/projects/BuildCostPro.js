@@ -13,6 +13,7 @@ const BuildCostPro = () => {
   const [objectType, setObjectType] = useState("");
   const [area, setArea] = useState("");
   const [selectedQuality, setSelectedQuality] = useState("first");
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
   // Options for react-select
@@ -40,8 +41,7 @@ const BuildCostPro = () => {
 
   const handlePurchase = () => {
     if (!localStorage.getItem("user")) {
-      alert(t("loginRequired"));
-      navigate("/reviews");
+      setErrorMessage(t("errorMessage"));
       return;
     }
     localStorage.setItem("totalCost", totalCost);
@@ -158,6 +158,7 @@ const BuildCostPro = () => {
               <h3>{t("totalCost")}</h3>
               <p className="big">€{totalCost.toFixed(2)}</p>
               <button onClick={handlePurchase} className="button primary">{t("buyProject")}</button>
+              {errorMessage && (<p className="error-message">{errorMessage}</p>)}
             </div>
           )}
         </aside>
@@ -168,3 +169,4 @@ const BuildCostPro = () => {
 };
 
 export default BuildCostPro;
+

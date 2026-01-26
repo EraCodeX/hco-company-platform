@@ -8,7 +8,7 @@ function ApplicationsList() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://hocompany1.com/api/get-application.php")
+    fetch(`${process.env.REACT_APP_API_BASE}/api/get-application.php`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -107,7 +107,7 @@ function ApplicationsList() {
                   <td>{app.email}</td>
                   <td>
                     <a
-                      href={`https://hocompany1.com/api/uploads/${encodeURIComponent(
+                      href={`${process.env.REACT_APP_API_BASE}/api/uploads/${encodeURIComponent(
                         app.resume.split("/").pop()
                       )}`}
                       target="_blank"

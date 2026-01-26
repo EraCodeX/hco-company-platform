@@ -14,7 +14,7 @@ const Payments = () => {
 
   const savePaymentToBackend = useCallback(
     (paymentData) => {
-      fetch("https://hocompany1.com/api/payments.php", {
+      fetch(`${process.env.REACT_APP_API_BASE}/api/payments.php`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -112,9 +112,22 @@ const Payments = () => {
   };
   return (
     <div className="payments-page">
-      <button onClick={handleGoBack} className="back-button">
-        Back
-      </button>
+      <div onClick={handleGoBack} className="back-button-payments">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="19" y1="12" x2="5" y2="12" />
+          <polyline points="12 19 5 12 12 5" />
+        </svg>
+      </div>
       <div className="payment-container">
         <div className="payment-summary">
           <h2>Payment Summary</h2>
@@ -184,3 +197,8 @@ const Payments = () => {
 };
 
 export default Payments;
+
+
+
+
+

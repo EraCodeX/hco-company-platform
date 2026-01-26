@@ -80,17 +80,6 @@ function Contact() {
           {formStatus && <p className="form-status">{formStatus}</p>}
         </div>
       </section>
-
-      {/* WhatsApp */}
-      <a
-        href="https://wa.me/+355695248404"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="whatsapp-float"
-      >
-        <i className="fab fa-whatsapp"></i>
-      </a>
-
       {/* Footer */}
       <Footer />
     </div>

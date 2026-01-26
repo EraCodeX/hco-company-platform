@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/About.css";
-import aboutlogo from "../assets/images/aboutlogo.png";
+import aboutlogo from "../assets/images/logo2.png";
 import aboutimage1 from "../assets/images/aboutimage1.png";
 import aboutimage2 from "../assets/images/aboutimage2.png";
 import aboutimage3 from "../assets/images/aboutimage3.png";

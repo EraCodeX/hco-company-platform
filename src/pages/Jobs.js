@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
@@ -8,6 +7,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { jobListings } from "../utils/Data";
 import "../styles/Jobs.css";
 import { Search } from "lucide-react";
+
 function Jobs() {
   const { t } = useLanguage();
   const { user } = useContext(AuthContext);
@@ -34,7 +34,7 @@ function Jobs() {
 
       try {
         const response = await fetch(
-          `https://hocompany1.com/api/get-application.php?email=${user.email}`
+          `${process.env.REACT_APP_API_BASE}/api/get-application.php?email=${user.email}`
         );
         const data = await response.json();
         if (data.success) setApplications(data.applications);
@@ -70,8 +70,9 @@ function Jobs() {
           <Search className="search-icon" size={20} />
         </div>
       </div>
+
       {/* Lista e punëve */}
-      < h2> {t("availableJobs")}</h2 >
+      <h2>{t("availableJobs")}</h2>
       <div className="job-listings">
         {filteredJobs.map((job) => (
           <div className="job-card" key={job.id}>
@@ -89,52 +90,63 @@ function Jobs() {
       </div>
 
       {/* Mesazh kur nuk ka punë */}
-      {
-        showMessage && (
-          <div className="no-jobs-message">
-            <p>{t("noJobsFound")}</p>
-          </div>
-        )
-      }
+      {showMessage && (
+        <div className="no-jobs-message">
+          <p>{t("noJobsFound")}</p>
+        </div>
+      )}
 
       {/* Aplikimet e përdoruesit */}
-      {
-        user?.email !== "erahidaj@gmail.com" && (
-          <div className="applications-section">
-            <h2>{t("yourApplications")}:</h2>
-            {applications.length > 0 ? (
-              applications.map((app, index) => {
-                const differenceInDays = Math.floor(
-                  (new Date() - new Date(app.created_at)) / (1000 * 3600 * 24)
-                );
-                const status = differenceInDays <= 30 ? t("pending") : t("closed");
-                const statusClass = differenceInDays <= 30 ? "pending" : "closed";
+      <div className="applications-section">
+        <h2>{t("yourApplications")}:</h2>
 
-                return (
-                  <div key={index} className="application-card">
-                    <h3><strong>{app.name || "N/A"}</strong></h3>
-                    <p><strong>{t("jobTitle")}:</strong> {app.jobTitle || "N/A"}</p>
-                    <p>
-                      <strong>{t("appliedOn")}:</strong>{" "}
-                      {app.created_at
-                        ? new Date(app.created_at).toLocaleDateString()
-                        : "N/A"}
-                    </p>
-                    <p className={`status ${statusClass}`}>
-                      <strong>{t("status")}:</strong> {status}
-                    </p>
-                  </div>
-                );
-              })
-            ) : (
-              <p>{t("noApplicationsYet")}</p>
-            )}
+        {!user ? (
+          <div className="login-prompt-wrapper">
+            <p>
+              {t("You have not applied to any jobs yet. Please log in to apply.")
+              }
+            </p>
           </div>
-        )
-      }
+        ) : applications.length === 0 ? (
+          <div className="no-applications-wrapper">
+            <p>
+              {t("noApplicationsYet") ||
+                "You have not applied to any jobs yet."}
+            </p>
+          </div>
+        ) : (
+          applications.map((app, index) => {
+            const differenceInDays = Math.floor(
+              (new Date() - new Date(app.created_at)) / (1000 * 3600 * 24)
+            );
+            const status = differenceInDays <= 30 ? t("pending") : t("closed");
+            const statusClass = differenceInDays <= 30 ? "pending" : "closed";
+
+            return (
+              <div key={index} className="application-card">
+                <h3>
+                  <strong>{app.name || "N/A"}</strong>
+                </h3>
+                <p>
+                  <strong>{t("jobTitle")}:</strong> {app.jobTitle || "N/A"}
+                </p>
+                <p>
+                  <strong>{t("appliedOn")}:</strong>{" "}
+                  {app.created_at
+                    ? new Date(app.created_at).toLocaleDateString()
+                    : "N/A"}
+                </p>
+                <p className={`status ${statusClass}`}>
+                  <strong>{t("status")}:</strong> {status}
+                </p>
+              </div>
+            );
+          })
+        )}
+      </div>
 
       <Footer />
-    </div >
+    </div>
   );
 }
 

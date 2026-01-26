@@ -28,7 +28,6 @@ const HomePage = () => {
           <p>{t("heroSubtitle")}</p>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="services-section" data-aos="fade-up" data-aos-delay="100">
         <h2>{t("services")}</h2>

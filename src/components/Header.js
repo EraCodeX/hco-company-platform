@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo1.png";
 import "../styles/Header.css";
 import { useLanguage } from "../context/LanguageContext";
 import { GoogleOAuthProvider, useGoogleLogin } from "@react-oauth/google";
@@ -9,8 +9,8 @@ import { getFirebaseToken, onForegroundMessage, saveNotificationToFirestore } fr
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { NotificationDropdown } from "../components/NotificationDropdown";
-import { ChevronDown, Moon, Sun } from "lucide-react";
-import { useTheme } from "../context/theme";
+import { ChevronDown, HelpCircle } from "lucide-react";
+
 const HeaderContent = () => {
   const { t } = useLanguage();
   const { user, login, logout } = useContext(AuthContext);
@@ -18,7 +18,6 @@ const HeaderContent = () => {
   const [openMenu, setOpenMenu] = useState(null);
   const [dropdowns, setDropdowns] = useState({ home: false, projects: false });
   const location = useLocation();
-  const { theme, toggleTheme } = useTheme();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleDropdown = (dropdownName) => {
@@ -128,7 +127,7 @@ const HeaderContent = () => {
           </span>
           <ul className="dropdown">
             <li><Link to="/projects" className={isActive("/projects")}>{t("projects")}</Link></li>
-            <li><Link to="/buildcostpro" className={isActive("/buildcostpro")}>{t("buildCostPro")}</Link></li>
+            <li><Link to="/buildcostpro" className={isActive("/buildcostpro")}>{t("ProBuild")}</Link></li>
             <li><Link to="/materials" className={isActive("/materials")}>{t("materials")}</Link></li>
             <li><Link to="/calendar" className={isActive("/calendar")}>{t("calendar")}</Link></li>
           </ul>
@@ -141,21 +140,19 @@ const HeaderContent = () => {
         <li><Link to="/contact" className={isActive("/contact")}>{t("contact")}</Link></li>
         {/* Ikonat: Notifications, Theme Toggle, Profile */}
 
-        <li className="icon-item">
+        <li className={`icon-item ${openMenu === "notifications" ? "active" : ""}`}>
           <NotificationDropdown
             isOpen={openMenu === "notifications"}
             setOpenMenu={setOpenMenu}
             closeProfileMenu={() => setOpenMenu(null)}
           />
           <ToastContainer />
-          <div className="theme-toggle" onClick={toggleTheme}>
-            {theme === "dark" ? (
-              <Sun size={22} color="#ffffff" className="theme-icon sun" />
-            ) : (
-              <Moon size={22} color="#ffffff" className="theme-icon moon" />
-            )}
-          </div>
 
+          <li className="icon-item">
+            <Link to="/help">
+              <HelpCircle size={22} className="header-icon" />
+            </Link>
+          </li>
           {user ? (
             <div className="profile-menu-container">
               <img

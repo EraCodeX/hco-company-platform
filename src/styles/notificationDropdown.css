@@ -17,7 +17,6 @@
     width: 22px;
     height: 22px;
     transition: transform 0.2s ease;
-
 }
 
 .bell-container:hover .bell-icon {

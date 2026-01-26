@@ -1,0 +1,36 @@
+/* ================== Language Selector (Enterprise Level) ================== */
+.language-flag {
+  position: sticky;
+  bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 30px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05); /* semi-transparent overlay */
+  backdrop-filter: blur(10px); /* blur elegant */
+  transition: all 0.4s ease;
+}
+
+.language-flag img {
+  cursor: pointer;
+  width: 36px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.language-flag img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+  border-color: #facc15; /* highlight color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.language-flag img.active {
+  opacity: 1 !important;
+  border-color: #facc15;
+  box-shadow: 0 6px 16px rgba(250, 204, 21, 0.4);
+}

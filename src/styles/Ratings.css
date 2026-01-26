@@ -1,7 +1,7 @@
-/* ===================== Ratings Page ===================== */
+/* ===================== Ratings Page – Enterprise Level ===================== */
 .ratings-page {
-  padding: 50px 20px;
-  max-width: 1200px;
+  padding: 60px 20px;
+  max-width: 1300px;
   margin: 0 auto;
   font-family: 'Inter', sans-serif;
   color: #1f2937;
@@ -9,59 +9,61 @@
 
 /* Section Titles */
 .section-title {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   background: linear-gradient(90deg, #7c620c, #b59443);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .section-subtitle {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #6b7280;
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 /* ===================== Columns ===================== */
 .ratings-columns {
   display: flex;
-  gap: 40px;
+  gap: 50px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .left-column,
 .right-column {
   flex: 1;
-  min-width: 350px;
-  background: linear-gradient(145deg, #fff, #fefefe);
-  border-radius: 20px;
-  padding: 30px 25px;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.left-column p {
-  text-align: center;
+  min-width: 380px;
+  background: linear-gradient(145deg, #ffffff, #fefefe);
+  border-radius: 25px;
+  padding: 40px 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .left-column:hover,
 .right-column:hover {
-  transform: scale(1.02);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.left-column p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* ===================== Stars ===================== */
 .stars {
   text-align: center;
-  font-size: 34px;
+  font-size: 36px;
   color: #ccc;
   cursor: pointer;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .star.filled {
@@ -71,72 +73,84 @@
 /* ===================== Rating Form ===================== */
 .rating-textarea {
   width: 100%;
-  min-height: 100px;
-  padding: 1rem;
-  border-radius: 14px;
+  min-height: 120px;
+  padding: 18px 20px;
+  border-radius: 20px;
   border: 1px solid #e0e0e0;
   background: #fefefe;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  resize: none;
+  transition: all 0.3s ease;
 }
 
 .rating-textarea:focus {
   border-color: #7c620c;
-  box-shadow: 0 0 0 4px rgba(124, 98, 12, 0.2);
+  box-shadow: 0 0 0 6px rgba(124, 98, 12, 0.2);
+  background-color: #fff;
 }
 
+/* Submit Button */
 .rating-btn {
   width: 100%;
-  padding: 0.85rem;
+  padding: 16px 0;
   border: none;
-  border-radius: 14px;
+  border-radius: 50px;
   background: linear-gradient(135deg, #7c620c, #b59443);
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .rating-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(124, 98, 12, 0.35);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(124, 98, 12, 0.35);
 }
 
 /* ===================== Average Rating ===================== */
 .average-rating {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .avg-score {
-  font-size: 3.8rem;
+  font-size: 4.2rem;
   font-weight: 700;
   color: #7c620c;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 /* ===================== Progress Bars ===================== */
 .rating-progress {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .rating-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.rating-row p {
+  width: 35px;
+  font-weight: 600;
 }
 
 .progress {
   flex: 1;
-  height: 10px;
-  border-radius: 10px;
+  height: 14px;
+  border-radius: 14px;
   background: #e0e0e0;
   overflow: hidden;
 }
 
 .progress div {
   height: 100%;
-  border-radius: 10px;
+  border-radius: 14px;
   background: linear-gradient(90deg, #b59443, #7c620c);
   transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
 }
@@ -145,8 +159,8 @@
 .ratings-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  margin-top: 30px;
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .ratings-grid .stars {
@@ -156,52 +170,51 @@
 .rating-item {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(145deg, #fff, #fcfcfc);
-  border-radius: 18px;
-  padding: 20px;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  background: linear-gradient(145deg, #ffffff, #fcfcfc);
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .rating-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 .rating-avatar {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .rating-email {
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .rating-comment {
-  font-size: 15px;
+  font-size: 1rem;
   color: #4b5563;
   background: #f9f9f9;
-  padding: 14px 18px;
-  border-radius: 14px;
-  line-height: 1.6;
+  padding: 16px 20px;
+  border-radius: 20px;
+  line-height: 1.7;
   flex-grow: 1;
 }
 
 /* ===================== Responsive ===================== */
 @media (max-width: 1024px) {
-
   .ratings-columns {
     flex-direction: column;
-    gap: 30px;
+    gap: 35px;
   }
 
   .ratings-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 25px;
   }
 }
 
@@ -212,11 +225,11 @@
   }
 
   .avg-score {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 
   .stars {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .rating-comment {
@@ -224,7 +237,7 @@
   }
 
   .rating-avatar {
-    margin: 0 auto 15px auto;
+    margin: 0 auto 18px auto;
   }
 
   .progress {

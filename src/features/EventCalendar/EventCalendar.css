@@ -58,6 +58,16 @@
   color: var(--color-primary);
 }
 
+.calendar-back-button {
+  background: transparent;
+  color: black;
+}
+
+.calendar-back-button:hover {
+  background: transparent;
+  color: #F97316;
+}
+
 /* ======================== Navigation ======================== */
 .custom-calendar-header {
   display: flex;

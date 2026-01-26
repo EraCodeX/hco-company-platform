@@ -1,6 +1,6 @@
 <?php
 
-header('Access-Control-Allow-Origin: https://hocompany1.com/');
+header('Access-Control-Allow-Origin: http://localhost:3000');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 header('Content-Type: application/json');
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $resumePath = $uploadDir . basename($resume['name']);
-    $fullResumeURL = 'https://hocompany1.com/api/uploads/' . urlencode(basename($resume['name']));
+    $fullResumeURL = 'http://localhost/kompani-ndertimi/api/uploads/' . urlencode(basename($resume['name']));
 
     if (move_uploaded_file($resume['tmp_name'], $resumePath)) {
         $stmt = $conn->prepare("INSERT INTO applications (name, email, jobTitle, resume) VALUES (?, ?, ?, ?)");

@@ -17,7 +17,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (isAdmin) {
-      fetch("https://hocompany1.com/api/get-application.php")
+      fetch(`${process.env.REACT_APP_API_BASE}/api/get-application.php`)
         .then((response) => response.json())
         .then((data) => {
           if (data.applications) {
@@ -31,7 +31,7 @@ const Dashboard = () => {
   // Fetch registered users
   useEffect(() => {
     if (isAdmin) {
-      fetch("https://hocompany1.com/api/registeredUser.php")
+      fetch(`${process.env.REACT_APP_API_BASE}/api/registeredUser.php`)
         .then((response) => response.json())
         .then((data) => {
           if (data.total) {
@@ -45,7 +45,7 @@ const Dashboard = () => {
   // Fetch ratings and comments
   useEffect(() => {
     if (isAdmin) {
-      fetch("https://hocompany1.com/api/ratingsPage.php")
+      fetch(`${process.env.REACT_APP_API_BASE}/api/ratingsPage.php`)
         .then((response) => response.json())
         .then((data) => {
           if (data.ratings) {
@@ -59,7 +59,7 @@ const Dashboard = () => {
   // Fetch page visitors
   useEffect(() => {
     if (isAdmin) {
-      fetch("https://hocompany1.com/api/pageVisit.php")
+      fetch(`${process.env.REACT_APP_API_BASE}/api/pageVisit.php`)
         .then((response) => response.json())
         .then((data) => {
           if (data.visitors) {

@@ -1,157 +1,205 @@
+/* =========================
+   SEARCH BAR – ENTERPRISE
+========================= */
 .search-container {
   display: flex;
   justify-content: flex-end;
-  margin: 30px 50px;
+  max-width: 1300px;
+  margin: 32px auto;
+  padding: 0 24px;
 }
 
 .search-wrapper {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
 }
 
 .search-input {
   width: 100%;
-  padding: 14px 50px 14px 20px;
-  border: 1px solid #ddd;
-  border-radius: 50px;
-  font-size: 1rem;
-  background-color: #fff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 14px 52px 14px 22px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+  transition: all 0.2s ease;
 }
 
 .search-input::placeholder {
-  color: #999;
-  font-weight: 500;
+  color: #9ca3af;
 }
 
 .search-input:focus {
-  border-color: #FACC15;
-  box-shadow: 0 6px 20px rgba(250, 204, 21, 0.25);
   outline: none;
+  border-color: #9ca3af;
+  box-shadow: 0 0 0 4px rgba(156, 163, 175, 0.15);
 }
 
 .search-icon {
   position: absolute;
-  right: 20px;
+  right: 22px;
   top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #706f6f;
+  color: #6b7280;
+  pointer-events: none;
 }
 
+/* =========================
+   PAGE TITLE – CORPORATE
+========================= */
 h2 {
   text-align: center;
   font-size: 2rem;
-  font-weight: 700;
-  color: #1f2937;
-  position: relative;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 36px 0;
+  letter-spacing: -0.25px;
 }
 
+/* =========================
+   JOB LISTINGS GRID
+========================= */
 .job-listings {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+  padding: 24px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
+/* =========================
+   JOB CARD – ENTERPRISE
+========================= */
 .job-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 2px solid #facc15;
-  outline: none;
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
 }
 
 .job-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-color: #d1d5db;
+  box-shadow:
+    0 12px 24px rgba(15, 23, 42, 0.08),
+    0 2px 4px rgba(15, 23, 42, 0.06);
 }
 
 .job-card h3 {
   font-size: 1.1rem;
-  text-align: start;
+  font-weight: 600;
+  color: #020617;
+  margin-bottom: 8px;
 }
 
-.button-container {
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px 0;
+.job-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 12px;
 }
 
+/* =========================
+   APPLY BUTTON – CORPORATE
+========================= */
 .apply-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #facc15;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  margin-top: 16px;
+  align-self: flex-start;
+  padding: 11px 24px;
+  border-radius: 10px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .apply-button:hover {
-  background-color: #facc15;
+  background: #020617;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
 }
 
+/* =========================
+   USER APPLICATIONS
+========================= */
+.applications-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+
+.application-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 18px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+.application-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #020617;
+}
+
+.application-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin: 4px 0;
+}
+
+/* =========================
+   STATUS
+========================= */
 .status.pending {
-  color: #3f6212;
+  color: #166534;
+  font-weight: 600;
 }
 
 .status.closed {
-  color: #d9534f;
+  color: #b91c1c;
+  font-weight: 600;
 }
 
-@media (min-width: 175px) and (max-width: 799px) {
+/* =========================
+   EMPTY STATES
+========================= */
+.no-jobs-message {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 1rem;
+  color: #6b7280;
+}
 
-  /*Jobs Section*/
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .job-listings {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+
   .search-container {
     justify-content: center;
-    margin: 20px;
   }
 
-  .search-wrapper {
-    max-width: 90%;
+  .apply-button {
+    width: 100%;
+    text-align: center;
   }
-
-  .search-input {
-    font-size: 0.95rem;
-    padding: 12px 45px 12px 18px;
-  }
-
-  .search-icon svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .job-listings {
-    grid-template-columns: 1fr;
-    padding: 15px;
-  }
-
-  .job-card {
-    padding: 15px;
-  }
-
-  .job-card h3 {
-    font-size: 0.9rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
 }

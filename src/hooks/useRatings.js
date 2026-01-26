@@ -6,7 +6,7 @@ export const useRatings = (user, hasRated, setHasRated) => {
 
   // Fetch ratings from backend
   const fetchRatings = () => {
-    fetch("https://hocompany1.com/api/ratingsPage.php")
+    fetch(`${process.env.REACT_APP_API_BASE}/api/ratingsPage.php`)
       .then((response) => response.json())
       .then((data) => {
         if (data.ratings) {
@@ -37,7 +37,7 @@ export const useRatings = (user, hasRated, setHasRated) => {
       imageUrl: user.imageUrl,
     };
 
-    fetch("https://hocompany1.com/api/ratingsPage.php", {
+    fetch(`${process.env.REACT_APP_API_BASE}/api/ratingsPage.php`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(ratingData),

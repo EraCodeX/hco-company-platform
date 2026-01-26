@@ -1,3 +1,6 @@
+import React from 'react';
+import { Hammer, DollarSign, Phone } from 'lucide-react';
+
 import image1a from "../assets/images/image1a.png";
 import image1b from "../assets/images/image1b.png";
 import image1c from "../assets/images/image1c.png";
@@ -7,6 +10,8 @@ import image2c from "../assets/images/image2c.png";
 import image3a from "../assets/images/image3a.png";
 import image3b from "../assets/images/image3b.png";
 import image3c from "../assets/images/image3c.png";
+
+
 //Projects
 import tiranaCielo from "../assets/images/project-image1.png";
 import samiFrasheri from "../assets/images/project-image2.png";
@@ -52,6 +57,7 @@ import stoneImage from "../assets/images/stone.jpg";
 import metalSheetsImage from "../assets/images/metal-sheets.jpg";
 import compositeImage from "../assets/images/composite.jpg";
 import fiberCementImage from "../assets/images/fiber-cement.jpg";
+
 export const imagesData = [
     [
         { src: image1a, alt: "Activity 1a" },
@@ -75,101 +81,84 @@ export const servicesData = [
     {
         icon: "fas fa-truck-loading",
         title: "Excavation Works",
-        description:
-            "We provide expert excavation services, from site clearing to trench digging, ensuring your project starts on solid ground.",
+        description: "We provide expert excavation services, from site clearing to trench digging, ensuring your project starts on solid ground.",
     },
     {
         icon: "fa fa-hammer",
         title: "Carpentry Works",
-        description:
-            "Our carpenters craft high-quality woodwork, including framing, roofing, and custom cabinetry, to meet your specific needs.",
+        description: "Our carpenters craft high-quality woodwork, including framing, roofing, and custom cabinetry, to meet your specific needs.",
     },
     {
         icon: "fa fa-wrench",
-        title: "Ironworks",
-        description:
-            "We specialize in durable and precise ironwork, including gates, railings, and structural supports.",
+        title: "Iron Works",
+        description: "We specialize in durable and precise ironwork, including gates, railings, and structural supports.",
     },
     {
         icon: "fas fa-building",
         title: "Concrete Works",
-        description:
-            "Offering a range of concrete services, from foundations to decorative finishes, for residential and commercial buildings.",
+        description: "Offering a range of concrete services, from foundations to decorative finishes, for residential and commercial buildings.",
     },
     {
         icon: "fas fa-home",
         title: "Roofing Works",
-        description:
-            "Our roofing experts ensure reliable, long-lasting roofs, handling installations, repairs, and replacements.",
+        description: "Our roofing experts ensure reliable, long-lasting roofs, handling installations, repairs, and replacements.",
     },
     {
         icon: "fas fa-th-large",
         title: "Brick Wall Works",
-        description:
-            "We build and repair brick walls with precision, adding both structural integrity and aesthetic value to your property.",
+        description: "We build and repair brick walls with precision, adding both structural integrity and aesthetic value to your property.",
     },
     {
         icon: "fa fa-paint-roller",
         title: "Plastering Works",
-        description:
-            "Our plastering services provide smooth, durable finishes for both interior and exterior surfaces, enhancing your space.",
+        description: "Our plastering services provide smooth, durable finishes for both interior and exterior surfaces, enhancing your space.",
     },
     {
         icon: "fa fa-thumbs-up",
         title: "Facade Works",
-        description:
-            "Transform the look of your building with our expert facade services, including restoration, installation, and cladding.",
+        description: "Transform the look of your building with our expert facade services, including restoration, installation, and cladding.",
     },
     {
         icon: "fa fa-umbrella",
         title: "Canopy System Works",
-        description:
-            "We design and install functional canopy systems, providing shelter and aesthetic appeal for your property.",
+        description: "We design and install functional canopy systems, providing shelter and aesthetic appeal for your property.",
     },
     {
         icon: "fa fa-window-restore",
         title: "Ventilated Facade Works",
-        description:
-            "Our ventilated facades improve energy efficiency and airflow while adding a modern touch to your building’s exterior.",
+        description: "Our ventilated facades improve energy efficiency and airflow while adding a modern touch to your building’s exterior.",
     },
     {
         icon: "fas fa-border-all",
         title: "Tiling Works",
-        description:
-            "Our tiling services cover everything from floors to walls, offering a variety of styles and high-quality installations.",
+        description: "Our tiling services cover everything from floors to walls, offering a variety of styles and high-quality installations.",
     },
     {
         icon: "fa fa-paint-brush",
         title: "Decorative Coating Works",
-        description:
-            "We specialize in decorative coatings that enhance the look and feel of your space, combining beauty with protection.",
+        description: "We specialize in decorative coatings that enhance the look and feel of your space, combining beauty with protection.",
     },
     {
         icon: "fa fa-tools",
         title: "Renovation Works",
-        description:
-            "Our renovation services transform existing spaces, upgrading interiors and exteriors to meet modern standards.",
+        description: "Our renovation services transform existing spaces, upgrading interiors and exteriors to meet modern standards.",
     },
     {
         icon: "fa fa-water",
         title: "Plumbing Works",
-        description:
-            "From installations to repairs, our plumbing services cover everything from pipes to fixtures, ensuring a well-functioning system.",
+        description: "From installations to repairs, our plumbing services cover everything from pipes to fixtures, ensuring a well-functioning system.",
     },
     {
         icon: "fa fa-shield-alt",
         title: "Insulation Works",
-        description:
-            "We provide insulation solutions to improve energy efficiency, reduce noise, and create comfortable indoor environments.",
+        description: "We provide insulation solutions to improve energy efficiency, reduce noise, and create comfortable indoor environments.",
     },
     {
         icon: "fa fa-bolt",
         title: "Electrical Works",
-        description:
-            "Our licensed electricians offer reliable electrical installations, repairs, and maintenance for both residential and commercial properties.",
+        description: "Our licensed electricians offer reliable electrical installations, repairs, and maintenance for both residential and commercial properties.",
     },
 ];
-
 
 
 export const valuesData = [
@@ -248,64 +237,156 @@ export const projectsData = [
     },
 ];
 
+// src/utils/Data.js
+// src/utils/Data.js
 export const jobListings = [
     {
-        id: 1,
         titleKey: "constructionEngineerTitle",
+        descriptionKey: "constructionEngineerDescription",
         location: "Tirana, Albania",
-        descriptionKey: "constructionEngineerDesc",
-        link: "/jobs/construction-engineer",
+        responsibilities: [
+            "responsibilityConstructionEngineer1",
+            "responsibilityConstructionEngineer2",
+            "responsibilityConstructionEngineer3",
+            "responsibilityConstructionEngineer4",
+        ],
+        requirements: [
+            "requirementConstructionEngineer1",
+            "requirementConstructionEngineer2",
+            "requirementConstructionEngineer3",
+            "requirementConstructionEngineer4",
+        ],
+        deadline: "30/11/2025",
     },
     {
-        id: 2,
         titleKey: "constructionWorkerTitle",
+        descriptionKey: "constructionWorkerDescription",
         location: "Tirana, Albania",
-        descriptionKey: "constructionWorkerDesc",
-        link: "/jobs/construction-worker",
+        responsibilities: [
+            "responsibilityConstructionWorker1",
+            "responsibilityConstructionWorker2",
+            "responsibilityConstructionWorker3",
+            "responsibilityConstructionWorker4",
+        ],
+        requirements: [
+            "requirementConstructionWorker1",
+            "requirementConstructionWorker2",
+            "requirementConstructionWorker3",
+            "requirementConstructionWorker4",
+        ],
+        deadline: "30/11/2025",
     },
     {
-        id: 3,
         titleKey: "constructionForemanTitle",
+        descriptionKey: "constructionForemanDescription",
         location: "Tirana, Albania",
-        descriptionKey: "constructionForemanDesc",
-        link: "/jobs/construction-foreman",
+        responsibilities: [
+            "responsibilityConstructionForeman1",
+            "responsibilityConstructionForeman2",
+            "responsibilityConstructionForeman3",
+            "responsibilityConstructionForeman4",
+        ],
+        requirements: [
+            "requirementConstructionForeman1",
+            "requirementConstructionForeman2",
+            "requirementConstructionForeman3",
+            "requirementConstructionForeman4",
+        ],
+        deadline: "30/11/2025",
     },
     {
-        id: 4,
         titleKey: "constructionArchaeologistTitle",
+        descriptionKey: "constructionArchaeologistDescription",
         location: "Tirana, Albania",
-        descriptionKey: "constructionArchaeologistDesc",
-        link: "/jobs/construction-archaeologist",
+        responsibilities: [
+            "responsibilityConstructionArchaeologist1",
+            "responsibilityConstructionArchaeologist2",
+            "responsibilityConstructionArchaeologist3",
+            "responsibilityConstructionArchaeologist4",
+        ],
+        requirements: [
+            "requirementConstructionArchaeologist1",
+            "requirementConstructionArchaeologist2",
+            "requirementConstructionArchaeologist3",
+            "requirementConstructionArchaeologist4",
+        ],
+        deadline: "30/11/2025",
     },
     {
-        id: 5,
         titleKey: "architecturalDesignerTitle",
+        descriptionKey: "architecturalDesignerDescription",
         location: "Tirana, Albania",
-        descriptionKey: "architecturalDesignerDesc",
-        link: "/jobs/architectural-designer",
+        responsibilities: [
+            "responsibilityArchitecturalDesigner1",
+            "responsibilityArchitecturalDesigner2",
+            "responsibilityArchitecturalDesigner3",
+            "responsibilityArchitecturalDesigner4",
+        ],
+        requirements: [
+            "requirementArchitecturalDesigner1",
+            "requirementArchitecturalDesigner2",
+            "requirementArchitecturalDesigner3",
+            "requirementArchitecturalDesigner4",
+        ],
+        deadline: "30/11/2025",
     },
     {
-        id: 6,
         titleKey: "projectCoordinatorTitle",
+        descriptionKey: "projectCoordinatorDescription",
         location: "Tirana, Albania",
-        descriptionKey: "projectCoordinatorDesc",
-        link: "/jobs/project-coordinator",
+        responsibilities: [
+            "responsibilityProjectCoordinator1",
+            "responsibilityProjectCoordinator2",
+            "responsibilityProjectCoordinator3",
+            "responsibilityProjectCoordinator4",
+        ],
+        requirements: [
+            "requirementProjectCoordinator1",
+            "requirementProjectCoordinator2",
+            "requirementProjectCoordinator3",
+            "requirementProjectCoordinator4",
+        ],
+        deadline: "30/11/2025",
     },
     {
-        id: 7,
         titleKey: "structuralEngineerTitle",
+        descriptionKey: "structuralEngineerDescription",
         location: "Tirana, Albania",
-        descriptionKey: "structuralEngineerDesc",
-        link: "/jobs/structural-engineer",
+        responsibilities: [
+            "responsibilityStructuralEngineer1",
+            "responsibilityStructuralEngineer2",
+            "responsibilityStructuralEngineer3",
+            "responsibilityStructuralEngineer4",
+        ],
+        requirements: [
+            "requirementStructuralEngineer1",
+            "requirementStructuralEngineer2",
+            "requirementStructuralEngineer3",
+            "requirementStructuralEngineer4",
+        ],
+        deadline: "30/11/2025",
     },
     {
-        id: 8,
         titleKey: "installationForemanTitle",
+        descriptionKey: "installationForemanDescription",
         location: "Tirana, Albania",
-        descriptionKey: "installationForemanDesc",
-        link: "/jobs/installation-foreman",
+        responsibilities: [
+            "responsibilityInstallationForeman1",
+            "responsibilityInstallationForeman2",
+            "responsibilityInstallationForeman3",
+            "responsibilityInstallationForeman4",
+        ],
+        requirements: [
+            "requirementInstallationForeman1",
+            "requirementInstallationForeman2",
+            "requirementInstallationForeman3",
+            "requirementInstallationForeman4",
+        ],
+        deadline: "30/11/2025",
     },
 ];
+
+
 export const objectTypes = [
     { id: 1, type: "Residential", qualityPrices: { first: 100, second: 90, third: 80 }, workerCost: 20, transportCost: 10, discount: 5, tax: 18 },
     { id: 2, type: "House", qualityPrices: { first: 120, second: 110, third: 100 }, workerCost: 25, transportCost: 12, discount: 7, tax: 20 },
@@ -508,3 +589,40 @@ export const materials = [
             "Durable and fire-resistant fiber cement boards for walls and cladding.",
     },
 ];
+//Help
+export const helpCategories = {
+    projects: {
+        icon: <Hammer size={20} />,
+        titleKey: "Projects",
+        faqKeys: [
+            { q: "faq_project_1_q", a: "faq_project_1_a" },
+            { q: "faq_project_2_q", a: "faq_project_2_a" },
+            { q: "faq_project_3_q", a: "faq_project_3_a" },
+            { q: "faq_project_4_q", a: "faq_project_4_a" },
+            { q: "faq_project_5_q", a: "faq_project_5_a" },
+            { q: "faq_project_6_q", a: "faq_project_6_a" },
+        ],
+    },
+    payments: {
+        icon: <DollarSign size={20} />,
+        titleKey: "Payments",
+        faqKeys: [
+            { q: "faq_payment_1_q", a: "faq_payment_1_a" },
+            { q: "faq_payment_2_q", a: "faq_payment_2_a" },
+            { q: "faq_payment_3_q", a: "faq_payment_3_a" },
+            { q: "faq_payment_4_q", a: "faq_payment_4_a" },
+            { q: "faq_payment_5_q", a: "faq_payment_5_a" },
+        ],
+    },
+    support: {
+        icon: <Phone size={20} />,
+        titleKey: "Support",
+        faqKeys: [
+            { q: "faq_support_1_q", a: "faq_support_1_a" },
+            { q: "faq_support_2_q", a: "faq_support_2_a" },
+            { q: "faq_support_3_q", a: "faq_support_3_a" },
+            { q: "faq_support_4_q", a: "faq_support_4_a" },
+            { q: "faq_support_5_q", a: "faq_support_5_a" },
+        ],
+    },
+};

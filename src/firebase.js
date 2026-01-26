@@ -17,7 +17,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const messaging = getMessaging(app);
 export const db = getFirestore(app);
-
+// Ruaj aplikimin në Firestore
+export const saveApplicationToFirestore = async (data) => {
+    try {
+        await addDoc(collection(db, "applications"), {
+            ...data,
+            timestamp: serverTimestamp()
+        });
+        console.log("✅ Application saved in Firestore");
+    } catch (err) {
+        console.error("❌ Error saving application:", err);
+    }
+};
 // Kërkon lejen për njoftime
 export const requestNotificationPermission = async () => {
     const permission = await Notification.requestPermission();
@@ -48,10 +59,11 @@ export const getFirebaseToken = async () => {
         const registration = await registerServiceWorker();
         if (!registration) return null;
 
-        const token = await getToken(messaging, {
-            vapidKey: "",
-            serviceWorkerRegistration: registration
-        });
+  const token = await getToken(messaging, {
+  vapidKey: process.env.REACT_APP_FIREBASE_VAPID_KEY,
+  serviceWorkerRegistration: registration
+});
+
 
         console.log("🔥 Firebase Token:", token);
         return token;
@@ -78,7 +90,7 @@ export const saveNotificationToFirestore = async (payload, userEmail = null) => 
             },
             read: false,
             timestamp: serverTimestamp(),
-            userEmail: userEmail ? userEmail.toLowerCase() : null // vetem për përdorues specifik
+            userEmail: userEmail ? userEmail.toLowerCase() : null
         });
         console.log("💾 Notification saved for", userEmail || "everyone");
     } catch (err) {
@@ -93,3 +105,4 @@ export const onForegroundMessage = (callback) => {
         callback(payload);
     });
 };
+

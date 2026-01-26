@@ -13,7 +13,7 @@ export const translations = {
         service1_description: "We provide expert excavation services, from site clearing to trench digging, ensuring your project starts on solid ground.",
         service2_title: "Carpentry Works",
         service2_description: "Our carpenters craft high-quality woodwork, including framing, roofing, and custom cabinetry, to meet your specific needs.",
-        service3_title: "Ironworks",
+        service3_title: "Iron Works",
         service3_description: "We specialize in durable and precise ironwork, including gates, railings, and structural supports.",
         service4_title: "Concrete Works",
         service4_description: "Offering a range of concrete services, from foundations to decorative finishes, for residential and commercial buildings.",
@@ -55,7 +55,7 @@ export const translations = {
         features: "Features",
         dashboard: "Dashboard",
         projects: "Projects",
-        buildCostPro: "BuildCostPro",
+        ProBuild: "ProBuild",
         materials: "Materials",
         calendar: "Calendar",
         about: "About",
@@ -128,33 +128,121 @@ export const translations = {
         spaWellnessDesc: "The building is located in the city of Shkodra, with high standards...",
         aeroportiTitle: "AEROPORTI NENE TEREZA",
         aeroportiDesc: 'The international airport "Nënë Tereza" is the airport of ...',
-        //Jobs
+        // General
+        backToAllJobs: "← Back to All Jobs",
         searchPlaceholder: "Search",
         availableJobs: "Available Construction Jobs",
+        applyNow: "Apply Now",
+        yourApplications: "Your Applications",
+        jobTitle: "Job Title",
+        appliedOn: "Applied on",
+        status: "Status",
+        pending: "Pending",
+        closed: "Closed",
+        noApplicationsYet: "You have not applied to any jobs yet",
+        responsibilities: "Responsibilities",
+        requirements: "Requirements",
+        deadline: "Deadline",
+        jobDetailsNotFound: "Job details not found",
+        fillAllFields: "Please fill all fields and upload your resume.",
+        Submit: "Submit",
+        applicationSuccess: "Your application has been successfully submitted!",
+        // Construction Engineer
         constructionEngineerTitle: "Construction Engineer",
-        constructionEngineerDesc: "We are looking for a construction engineer to lead new projects and ensure the quality of work.",
+        constructionEngineerDescription: "As a Construction Engineer, you will oversee project design and implementation, ensuring compliance with safety and quality standards.",
+        responsibilityConstructionEngineer1: "Plan, design, and supervise construction projects from start to finish.",
+        responsibilityConstructionEngineer2: "Prepare cost estimates, budgets, and schedules.",
+        responsibilityConstructionEngineer3: "Collaborate with architects, contractors, and stakeholders.",
+        responsibilityConstructionEngineer4: "Ensure compliance with building codes and safety regulations.",
+        requirementConstructionEngineer1: "Bachelor’s degree in Civil or Construction Engineering.",
+        requirementConstructionEngineer2: "Minimum 3 years of experience in construction project management.",
+        requirementConstructionEngineer3: "Excellent problem-solving and communication skills.",
+        requirementConstructionEngineer4: "Proficiency in AutoCAD, Revit, or similar design software.",
+
+        // Construction Worker
         constructionWorkerTitle: "Construction Worker",
-        constructionWorkerDesc: "We are seeking qualified workers to work on various construction projects.",
+        constructionWorkerDescription: "We are seeking motivated Construction Workers to join our team in executing high-quality construction projects.",
+        responsibilityConstructionWorker1: "Assist in concrete mixing, site preparation, and material handling.",
+        responsibilityConstructionWorker2: "Follow blueprints and project instructions accurately.",
+        responsibilityConstructionWorker3: "Operate hand and power tools safely.",
+        responsibilityConstructionWorker4: "Ensure compliance with safety and health guidelines on site.",
+        requirementConstructionWorker1: "Previous experience in construction or related work preferred.",
+        requirementConstructionWorker2: "Ability to perform physical labor and work outdoors.",
+        requirementConstructionWorker3: "Strong teamwork and reliability.",
+        requirementConstructionWorker4: "Basic understanding of construction procedures and tools.",
+
+        // Construction Foreman
         constructionForemanTitle: "Construction Foreman",
-        constructionForemanDesc: "We need a construction foreman to lead the construction team and manage materials.",
+        constructionForemanDescription: "The Construction Foreman will lead and coordinate teams of workers, ensuring that all operations are completed safely, efficiently, and on schedule.",
+        responsibilityConstructionForeman1: "Supervise construction workers and subcontractors on site.",
+        responsibilityConstructionForeman2: "Monitor project progress and report to the project manager.",
+        responsibilityConstructionForeman3: "Ensure that safety and quality standards are met.",
+        responsibilityConstructionForeman4: "Coordinate daily activities and resolve on-site issues promptly.",
+        requirementConstructionForeman1: "Proven experience as a Foreman or similar supervisory role.",
+        requirementConstructionForeman2: "Strong leadership and communication skills.",
+        requirementConstructionForeman3: "Excellent knowledge of construction processes and safety practices.",
+        requirementConstructionForeman4: "Ability to read blueprints and technical drawings.",
+
+        // Construction Archaeologist
         constructionArchaeologistTitle: "Construction Archaeologist",
-        constructionArchaeologistDesc: "We are looking for an archaeologist to monitor construction projects and ensure the preservation of cultural heritage.",
+        constructionArchaeologistDescription: "As a Construction Archaeologist, you will assess and monitor construction projects to identify and preserve archaeological findings.",
+        responsibilityConstructionArchaeologist1: "Conduct archaeological assessments before and during construction.",
+        responsibilityConstructionArchaeologist2: "Document findings and prepare detailed reports.",
+        responsibilityConstructionArchaeologist3: "Collaborate with site managers to minimize site impact.",
+        responsibilityConstructionArchaeologist4: "Ensure legal compliance with heritage conservation standards.",
+        requirementConstructionArchaeologist1: "Degree in Archaeology, Anthropology, or related field.",
+        requirementConstructionArchaeologist2: "Strong research and documentation skills.",
+        requirementConstructionArchaeologist3: "Ability to work collaboratively on active construction sites.",
+        requirementConstructionArchaeologist4: "Attention to detail and respect for cultural heritage.",
+
+        // Architectural Designer
         architecturalDesignerTitle: "Architectural Designer",
-        architecturalDesignerDesc: "We need an architectural designer to draft plans and sketches for construction projects.",
+        architecturalDesignerDescription: "We are looking for a creative Architectural Designer to produce innovative designs for residential and commercial projects. ",
+        responsibilityArchitecturalDesigner1: "Develop design concepts and 3D visualizations.",
+        responsibilityArchitecturalDesigner2: "Collaborate with engineering teams and project managers.",
+        responsibilityArchitecturalDesigner3: "Prepare technical drawings and specifications.",
+        responsibilityArchitecturalDesigner4: "Ensure designs comply with local regulations and sustainability goals.",
+        requirementArchitecturalDesigner1: "Bachelor’s degree in Architecture or related field.",
+        requirementArchitecturalDesigner2: "Proficiency in AutoCAD, SketchUp, or Revit.",
+        requirementArchitecturalDesigner3: "Strong design portfolio showcasing creativity and technical ability.",
+        requirementArchitecturalDesigner4: "Excellent communication and teamwork skills.",
+
+        // Project Coordinator
         projectCoordinatorTitle: "Project Coordinator",
-        projectCoordinatorDesc: "We are looking for a project coordinator to manage and organize resources for construction projects.",
+        projectCoordinatorDescription: "As a Project Coordinator, you will assist in planning, executing, and finalizing projects within budget and deadlines. ",
+        responsibilityProjectCoordinator1: "Assist in scheduling, budgeting, and reporting.",
+        responsibilityProjectCoordinator2: "Communicate project progress with stakeholders.",
+        responsibilityProjectCoordinator3: "Maintain project documentation and contracts.",
+        responsibilityProjectCoordinator4: "Support the project manager in day-to-day activities.",
+        requirementProjectCoordinator1: "Bachelor’s degree in Management, Engineering, or similar field.",
+        requirementProjectCoordinator2: "Strong organizational and multitasking skills.",
+        requirementProjectCoordinator3: "Excellent verbal and written communication abilities.",
+        requirementProjectCoordinator4: "Knowledge of project management software is a plus.",
+
+        // Structural Engineer
         structuralEngineerTitle: "Structural Engineer",
-        structuralEngineerDesc: "We are looking for a structural engineer to develop plans and calculations for various construction structures.",
+        structuralEngineerDescription: "The Structural Engineer will design, plan, and oversee the construction of load-bearing structures. ",
+        responsibilityStructuralEngineer1: "Develop structural designs and calculations.",
+        responsibilityStructuralEngineer2: "Review architectural drawings for structural integrity.",
+        responsibilityStructuralEngineer3: "Collaborate with construction and design teams.",
+        responsibilityStructuralEngineer4: "Conduct site inspections and issue compliance reports.",
+        requirementStructuralEngineer1: "Degree in Structural or Civil Engineering.",
+        requirementStructuralEngineer2: "Strong knowledge of Eurocodes and design standards.",
+        requirementStructuralEngineer3: "Experience with structural analysis software.",
+        requirementStructuralEngineer4: "Attention to detail and problem-solving mindset.",
+
+        // Installation Foreman
         installationForemanTitle: "Installation Foreman",
-        installationForemanDesc: "We are seeking an installation foreman to manage and carry out installation work on construction projects.",
-        "applyNow": "Apply Now",
-        "yourApplications": "Your Applications",
-        "jobTitle": "Job Title",
-        "appliedOn": "Applied on",
-        "status": "Status",
-        "pending": "Pending",
-        "closed": "Closed",
-        "noApplicationsYet": "You have not applied to any jobs yet",
+        installationForemanDescription: "We are seeking an experienced Installation Foreman to supervise the installation of mechanical, electrical, and plumbing systems.",
+        responsibilityInstallationForeman1: "Plan and oversee installation activities on site.",
+        responsibilityInstallationForeman2: "Supervise technicians and subcontractors.",
+        responsibilityInstallationForeman3: "Ensure quality and compliance with technical standards.",
+        responsibilityInstallationForeman4: "Monitor progress and report any deviations to management.",
+        requirementInstallationForeman1: "Technical degree in Engineering or related field.",
+        requirementInstallationForeman2: "Minimum 3 years of experience as Installation Foreman.",
+        requirementInstallationForeman3: "Strong leadership and organizational skills.",
+        requirementInstallationForeman4: "Knowledge of MEP systems and technical drawings.",
+
         //BuildCostpro
         objectType: "Object Type",
         area: "Area (m²)",
@@ -175,6 +263,7 @@ export const translations = {
         step4: "Step 4: Calculate the total cost.",
         factTitle: "💡 Did you know?",
         factText: "On average, construction costs can vary up to 30% depending on quality and location.",
+        errorMessage: "You have to login!",
         //Features
         highQualityTitle: "High-Quality Materials",
         highQualityDesc: "We use only certified and durable materials, ensuring excellent results in every project. Material quality is our priority to ensure longevity and high performance.",
@@ -198,9 +287,6 @@ export const translations = {
         //Aplication
         applyingFor: "Applying for",
         resume: "Resume",
-        submitApplication: "Submit Application",
-        formSubmitted: "Form Submitted!",
-        applicationSuccess: "Application submitted successfully!",
         somethingWrong: "Something went wrong.",
         serverError: "An error occurred. Please try again later.",
         invalidEmail: "Please enter a valid email address.",
@@ -221,6 +307,8 @@ export const translations = {
         noEventsMonth: "No events for this month.",
         errorAddingEvent: "Error adding event",
         //Materials
+        exploreMaterials: "Explore Materials",
+        materialsIntro: "Here you can find information about our materials...",
         Wood: "Wood",
         "Premium quality wood for construction and design, offering durability and aesthetic appeal.":
             "Premium quality wood for construction and design, offering durability and aesthetic appeal.",
@@ -331,8 +419,68 @@ export const translations = {
         //Notifications
         notifications: "Notifications",
         noNotifications: "No notifications",
-    },
+        //Help
+        welcomeMessage: "Welcome! For account access, please use the main header login.",
+        categories: "Categories",
+        helpCenter: "Help Center",
+        noResults: "Sorry, we could not find any matching questions.",
+        needAssistance: "Need more assistance?",
+        contactMessage: "Contact our support team and we’ll get back to you as soon as possible.",
+        "Projects & Services": "Projects & Services",
+        "Payments & Billing": "Payments & Billing",
+        "Account Settings": "Account Settings",
+        "Technical Issues": "Technical Issues",
+        faq_project_1_q: "How do I start a construction project?",
+        faq_project_1_a: 'Fill out the project form under "Services", and our team will contact you.',
 
+        faq_project_2_q: "How can I track my project progress?",
+        faq_project_2_a: "Once registered, you can track your project progress in your profile.",
+
+        faq_project_3_q: "Can I request multiple projects at once?",
+        faq_project_3_a: "Yes, you can submit multiple project requests, and our team will manage them efficiently.",
+
+        faq_project_4_q: "Do you provide consultation before starting?",
+        faq_project_4_a: "Absolutely, we offer free consultation to discuss your requirements.",
+
+        faq_project_5_q: "How long does a typical project take?",
+        faq_project_5_a: "Project timelines depend on the scope, but we provide estimated durations for each project.",
+
+        faq_project_6_q: "Can I customize the design?",
+        faq_project_6_a: "Yes, our team will work with you to customize your project design.",
+
+        // FAQs - Payments & Contracts
+        faq_payment_1_q: "What payment methods do you accept?",
+        faq_payment_1_a: "We accept bank transfer, credit card, and cash payments.",
+
+        faq_payment_2_q: "Are official contracts provided?",
+        faq_payment_2_a: "Yes, every project comes with an official contract for transparency and security.",
+
+        faq_payment_3_q: "Can I get a refund if needed?",
+        faq_payment_3_a: "Refunds are processed according to the contract terms agreed upon before starting the project.",
+
+        faq_payment_4_q: "Do you offer installment payments?",
+        faq_payment_4_a: "Yes, payment installments are available for eligible projects.",
+
+        faq_payment_5_q: "Are invoices provided?",
+        faq_payment_5_a: "Yes, detailed invoices are issued for every payment made.",
+
+        // FAQs - Contact & Support
+        faq_support_1_q: "How can I contact the company?",
+        faq_support_1_a: "You can contact us via the contact form or by phone.",
+
+        faq_support_2_q: "What are your working hours?",
+        faq_support_2_a: "Monday to Friday, 8:00 AM - 5:00 PM.",
+
+        faq_support_3_q: "Do you offer online support?",
+        faq_support_3_a: "Yes, our support team is available via email and chat.",
+
+        faq_support_4_q: "Can I schedule a site visit?",
+        faq_support_4_a: "Yes, schedule a site visit through the contact form or by calling us.",
+
+        faq_support_5_q: "Is emergency support available?",
+        faq_support_5_a: "Yes, emergency support is available for ongoing projects.",
+
+    },
 
     sq: {
         welcome: "Mirësevini në faqen tonë!",
@@ -388,9 +536,9 @@ export const translations = {
         features: "Karakteristikat",
         dashboard: "Paneli",
         projects: "Projektet",
-        buildCostPro: "Llogarit",
+        ProBuild: "Preventiv",
         materials: "Materialet",
-        calendar: "Kalendari",
+        calendar: "Kalendar",
         about: "Rreth Nesh",
         jobs: "Punët",
         reviews: "Rishikimet",
@@ -463,32 +611,119 @@ export const translations = {
         aeroportiTitle: "AEROPORTI NENE TEREZA",
         aeroportiDesc: 'Aeroporti ndërkombëtar "Nënë Tereza" është aeroporti i ...',
         //Jobs
-        searchPlaceholder: "Kerko",
-        availableJobs: "Punët e disponueshme në ndërtim",
+        backToAllJobs: "← Kthehu tek të gjitha pozicionet",
+        searchPlaceholder: "Kërko",
+        availableJobs: "Pozicionet e Lira në Ndërtim",
+        applyNow: "Apliko Tani",
+        yourApplications: "Aplikimet Tuaja",
+        jobTitle: "Pozicioni",
+        appliedOn: "Aplikuar më",
+        status: "Statusi",
+        pending: "Në pritje",
+        closed: "Mbyllur",
+        noApplicationsYet: "Nuk keni aplikuar ende për ndonjë punë",
+        responsibilities: "Detyrat",
+        requirements: "Kërkesat",
+        deadline: "Afati",
+        jobDetailsNotFound: "Detajet e punës nuk u gjetën",
+        fillAllFields: "Ju lutem plotësoni të gjitha fushat dhe ngarkoni CV-në tuaj.",
+        Submit: "Dergo",
+
+        // Construction Engineer
         constructionEngineerTitle: "Inxhinier Ndërtimi",
-        constructionEngineerDesc: "Kërkojmë një inxhinier ndërtimi për të drejtuar projekte të reja dhe për të siguruar cilësinë e punës.",
+        constructionEngineerDescription: "Si Inxhinier Ndërtimi, do të mbikëqyrni dizajnin dhe zbatimin e projekteve, duke siguruar përputhshmëri me standardet e sigurisë dhe cilësisë.",
+        responsibilityConstructionEngineer1: "Planifikoni, dizajnoni dhe mbikëqyrni projektet e ndërtimit nga fillimi deri në fund.",
+        responsibilityConstructionEngineer2: "Përgatitni vlerësimet e kostove, buxhetet dhe afatet kohore.",
+        responsibilityConstructionEngineer3: "Bashkëpunoni me arkitektët, kontraktorët dhe palët e interesuara.",
+        responsibilityConstructionEngineer4: "Siguroni përputhshmëri me kodet e ndërtimit dhe rregulloret e sigurisë.",
+        requirementConstructionEngineer1: "Diplomë bachelor në Inxhinieri Civile ose Ndërtimi.",
+        requirementConstructionEngineer2: "Minimum 3 vjet përvojë në menaxhimin e projekteve të ndërtimit.",
+        requirementConstructionEngineer3: "Aftësi të shkëlqyera në zgjidhjen e problemeve dhe komunikim.",
+        requirementConstructionEngineer4: "Njohuri në AutoCAD, Revit ose softuer të ngjashëm dizajni.",
+
+        // Construction Worker
         constructionWorkerTitle: "Punëtor Ndërtimi",
-        constructionWorkerDesc: "Kërkojmë punëtorë të kualifikuar për të punuar në projekte të ndryshme ndërtimi.",
-        constructionForemanTitle: "Shef Ndërtimi",
-        constructionForemanDesc: "Na nevojitet një shef ndërtimi për të drejtuar ekipin dhe menaxhuar materialet.",
+        constructionWorkerDescription: "Kërkojmë Punëtorë Ndërtimi të motivuar për t'u bashkuar me ekipin tonë në zbatimin e projekteve të ndërtimit me cilësi të lartë.",
+        responsibilityConstructionWorker1: "Ndihmoni në përzierjen e betonit, përgatitjen e vendit dhe trajtimin e materialeve.",
+        responsibilityConstructionWorker2: "Ndjekni me saktësi planet dhe udhëzimet e projektit.",
+        responsibilityConstructionWorker3: "Përdorni me siguri veglat manuale dhe elektrike.",
+        responsibilityConstructionWorker4: "Siguroni përputhshmëri me udhëzimet e sigurisë dhe shëndetit në vend.",
+        requirementConstructionWorker1: "Përvojë e mëparshme në ndërtim ose punë të ngjashme e preferuar.",
+        requirementConstructionWorker2: "Aftësi për të kryer punë fizike dhe për të punuar jashtë.",
+        requirementConstructionWorker3: "Puna në grup dhe besueshmëri e fortë.",
+        requirementConstructionWorker4: "Kuptim bazik i procedurave dhe mjeteve të ndërtimit.",
+
+        // Construction Foreman
+        constructionForemanTitle: "Kryeinspektor Ndërtimi",
+        constructionForemanDescription: "Kryeinspektori i Ndërtimit do të udhëheqë dhe koordinojë ekipet e punëtorëve, duke siguruar që të gjitha operacionet të përfundojnë në mënyrë të sigurt, efikase dhe sipas afatit.",
+        responsibilityConstructionForeman1: "Mbikëqyr punëtorët e ndërtimit dhe nënkontraktorët në vend.",
+        responsibilityConstructionForeman2: "Monitoron progresin e projektit dhe raporton tek menaxheri i projektit.",
+        responsibilityConstructionForeman3: "Siguron që standardet e sigurisë dhe cilësisë të zbatohen.",
+        responsibilityConstructionForeman4: "Koordinon aktivitetet ditore dhe zgjidh çështjet në vend shpejt.",
+        requirementConstructionForeman1: "Përvojë e provuar si Kryeinspektor ose rol mbikëqyrës i ngjashëm.",
+        requirementConstructionForeman2: "Aftësi të forta udhëheqëse dhe komunikimi.",
+        requirementConstructionForeman3: "Njohuri të shkëlqyera të proceseve të ndërtimit dhe praktikave të sigurisë.",
+        requirementConstructionForeman4: "Aftësi për të lexuar planet dhe vizatimet teknike.",
+
+        // Construction Archaeologist
         constructionArchaeologistTitle: "Arkeolog Ndërtimi",
-        constructionArchaeologistDesc: "Kërkojmë një arkeolog për të monitoruar projektet e ndërtimit dhe për të ruajtur trashëgiminë kulturore.",
-        architecturalDesignerTitle: "Projektues Arkitektural",
-        architecturalDesignerDesc: "Na nevojitet një projektues arkitekturor për të hartuar plane dhe skica për projektet e ndërtimit.",
+        constructionArchaeologistDescription: "Si Arkeolog Ndërtimi, do të vlerësoni dhe monitoroni projektet e ndërtimit për të identifikuar dhe ruajtur gjetjet arkeologjike.",
+        responsibilityConstructionArchaeologist1: "Kryeni vlerësime arkeologjike para dhe gjatë ndërtimit.",
+        responsibilityConstructionArchaeologist2: "Dokumentoni gjetjet dhe përgatitni raporte të detajuara.",
+        responsibilityConstructionArchaeologist3: "Bashkëpunoni me menaxherët e vendit për të minimizuar ndikimin në vend.",
+        responsibilityConstructionArchaeologist4: "Siguroni përputhshmëri ligjore me standardet e ruajtjes së trashëgimisë.",
+        requirementConstructionArchaeologist1: "Diplomë në Arkeologji, Antropologji ose fushë të ngjashme.",
+        requirementConstructionArchaeologist2: "Aftësi të forta kërkimore dhe dokumentuese.",
+        requirementConstructionArchaeologist3: "Aftësi për të punuar bashkëpunueshëm në vendet aktive të ndërtimit.",
+        requirementConstructionArchaeologist4: "Vëmendje ndaj detajeve dhe respekt për trashëgiminë kulturore.",
+
+        // Architectural Designer
+        architecturalDesignerTitle: "Dizajner Arkitekture",
+        architecturalDesignerDescription: "Kërkojmë një Dizajner Arkitekture kreativ për të prodhuar dizajne inovative për projekte rezidenciale dhe komerciale. ",
+        responsibilityArchitecturalDesigner1: "Zhvilloni konceptet e dizajnit dhe vizualizime 3D.",
+        responsibilityArchitecturalDesigner2: "Bashkëpunoni me ekipet e inxhinierisë dhe menaxherët e projektit.",
+        responsibilityArchitecturalDesigner3: "Përgatitni vizatime teknike dhe specifikime.",
+        responsibilityArchitecturalDesigner4: "Siguroni që dizajnet të përputhen me rregulloret lokale dhe qëllimet e qëndrueshmërisë.",
+        requirementArchitecturalDesigner1: "Diplomë bachelor në Arkitekturë ose fushë të ngjashme.",
+        requirementArchitecturalDesigner2: "Njohuri në AutoCAD, SketchUp ose Revit.",
+        requirementArchitecturalDesigner3: "Portofol i fortë dizajni që tregon kreativitet dhe aftësi teknike.",
+        requirementArchitecturalDesigner4: "Aftësi të shkëlqyera komunikimi dhe punë në grup.",
+
+        // Project Coordinator
         projectCoordinatorTitle: "Koordinator Projekti",
-        projectCoordinatorDesc: "Kërkojmë një koordinator projekti për të menaxhuar dhe organizuar burimet për projektet e ndërtimit.",
+        projectCoordinatorDescription: "Si Koordinator Projekti, do të ndihmoni në planifikimin, zbatimin dhe finalizimin e projekteve brenda buxhetit dhe afateve.",
+        responsibilityProjectCoordinator1: "Ndihmoni në planifikimin, buxhetimin dhe raportimin.",
+        responsibilityProjectCoordinator2: "Komunikoni progresin e projektit me palët e interesuara.",
+        responsibilityProjectCoordinator3: "Mbani dokumentacionin e projektit dhe kontratat.",
+        responsibilityProjectCoordinator4: "Mbështesni menaxherin e projektit në aktivitetet ditore.",
+        requirementProjectCoordinator1: "Diplomë bachelor në Menaxhim, Inxhinieri ose fushë të ngjashme.",
+        requirementProjectCoordinator2: "Aftësi të forta organizative dhe multitasking.",
+        requirementProjectCoordinator3: "Aftësi të shkëlqyera në komunikim verbal dhe shkrim.",
+        requirementProjectCoordinator4: "Njohuri të softuerëve të menaxhimit të projekteve është plus.",
+
+        // Structural Engineer
         structuralEngineerTitle: "Inxhinier Struktural",
-        structuralEngineerDesc: "Kërkojmë një inxhinier struktural për të zhvilluar plane dhe llogaritje për strukturat e ndryshme ndërtimore.",
-        installationForemanTitle: "Shef Instalimi",
-        installationForemanDesc: "Kërkojmë një shef instalimi për të menaxhuar dhe kryer punët e instalimit në projektet e ndërtimit.",
-        "applyNow": "Apliko Tani",
-        "yourApplications": "Aplikimet Tuaja",
-        "jobTitle": "Titulli i Punës",
-        "appliedOn": "Aplikuar më",
-        "status": "Statusi",
-        "pending": "Në pritje",
-        "closed": "Mbyllur",
-        "noApplicationsYet": "Nuk keni aplikuar ende për ndonjë punë",
+        structuralEngineerDescription: "Inxhinieri Struktural do të dizajnojë, planifikojë dhe mbikëqyrë ndërtimin e strukturave mbajtëse. ",
+        responsibilityStructuralEngineer1: "Zhvilloni dizajne dhe llogaritje strukturore.",
+        responsibilityStructuralEngineer2: "Rishikoni vizatimet arkitekturore për integritet struktural.",
+        responsibilityStructuralEngineer3: "Bashkëpunoni me ekipet e ndërtimit dhe dizajnit.",
+        responsibilityStructuralEngineer4: "Kryeni inspektime në vend dhe lëshoni raporte për përputhshmëri.",
+        requirementStructuralEngineer1: "Diplomë në Inxhinieri Struktural ose Civile.",
+        requirementStructuralEngineer2: "Njohuri të forta të Eurocodes dhe standardeve të dizajnit.",
+        requirementStructuralEngineer3: "Përvojë me softuerët e analizës strukturore.",
+        requirementStructuralEngineer4: "Vëmendje ndaj detajeve dhe aftësi për zgjidhjen e problemeve.",
+
+        // Installation Foreman
+        installationForemanTitle: "Kryeinspektor Instalimi",
+        installationForemanDescription: "Kërkojmë një Kryeinspektor Instalimi me përvojë për të mbikëqyrur instalimin e sistemeve mekanike, elektrike dhe hidraulike.",
+        responsibilityInstallationForeman1: "Planifikoni dhe mbikëqyrni aktivitetet e instalimit në vend.",
+        responsibilityInstallationForeman2: "Mbikëqyrni teknikët dhe nënkontraktorët.",
+        responsibilityInstallationForeman3: "Siguroni cilësi dhe përputhshmëri me standardet teknike.",
+        responsibilityInstallationForeman4: "Monitoroni progresin dhe raportoni devijimet tek menaxhimi.",
+        requirementInstallationForeman1: "Diplomë teknike në Inxhinieri ose fushë të ngjashme.",
+        requirementInstallationForeman2: "Minimum 3 vjet përvojë si Kryeinspektor Instalimi.",
+        requirementInstallationForeman3: "Aftësi të forta udhëheqëse dhe organizative.",
+        requirementInstallationForeman4: "Njohuri të sistemeve MEP dhe vizatimeve teknike.",
         //Kalkulatori
         objectType: "Lloji i objektit",
         area: "Sipërfaqja (m²)",
@@ -509,6 +744,7 @@ export const translations = {
         step4: "Hapi 4: Llogaritni koston totale.",
         factTitle: "💡 A e dinit?",
         factText: "Mesatarisht, kostot e ndërtimit mund të ndryshojnë deri në 30% në varësi të cilësisë dhe vendndodhjes.",
+        errorMessage: "Ju duhet te logoheni!",
         //Features
         highQualityTitle: "Materiale me Cilësi të Lartë",
         highQualityDesc: "Ne përdorim vetëm materiale të certifikuara dhe të qëndrueshme, duke siguruar rezultate të shkëlqyera në çdo projekt. Cilësia e materialeve është prioritet për të garantuar qëndrueshmëri dhe performancë të lartë.",
@@ -555,6 +791,8 @@ export const translations = {
         noEventsMonth: "Nuk ka ngjarje për këtë muaj.",
         errorAddingEvent: "Gabim gjatë shtimit të ngjarjes",
         //Materials
+        exploreMaterials: "Zbuloni Materialet",
+        materialsIntro: "Këtu mund të gjeni informacion për materialet tona...",
         Wood: "Druri",
         "Premium quality wood for construction and design, offering durability and aesthetic appeal.":
             "Druri me cilësi të lartë për ndërtim dhe dizajn, ofron qëndrueshmëri dhe estetikë.",
@@ -665,6 +903,68 @@ export const translations = {
         //Njoftime
         Notifications: "Njoftimet",
         noNotifications: "Nuk ka njoftime",
+        //Help
+        welcomeMessage: "Mirësevini! Për qasje në llogari përdorni hyrjen kryesore.",
+        categories: "Kategoritë",
+        helpCenter: "Qendra e Ndihmës",
+        noResults: "Na vjen keq, nuk u gjetën pyetje të përputhshme.",
+        needAssistance: "Keni nevojë për më shumë ndihmë?",
+        contactMessage: "Kontaktoni ekipin tonë të mbështetjes dhe do t'ju përgjigjemi sa më shpejt të jetë e mundur.",
+        "Projects & Services": "Projektet & Shërbimet",
+        "Payments & Billing": "Pagesat & Faturimi",
+        "Account Settings": "Cilësimet e Llogarisë",
+        "Technical Issues": "Çështje Teknike",
+        // FAQs - Projects & Services
+        faq_project_1_q: "Si mund të filloj një projekt ndërtimi?",
+        faq_project_1_a: 'Plotësoni formularin e projektit nën "Shërbimet", dhe ekipi ynë do t\'ju kontaktojë.',
+
+        faq_project_2_q: "Si mund të ndjek progresin e projektit tim?",
+        faq_project_2_a: "Pasi të regjistroheni, mund të ndiqni progresin e projektit në profilin tuaj.",
+
+        faq_project_3_q: "A mund të kërkoj disa projekte njëherësh?",
+        faq_project_3_a: "Po, mund të dorëzoni disa kërkesa projektesh, dhe ekipi ynë do t'i menaxhojë me efikasitet.",
+
+        faq_project_4_q: "A ofroni konsultim para fillimit?",
+        faq_project_4_a: "Patjetër, ne ofrojmë konsultim falas për të diskutuar kërkesat tuaja.",
+
+        faq_project_5_q: "Sa zgjat një projekt tipik?",
+        faq_project_5_a: "Koha e projekteve varet nga shkalla e tyre, por ne japim kohëzgjatje të llogaritura për çdo projekt.",
+
+        faq_project_6_q: "A mund të personalizoj dizajnin?",
+        faq_project_6_a: "Po, ekipi ynë do të punojë me ju për të personalizuar dizajnin e projektit.",
+
+        // FAQs - Payments & Contracts
+        faq_payment_1_q: "Çfarë mënyrash pagese pranoni?",
+        faq_payment_1_a: "Pranojmë transfer bankar, kartë krediti dhe pagesa me para.",
+
+        faq_payment_2_q: "A ofrohen kontrata zyrtare?",
+        faq_payment_2_a: "Po, çdo projekt vjen me kontratë zyrtare për transparencë dhe siguri.",
+
+        faq_payment_3_q: "A mund të marr rimbursim nëse është e nevojshme?",
+        faq_payment_3_a: "Rimbursimet përpunohen sipas kushteve të kontratës që janë dakorduar para fillimit të projektit.",
+
+        faq_payment_4_q: "A ofroni pagesa me këste?",
+        faq_payment_4_a: "Po, pagesa me këste është e disponueshme për projektet e kualifikuara.",
+
+        faq_payment_5_q: "A ofrohen fatura?",
+        faq_payment_5_a: "Po, faturat e hollësishme lëshohen për çdo pagesë të kryer.",
+
+        // FAQs - Contact & Support
+        faq_support_1_q: "Si mund të kontaktoj kompaninë?",
+        faq_support_1_a: "Mund të na kontaktoni përmes formularit të kontaktit ose telefonit.",
+
+        faq_support_2_q: "Cilat janë oraret tuaja të punës?",
+        faq_support_2_a: "E hënë deri të premte, 08:00 - 17:00.",
+
+        faq_support_3_q: "A ofroni mbështetje online?",
+        faq_support_3_a: "Po, ekipi ynë i mbështetjes është në dispozicion përmes email dhe chat.",
+
+        faq_support_4_q: "A mund të planifikoj një vizitë në vendin e ndërtimit?",
+        faq_support_4_a: "Po, planifikoni një vizitë në vend përmes formularit të kontaktit ose duke na telefonuar.",
+
+        faq_support_5_q: "A ofrohet mbështetje emergjente?",
+        faq_support_5_a: "Po, mbështetje emergjente është në dispozicion për projektet aktuale.",
+
     },
 
 };

@@ -21,3 +21,7 @@ body {
   margin: 0 auto;
   padding: 0;
 }
+
+.chatbase-embed {
+  z-index: 1100 !important;
+}

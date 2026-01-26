@@ -6,7 +6,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import "../../features/EventCalendar/EventCalendar.css";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
-
+import { ArrowLeft } from "lucide-react";
 // Funksioni për përkthim të teksteve (title, description)
 const translateComment = async (text, targetLang) => {
   try {
@@ -50,7 +50,7 @@ const EventCalendar = () => {
     const fetchEvents = async () => {
       try {
         const response = await fetch(
-          "https://hocompany1.com/api/calendar.php"
+          `${process.env.REACT_APP_API_BASE}/api/calendar.php`
         );
         const data = await response.json();
         const formattedEvents = data.map((event) => ({
@@ -67,7 +67,7 @@ const EventCalendar = () => {
     fetchEvents();
   }, []);
 
-  // Përkthimi i eventeve sa herë ndryshon gjuhë ose eventet ndryshojnë
+  // Events
   useEffect(() => {
     const translateAll = async () => {
       const promises = events.map(async (e) => {
@@ -96,7 +96,7 @@ const EventCalendar = () => {
     };
     try {
       const response = await fetch(
-        "https://hocompany1.com/api/calendar.php",
+        `${process.env.REACT_APP_API_BASE}/api/calendar.php`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -147,8 +147,8 @@ const EventCalendar = () => {
     <div className="event-calendar-container">
       <div className="calendar-header">
         <h1>📅 {t("eventCalendar")}</h1>
-        <button className="back-button" onClick={handleBackClick}>
-          {t("back")}
+        <button className="calendar-back-button" onClick={handleBackClick}>
+          <ArrowLeft size={28} />
         </button>
       </div>
 

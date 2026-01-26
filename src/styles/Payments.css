@@ -3,27 +3,28 @@
   position: relative;
 }
 
-.back-button {
-  width: 20%;
-  background-color: #201d1d;
-  border: 1px solid #ccc;
-  padding: 10px 20px;
-  font-size: 12px;
+.back-button-payments {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
-  margin-bottom: 20px;
-  border-radius: 5px;
+  transition: all 0.2s ease;
 }
+
 .payment-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
   max-width: 1200px;
-  margin: 30px auto;
+  margin: 60px auto;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
+
 .payment-summary {
   width: 48%;
   padding: 20px;
@@ -54,11 +55,13 @@
   color: black;
   margin-bottom: 10px;
 }
+
 .payment-summary li span {
   font-size: 18px;
   font-weight: bold;
   color: rgb(172, 63, 13);
 }
+
 .payment-methods {
   width: 50%;
   background: #d1d1c9;
@@ -104,17 +107,20 @@
   margin-bottom: 15px;
   cursor: pointer;
 }
+
 .payment-logo {
   width: 50px;
   height: auto;
   margin-right: 10px;
 }
+
 #paypal-button-container {
   display: block !important;
   width: 100%;
   height: auto;
   color: #090c01;
 }
+
 .stripe-form .button {
   width: 50%;
   background-color: #facc15;
@@ -125,6 +131,7 @@
   margin-bottom: 20px;
   border-radius: 5px;
 }
+
 .payments-page .modal {
   position: fixed;
   top: 0;
@@ -155,6 +162,7 @@
   font-size: 18px;
   color: #333;
 }
+
 /*Confirmation*/
 .confirmation-page {
   display: flex;
@@ -227,8 +235,10 @@
 .home-button:hover {
   background-color: #dbb20d;
 }
+
 @media (max-width: 799px) {
-      /*Payments*/
+
+  /*Payments*/
   .payments-page {
     width: 100%;
     font-size: 14px;
@@ -240,11 +250,7 @@
     justify-content: center;
     max-width: 100%;
   }
-  .back-button {
-    width: 20%;
-    padding: 10px 20px;
-    font-size: 12px;
-  }
+
   .payment-container {
     flex-direction: column;
     gap: 10px;
@@ -275,14 +281,17 @@
   .stripe-form .button {
     width: 100%;
   }
+
   .modal-content {
     width: 90%;
     padding: 20px;
   }
+
   .confirmation-container {
     width: 95%;
     padding: 20px;
   }
+
   .home-button {
     padding: 8px 16px;
     font-size: 14px;

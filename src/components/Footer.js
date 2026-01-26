@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo1.png";
 import "../styles/Footer.css";
 import { useLanguage } from "../context/LanguageContext";
 
