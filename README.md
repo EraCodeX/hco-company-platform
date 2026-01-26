@@ -103,19 +103,20 @@ The focus is on **real usability, clean UX, and long-term maintainability**, sim
 ## 📁 Project Structure
 
 ```text
-api/        → PHP REST API (authentication, business logic, database access)
-public/     → Static assets and application metadata
+api/                → PHP REST API (auth, business logic, database access)
+public/             → Static assets
 src/
- ├─ components/        → Reusable UI components
- ├─ pages/             → Application pages (Home, Jobs, Contact, About)
- ├─ features/          → Core feature modules (Applications, Calendar)
- ├─ hooks/             → Custom React hooks
- ├─ context/           → Global state management
- ├─ styles/            → CSS modules for components and pages
- ├─ App.js             → Main React app entry
- ├─ index.js           → ReactDOM render
- └─ firebase.js        → Firebase configuration & initialization
-screenshots/           → Project screenshots for documentation
+ ├─ components/     → Reusable UI components
+ ├─ pages/          → Application pages
+ ├─ features/       → Feature modules (Applications, Calendar)
+ ├─ hooks/          → Custom React hooks
+ ├─ context/        → Global state management
+ ├─ styles/         → Component & page styles
+ ├─ App.js          → Main React entry
+ ├─ index.js        → ReactDOM render
+ └─ firebase.js     → Firebase configuration
+screenshots/        → Project screenshots
+.env.example        → Environment variable template
 
 ```
 
@@ -123,8 +124,8 @@ screenshots/           → Project screenshots for documentation
 
 ### 1️⃣ Clone Repository
 ```
-git clone https://github.com/era123-1/h-o-company.git
-cd h-o-company
+git clone https://github.com/EraCodeX/hco-company-platform.git
+cd hco-company-platform
 
 
 ```
@@ -140,6 +141,7 @@ Create a .env file at the project root:
 - REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
 - REACT_APP_FIREBASE_PROJECT_ID=your_project_id
 - REACT_APP_PAYPAL_CLIENT_ID=your_paypal_client_id
+
 ```
 
 4️⃣ Run Locally
