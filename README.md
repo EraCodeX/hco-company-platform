@@ -131,7 +131,13 @@ cd hco-company-platform
 ```
 2️⃣ Install Dependencies
 ```
+Using NPM:
+
 npm install
+
+Using Yarn:
+
+yarn
 ```
 3️⃣ Setup Environment Variables
 ```
@@ -146,5 +152,11 @@ Create a .env file at the project root:
 
 4️⃣ Run Locally
 ```
+Using NPM:
+
 npm start
+
+Using Yarn:
+
+yarn start
 ```
