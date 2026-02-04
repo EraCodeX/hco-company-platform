@@ -160,3 +160,5 @@ Using Yarn:
 
 yarn start
 ```
+Testing workflow will be added using Jest and React Testing Library.
+
