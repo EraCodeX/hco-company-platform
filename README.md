@@ -119,6 +119,20 @@ screenshots/        → Project screenshots
 .env.example        → Environment variable template
 
 ```
+## Team Workflow
+
+This project follows a team-oriented workflow inspired by real-world engineering teams:
+
+- Work is done in feature-based branches (`feature/*`, `fix/*`, `docs/*`)
+- Changes are proposed via Pull Requests before merging into `main`
+- Conventional commits are used for a clean, readable history (feat, fix, docs, refactor, test)
+- Documentation is treated as part of the product for easier onboarding and maintenance
+
+### Branching Strategy
+- `main` → stable / production-ready
+- `feature/*` → new features
+- `fix/*` → bug fixes
+- `docs/*` → documentation updates
 
 ## 💻 Installation & Setup 
 
