@@ -131,13 +131,6 @@ This project follows a team-oriented development workflow inspired by real-world
       <sub><b>Payment Flow</b></sub>
     </td>
   </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="screenshots/company-reviews.png" alt="Customer Reviews" width="860" />
-      <br />
-      <sub><b>Customer Reviews</b></sub>
-    </td>
-  </tr>
 </table>
 
 <hr />
@@ -160,43 +153,33 @@ src/
 screenshots/        → Application screenshots
 .env.example        → Environment variables template
 
-<hr />```
+```
+## Installation & Setup
 
-<h2>Installation &amp; Setup</h2>
+### Clone the repository
 
-<h3>Clone the repository</h3>
-
-<pre><code>
+```
 git clone https://github.com/EraCodeX/hco-company-platform.git
 cd hco-company-platform
-</code></pre>
-
-<h3>Install dependencies</h3>
-
-<pre><code>
+```
+Install dependencies
+```
 npm install
 # or
 yarn
-</code></pre>
+```
+Environment configuration
+```
+Create a .env file at the project root using .env.example as reference.
 
-<h3>Environment configuration</h3>
-
-<p>
-Create a <code>.env</code> file at the project root using
-<code>.env.example</code> as reference.
-</p>
-
-<pre><code>
 REACT_APP_FIREBASE_API_KEY=your_api_key
 REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
 REACT_APP_FIREBASE_PROJECT_ID=your_project_id
 REACT_APP_PAYPAL_CLIENT_ID=your_paypal_client_id
-</code></pre>
-
-<h3>Run locally</h3>
-
-<pre><code>
+```
+Run locally
+```
 npm start
 # or
 yarn start
-</code></pre>
+```
