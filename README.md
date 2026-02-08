@@ -1,86 +1,148 @@
-# H&O Company — Construction Business Platform
+<div align="center">
 
-![Status](https://img.shields.io/badge/status-production-green)
-![React](https://img.shields.io/badge/react-18.3.1-blue)
-![PHP](https://img.shields.io/badge/php-8.x-purple)
-![Firebase](https://img.shields.io/badge/firebase-auth-yellow)
-![PayPal](https://img.shields.io/badge/paypal-live-blue)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+<h1>H&amp;O Company — Construction Business Platform</h1>
 
-A production-ready web platform designed to manage construction company operations, internal workflows, and customer interactions.
+<p>
+  <img alt="Status" src="https://img.shields.io/badge/status-production-green" />
+  <img alt="React" src="https://img.shields.io/badge/react-18.3.1-blue" />
+  <img alt="PHP" src="https://img.shields.io/badge/php-8.x-purple" />
+  <img alt="Firebase" src="https://img.shields.io/badge/firebase-auth-yellow" />
+  <img alt="PayPal" src="https://img.shields.io/badge/paypal-live-blue" />
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-lightgrey" />
+</p>
 
-This project represents a real-world business application built with a strong focus on **maintainability, scalability, and long-term usability**.
+<p>
+  A production-ready web platform designed to manage construction company operations, internal workflows, and customer interactions.
+</p>
 
-🌐 **Live Demo:** https://hocompany1.com
+<p>
+  <b>Live Demo:</b> <a href="https://hocompany1.com">https://hocompany1.com</a>
+</p>
 
----
+</div>
 
-## Overview
+<hr />
 
-H&O Company centralizes multiple construction-related workflows into a single platform, reducing reliance on fragmented tools and manual processes.
+<h2>Overview</h2>
 
-The system is designed to support both **public users** and **administrative roles**, with clear separation of concerns and predictable data flow.
+<p>
+H&amp;O Company centralizes construction-related workflows into a single platform, reducing reliance on fragmented tools and manual processes.
+The system supports both <b>public users</b> and <b>administrative roles</b>, with clear separation of concerns and predictable data flow.
+</p>
 
----
+<hr />
 
-## Core Capabilities
+<h2>Core Capabilities</h2>
 
-- User authentication with Google OAuth
-- Job application submission and tracking
-- Role-based access control (admin / user)
-- Administrative dashboard
-- Calendar-based scheduling
-- Secure online payments
-- Customer reviews and ratings
-- Responsive layout for desktop and mobile devices
+<ul>
+  <li>User authentication with Google OAuth</li>
+  <li>Job application submission and tracking</li>
+  <li>Role-based access control (admin / user)</li>
+  <li>Administrative dashboard</li>
+  <li>Calendar-based scheduling</li>
+  <li>Secure online payments (PayPal)</li>
+  <li>Customer reviews and ratings</li>
+  <li>Responsive layout for desktop and mobile devices</li>
+</ul>
 
----
+<hr />
 
-## Architecture
+<h2>Architecture</h2>
 
-- **Frontend:** React (component-driven architecture)
-- **Backend:** RESTful PHP API
-- **Database:** MySQL
-- **Authentication:** Firebase + Google OAuth
-- **Payments:** PayPal
-- **State Management:** React Context and custom hooks
-- **API Communication:** Axios
-- **Scheduling:** React Big Calendar
+<ul>
+  <li><b>Frontend:</b> React (component-driven architecture)</li>
+  <li><b>Backend:</b> RESTful PHP API</li>
+  <li><b>Database:</b> MySQL</li>
+  <li><b>Authentication:</b> Firebase + Google OAuth</li>
+  <li><b>Payments:</b> PayPal</li>
+  <li><b>State Management:</b> React Context + custom hooks</li>
+  <li><b>API Communication:</b> Axios</li>
+  <li><b>Scheduling:</b> React Big Calendar</li>
+</ul>
 
+<p>
 The architecture emphasizes modularity, separation of concerns, and ease of future extension.
+</p>
 
----
+<hr />
 
-## Development Principles
+<h2>Development Principles</h2>
 
-- Clean and predictable data flow
-- Reusable and isolated UI components
-- Explicit loading and error handling
-- Responsive and accessible UI
-- Configuration-driven environment setup
+<ul>
+  <li>Clean and predictable data flow</li>
+  <li>Reusable and isolated UI components</li>
+  <li>Explicit loading and error handling</li>
+  <li>Responsive and accessible UI</li>
+  <li>Configuration-driven environment setup</li>
+</ul>
 
----
+<hr />
 
-## Team Workflow
+<h2>Team Workflow</h2>
 
+<p>
 This project follows a team-oriented development workflow inspired by real-world engineering practices:
+</p>
 
-- Feature-based branching (`feature/*`, `fix/*`, `docs/*`)
-- Pull Requests for all changes
-- Conventional commit messages
-- Stable and protected `main` branch
-- Documentation treated as part of the product
+<ul>
+  <li>Feature-based branching (<code>feature/*</code>, <code>fix/*</code>, <code>docs/*</code>)</li>
+  <li>Pull Requests for all changes</li>
+  <li>Conventional commit messages</li>
+  <li>Stable <code>main</code> branch</li>
+  <li>Documentation treated as part of the product</li>
+</ul>
 
-### Branching Strategy
+<h3>Branching Strategy</h3>
+<ul>
+  <li><code>main</code> — production-ready code</li>
+  <li><code>feature/*</code> — new features</li>
+  <li><code>fix/*</code> — bug fixes</li>
+  <li><code>docs/*</code> — documentation changes</li>
+</ul>
 
-- `main` — production-ready code
-- `feature/*` — new features
-- `fix/*` — bug fixes
-- `docs/*` — documentation changes
+<hr />
 
----
+<h2>Application Preview</h2>
 
-## Project Structure
+<p>Selected screenshots from the application.</p>
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/dashboard-overview.png" alt="Dashboard Overview" width="420" />
+      <br />
+      <sub><b>Dashboard Overview</b></sub>
+    </td>
+    <td align="center">
+      <img src="screenshots/job-application-form.png" alt="Job Application Flow" width="420" />
+      <br />
+      <sub><b>Job Application Flow</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="screenshots/pro-build.png" alt="Admin Panel" width="420" />
+      <br />
+      <sub><b>Admin Panel</b></sub>
+    </td>
+    <td align="center">
+      <img src="screenshots/payment-flow.png" alt="Payment Flow" width="420" />
+      <br />
+      <sub><b>Payment Flow</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="screenshots/company-reviews.png" alt="Customer Reviews" width="860" />
+      <br />
+      <sub><b>Customer Reviews</b></sub>
+    </td>
+  </tr>
+</table>
+
+<hr />
+
+<h2>Project Structure</h2>
 
 ```text
 api/                → PHP REST API
@@ -98,44 +160,43 @@ src/
 screenshots/        → Application screenshots
 .env.example        → Environment variables template
 
+<hr />```
 
-## 💻 Installation & Setup 
+<h2>Installation &amp; Setup</h2>
 
-### 1️⃣ Clone Repository
-```
+<h3>Clone the repository</h3>
+
+<pre><code>
 git clone https://github.com/EraCodeX/hco-company-platform.git
 cd hco-company-platform
+</code></pre>
 
+<h3>Install dependencies</h3>
 
-```
-2️⃣ Install Dependencies
-```
-Using NPM:
+<pre><code>
 npm install
-
-Using Yarn:
+# or
 yarn
-```
-3️⃣ Setup Environment Variables
-```
-Create a .env file at the project root:
+</code></pre>
 
-- REACT_APP_FIREBASE_API_KEY=your_api_key
-- REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
-- REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-- REACT_APP_PAYPAL_CLIENT_ID=your_paypal_client_id
+<h3>Environment configuration</h3>
 
-```
+<p>
+Create a <code>.env</code> file at the project root using
+<code>.env.example</code> as reference.
+</p>
 
-4️⃣ Run Locally
-```
-Using NPM:
+<pre><code>
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_PAYPAL_CLIENT_ID=your_paypal_client_id
+</code></pre>
 
+<h3>Run locally</h3>
+
+<pre><code>
 npm start
-
-Using Yarn:
-
+# or
 yarn start
-```
-Testing workflow will be added using Jest and React Testing Library.
-
+</code></pre>
