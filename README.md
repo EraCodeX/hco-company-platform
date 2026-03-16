@@ -109,26 +109,26 @@ This project follows a team-oriented development workflow inspired by real-world
 <table>
   <tr>
     <td align="center">
-      <img src="screenshots/dashboard-overview.png" alt="Dashboard Overview" width="420" />
+      <img src="screenshots/dashboard-overview.png" alt="Overview" width="420" />
       <br />
-      <sub><b>Dashboard Overview</b></sub>
+      <sub><b>Overview</b></sub>
     </td>
     <td align="center">
       <img src="screenshots/job-application-form.png" alt="Job Application Flow" width="420" />
       <br />
-      <sub><b>Job Application Flow</b></sub>
+      <sub><b> Application </b></sub>
     </td>
   </tr>
   <tr>
     <td align="center">
       <img src="screenshots/pro-build.png" alt="Admin Panel" width="420" />
       <br />
-      <sub><b>Admin Panel</b></sub>
+      <sub><b>Calculator</b></sub>
     </td>
     <td align="center">
       <img src="screenshots/payment-flow.png" alt="Payment Flow" width="420" />
       <br />
-      <sub><b>Payment Flow</b></sub>
+      <sub><b>Payment</b></sub>
     </td>
   </tr>
 </table>
@@ -154,6 +154,7 @@ screenshots/        → Application screenshots
 .env.example        → Environment variables template
 
 ```
+
 ## Installation & Setup
 
 ### Clone the repository
@@ -162,13 +163,17 @@ screenshots/        → Application screenshots
 git clone https://github.com/EraCodeX/hco-company-platform.git
 cd hco-company-platform
 ```
+
 Install dependencies
+
 ```
 npm install
 # or
 yarn
 ```
+
 Environment configuration
+
 ```
 Create a .env file at the project root using .env.example as reference.
 
@@ -177,7 +182,9 @@ REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
 REACT_APP_FIREBASE_PROJECT_ID=your_project_id
 REACT_APP_PAYPAL_CLIENT_ID=your_paypal_client_id
 ```
+
 Run locally
+
 ```
 npm start
 # or
