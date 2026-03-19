@@ -1,247 +1,363 @@
-/* ===================== Ratings Page – Enterprise Level ===================== */
+/* =========================
+   RATINGS PAGE
+========================= */
 .ratings-page {
-  padding: 60px 20px;
-  max-width: 1300px;
+  max-width: 1240px;
   margin: 0 auto;
-  font-family: 'Inter', sans-serif;
-  color: #1f2937;
+  padding: 48px 20px 72px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111827;
+  box-sizing: border-box;
 }
 
-/* Section Titles */
+/* =========================
+   HEADINGS
+========================= */
+.ratings-page h2,
 .section-title {
-  font-size: 2rem;
+  margin: 0 0 12px;
+  font-size: 30px;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, #7c620c, #b59443);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+  color: #111827;
+  letter-spacing: -0.02em;
 }
 
-.section-subtitle {
-  font-size: 1.1rem;
-  color: #6b7280;
-  text-align: center;
-  margin-top: 1rem;
+.left-column h2,
+.right-column h2 {
+  text-align: left;
 }
 
-/* ===================== Columns ===================== */
+.ratings-grid h2 {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   TOP LAYOUT
+========================= */
 .ratings-columns {
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 48px;
 }
 
+/* =========================
+   PANELS
+========================= */
 .left-column,
 .right-column {
-  flex: 1;
-  min-width: 380px;
-  background: linear-gradient(145deg, #ffffff, #fefefe);
-  border-radius: 25px;
-  padding: 40px 35px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 2px 10px rgba(17, 24, 39, 0.04);
+  box-sizing: border-box;
 }
 
-.left-column:hover,
-.right-column:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+.left-column p,
+.right-column p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #4b5563;
 }
 
-.left-column p {
-  text-align: center;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* ===================== Stars ===================== */
+/* =========================
+   STARS
+========================= */
 .stars {
-  text-align: center;
-  font-size: 36px;
-  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+  font-size: 32px;
+  line-height: 1;
+  color: #d1d5db;
+}
+
+.star {
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease;
   cursor: pointer;
-  margin-bottom: 20px;
 }
 
 .star.filled {
-  color: #ffb600;
+  color: #f59e0b;
 }
 
-/* ===================== Rating Form ===================== */
+.star:hover {
+  transform: scale(1.04);
+}
+
+/* =========================
+   FORM
+========================= */
 .rating-textarea {
   width: 100%;
   min-height: 120px;
-  padding: 18px 20px;
-  border-radius: 20px;
-  border: 1px solid #e0e0e0;
-  background: #fefefe;
-  margin-bottom: 20px;
-  font-size: 1rem;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 15px;
   line-height: 1.6;
-  resize: none;
-  transition: all 0.3s ease;
+  resize: vertical;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.rating-textarea::placeholder {
+  color: #9ca3af;
 }
 
 .rating-textarea:focus {
-  border-color: #7c620c;
-  box-shadow: 0 0 0 6px rgba(124, 98, 12, 0.2);
-  background-color: #fff;
+  outline: none;
+  border-color: #111827;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
 }
 
-/* Submit Button */
 .rating-btn {
   width: 100%;
-  padding: 16px 0;
+  padding: 13px 18px;
   border: none;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #7c620c, #b59443);
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.1rem;
+  border-radius: 10px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
 }
 
 .rating-btn:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 12px 28px rgba(124, 98, 12, 0.35);
+  background: #000000;
 }
 
-/* ===================== Average Rating ===================== */
+.rating-btn:active {
+  transform: scale(0.99);
+}
+
+/* =========================
+   SUMMARY CARD
+========================= */
 .average-rating {
-  text-align: center;
-  margin-bottom: 35px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #f1f5f9;
 }
 
 .avg-score {
-  font-size: 4.2rem;
+  display: block;
+  font-size: 52px;
   font-weight: 700;
-  color: #7c620c;
-  margin-bottom: 12px;
+  line-height: 1;
+  color: #111827;
+  margin-bottom: 10px;
 }
 
-/* ===================== Progress Bars ===================== */
+.average-rating .stars {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.average-rating p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* =========================
+   DISTRIBUTION BARS
+========================= */
 .rating-progress {
-  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .rating-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 12px;
 }
 
 .rating-row p {
-  width: 35px;
+  font-size: 14px;
   font-weight: 600;
+  color: #374151;
 }
 
 .progress {
-  flex: 1;
-  height: 14px;
-  border-radius: 14px;
-  background: #e0e0e0;
+  width: 100%;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
   overflow: hidden;
 }
 
 .progress div {
   height: 100%;
-  border-radius: 14px;
-  background: linear-gradient(90deg, #b59443, #7c620c);
-  transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  background: #111827;
+  border-radius: 999px;
 }
 
-/* ===================== Reviews ===================== */
+/* =========================
+   REVIEWS SECTION
+========================= */
+.ratings-grid {
+  margin-top: 8px;
+}
+
 .ratings-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
-.ratings-grid .stars {
-  text-align: start;
-}
-
+/* =========================
+   REVIEW CARD
+========================= */
 .rating-item {
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(145deg, #ffffff, #fcfcfc);
-  border-radius: 25px;
-  padding: 25px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.03);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  box-sizing: border-box;
 }
 
 .rating-item:hover {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: #d1d5db;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.06);
+  transform: translateY(-2px);
 }
 
 .rating-avatar {
-  width: 60px;
-  height: 60px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 18px;
+  display: block;
+  margin-bottom: 12px;
 }
 
 .rating-email {
+  margin: 0 0 10px;
+  font-size: 15px;
   font-weight: 600;
-  margin-bottom: 10px;
+  color: #111827;
+  word-break: break-word;
+}
+
+.ratings-grid .stars {
+  margin: 0 0 12px;
+  font-size: 20px;
+  justify-content: flex-start;
 }
 
 .rating-comment {
-  font-size: 1rem;
-  color: #4b5563;
-  background: #f9f9f9;
-  padding: 16px 20px;
-  border-radius: 20px;
+  margin: 0;
+  font-size: 14px;
   line-height: 1.7;
-  flex-grow: 1;
+  color: #4b5563;
 }
 
-/* ===================== Responsive ===================== */
-@media (max-width: 1024px) {
+/* =========================
+   FEEDBACK MESSAGE
+========================= */
+.message {
+  max-width: 520px;
+  margin: 24px auto 0;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #166534;
+  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.03);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1100px) {
+  .ratings-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
   .ratings-columns {
-    flex-direction: column;
-    gap: 35px;
+    grid-template-columns: 1fr;
   }
 
-  .ratings-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+  .left-column,
+  .right-column {
+    padding: 24px;
   }
 }
 
-@media (max-width: 600px) {
-  .ratings-list {
-    grid-template-columns: 1fr;
-    gap: 15px;
+@media (max-width: 640px) {
+  .ratings-page {
+    padding: 36px 16px 56px;
+  }
+
+  .ratings-page h2,
+  .section-title {
+    font-size: 24px;
   }
 
   .avg-score {
-    font-size: 3.2rem;
+    font-size: 42px;
   }
 
   .stars {
-    font-size: 30px;
+    font-size: 28px;
   }
 
-  .rating-comment {
-    text-align: center;
+  .ratings-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .rating-avatar {
-    margin: 0 auto 18px auto;
+  .rating-item {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-column,
+  .right-column {
+    padding: 18px;
+    border-radius: 12px;
   }
 
-  .progress {
-    width: 70%;
-    margin: 0 auto;
+  .rating-row {
+    grid-template-columns: 38px 1fr;
+    gap: 10px;
+  }
+
+  .rating-textarea,
+  .rating-btn,
+  .rating-comment,
+  .rating-email {
+    font-size: 14px;
   }
 }
