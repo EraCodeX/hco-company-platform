@@ -26,13 +26,13 @@ This project reflects a real-world business application built with **scalability
     </td>
     <td align="center">
       <img src="screenshots/application.png" alt="Application" width="300"/><br/>
-      <strong>Job Application Flow</strong>
+      <strong>Application</strong>
     </td>
   </tr>
   <tr>
     <td align="center">
       <img src="screenshots/payment.png" alt="Payment" width="300"/><br/>
-      <strong>Admin Panel</strong>
+      <strong>Payment</strong>
     </td>
   </tr>
 </table>
