@@ -40,7 +40,9 @@
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.5px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, letter-spacing 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    letter-spacing 0.3s ease;
 }
 .overlay-content p:hover {
   transform: scale(1.05);
@@ -60,7 +62,9 @@
   padding: 25px;
   border-radius: 12px;
   color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .info-column:hover {
   transform: translateY(-8px);
@@ -87,78 +91,98 @@
   background: linear-gradient(135deg, #2e2641, #ff6b81);
 } /* ================== Services Section (Enterprise Level) ================== */ /* Services Section */
 .services-section {
-  padding: 40px 20px;
-  margin: 40px 0;
+  padding: 28px 16px;
+  margin: 28px 0;
 }
+
 .services-section h2 {
   text-align: center;
-  color: rgba(44, 47, 49, 0.3);
-  font-size: 3.2em;
-  margin-bottom: 40px;
+  color: rgba(31, 41, 55, 0.35);
+  font-size: 2.4rem;
+  margin-bottom: 28px;
   text-transform: uppercase;
-  text-shadow: 2px 2px 6px rgba(59, 51, 4, 0.3);
+  text-shadow: 1px 1px 4px rgba(59, 51, 4, 0.18);
   font-weight: 700;
+  letter-spacing: 0.04em;
   pointer-events: none;
 }
-.services-list {
+
+  .services-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
+  
+
 .service-item {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 14px;
+  box-shadow:
+    0 8px 18px rgba(15, 23, 42, 0.08),
+    0 2px 8px rgba(15, 23, 42, 0.05);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
   text-align: center;
   position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
+
 .service-item::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  height: 4px;
+  height: 3px;
   background-color: #facc15;
-  border-radius: 6px;
+  border-radius: 999px;
 }
+
 .service-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  transform: translateY(-5px);
+  box-shadow:
+    0 14px 28px rgba(15, 23, 42, 0.12),
+    0 4px 10px rgba(15, 23, 42, 0.06);
 }
+
 .service-item i {
-  font-size: 28px;
+  font-size: 20px;
   color: #facc15;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 70px;
-  height: 70px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  border: 2px solid #facc15;
-  background: #fff;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  border: 1.5px solid #facc15;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+  transition: all 0.28s ease;
 }
+
 .service-item i:hover {
   background: #facc15;
-  color: #fff;
-  transform: scale(1.15);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.12);
 }
+
 .service-item h3 {
-  color: #151616;
-  font-size: 1.2rem;
-  margin: 15px 0 10px;
+  color: #111827;
+  font-size: 1.02rem;
+  margin: 10px 0 8px;
   font-weight: 600;
 }
+
 .service-item p {
-  color: #333;
-  line-height: 1.7;
-  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  margin: 0;
 } /* ===================== Activities Section ===================== */
 .activities-section {
   padding: 40px 20px;
@@ -214,8 +238,8 @@
   margin-top: 35px;
 }
 .btn1 {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   background-color: #facc15;
   color: #fff;
   border: none;
@@ -235,7 +259,7 @@
   background-color: #eab308;
 } /* Values Section */
 .values-section {
-  padding: 40px 20px;
+  padding: 20px 10px;
   background-color: #f9f9f9;
   text-align: center;
 }
@@ -255,7 +279,9 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   padding: 25px;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .value-item:hover {
   transform: translateY(-8px);
