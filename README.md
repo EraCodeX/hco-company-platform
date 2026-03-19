@@ -31,14 +31,8 @@ This project reflects a real-world business application built with **scalability
   </tr>
   <tr>
     <td align="center">
-      <img src="screenshots/payment.png" alt="Admin Panel" width="300"/><br/>
+      <img src="screenshots/payment.png" alt="Payment" width="300"/><br/>
       <strong>Admin Panel</strong>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="screenshots/company-reviews.png" alt="Reviews" width="620"/><br/>
-      <strong>Customer Reviews</strong>
     </td>
   </tr>
 </table>
