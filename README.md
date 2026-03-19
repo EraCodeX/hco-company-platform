@@ -21,22 +21,18 @@ This project reflects a real-world business application built with **scalability
 <table>
   <tr>
     <td align="center">
-      <img src="screenshots/dashboard-overview.png" alt="Dashboard" width="300"/><br/>
+      <img src="screenshots/dashboard.png" alt="Dashboard" width="300"/><br/>
       <strong>Dashboard Overview</strong>
     </td>
     <td align="center">
-      <img src="screenshots/job-application-form.png" alt="Application" width="300"/><br/>
+      <img src="screenshots/application.png" alt="Application" width="300"/><br/>
       <strong>Job Application Flow</strong>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="screenshots/pro-build.png" alt="Admin Panel" width="300"/><br/>
+      <img src="screenshots/payment.png" alt="Admin Panel" width="300"/><br/>
       <strong>Admin Panel</strong>
-    </td>
-    <td align="center">
-      <img src="screenshots/payment-flow.png" alt="Payment" width="300"/><br/>
-      <strong>Payment Flow</strong>
     </td>
   </tr>
   <tr>
