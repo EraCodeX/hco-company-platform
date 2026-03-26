@@ -18,7 +18,7 @@ function Jobs() {
 
   // Filtrimi i punëve sipas search term
   const filteredJobs = jobListings.filter((job) =>
-    t(job.titleKey).toLowerCase().includes(searchTerm.toLowerCase())
+    t(job.titleKey).toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   // Kontrollo nëse ka rezultate
@@ -34,7 +34,7 @@ function Jobs() {
 
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_BASE}/api/get-application.php?email=${user.email}`
+          `${process.env.REACT_APP_API_BASE}/api/get-application.php?email=${user.email}`,
         );
         const data = await response.json();
         if (data.success) setApplications(data.applications);
@@ -72,7 +72,7 @@ function Jobs() {
       </div>
 
       {/* Lista e punëve */}
-      <h2>{t("availableJobs")}</h2>
+      <h2>{t("OpenPositions")}</h2>
       <div className="job-listings">
         {filteredJobs.map((job) => (
           <div className="job-card" key={job.id}>
@@ -103,8 +103,9 @@ function Jobs() {
         {!user ? (
           <div className="login-prompt-wrapper">
             <p>
-              {t("You have not applied to any jobs yet. Please log in to apply.")
-              }
+              {t(
+                "You have not applied to any jobs yet. Please log in to apply.",
+              )}
             </p>
           </div>
         ) : applications.length === 0 ? (
@@ -117,7 +118,7 @@ function Jobs() {
         ) : (
           applications.map((app, index) => {
             const differenceInDays = Math.floor(
-              (new Date() - new Date(app.created_at)) / (1000 * 3600 * 24)
+              (new Date() - new Date(app.created_at)) / (1000 * 3600 * 24),
             );
             const status = differenceInDays <= 30 ? t("pending") : t("closed");
             const statusClass = differenceInDays <= 30 ? "pending" : "closed";
