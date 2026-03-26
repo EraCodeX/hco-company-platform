@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import "../styles/CookieConsent.css";
 import { useLanguage } from "../context/LanguageContext";
+import loadChatbase from "./ChatbaseLoader";
 
 const CookieConsent = () => {
   const { t } = useLanguage();
+
   const [isVisible, setIsVisible] = useState(false);
   const [cookiesPreferences, setCookiesPreferences] = useState({
     essential: true,
@@ -14,43 +16,90 @@ const CookieConsent = () => {
 
   useEffect(() => {
     const consent = Cookies.get("cookieConsent");
+    const savedPreferences = Cookies.get("cookiePreferences");
+
     if (!consent) {
       setIsVisible(true);
-    } else {
-      const savedPreferences = JSON.parse(
-        Cookies.get("cookiePreferences") || "{}"
-      );
-      setCookiesPreferences(savedPreferences);
+      document.body.classList.add("no-scroll");
+      document.body.classList.add("hide-chatbase");
+      return;
     }
+
+    if (savedPreferences) {
+      try {
+        const parsedPreferences = JSON.parse(savedPreferences);
+
+        const nextPreferences = {
+          essential: true,
+          analytics: !!parsedPreferences.analytics,
+          marketing: !!parsedPreferences.marketing,
+        };
+
+        setCookiesPreferences(nextPreferences);
+
+        if (nextPreferences.marketing) {
+          document.body.classList.remove("hide-chatbase");
+          loadChatbase();
+        } else {
+          document.body.classList.add("hide-chatbase");
+        }
+      } catch (error) {
+        console.error("Failed to parse cookie preferences:", error);
+        document.body.classList.add("hide-chatbase");
+      }
+    } else {
+      document.body.classList.add("hide-chatbase");
+    }
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
   }, []);
 
-  // Funksionet për ruajtje
   const handleAcceptAll = () => {
-    Cookies.set("cookieConsent", "true", { expires: 365 });
-    Cookies.set(
-      "cookiePreferences",
-      JSON.stringify({
-        essential: true,
-        analytics: true,
-        marketing: true,
-      }),
-      { expires: 365 }
-    );
+    const allAccepted = {
+      essential: true,
+      analytics: true,
+      marketing: true,
+    };
+
+    Cookies.set("cookieConsent", "true", { expires: 365, path: "/" });
+    Cookies.set("cookiePreferences", JSON.stringify(allAccepted), {
+      expires: 365,
+      path: "/",
+    });
+
+    setCookiesPreferences(allAccepted);
+    document.body.classList.remove("no-scroll");
+    document.body.classList.remove("hide-chatbase");
+    loadChatbase();
     setIsVisible(false);
   };
 
   const handleSavePreferences = () => {
-    Cookies.set("cookieConsent", "true", { expires: 365 });
+    Cookies.set("cookieConsent", "true", { expires: 365, path: "/" });
     Cookies.set("cookiePreferences", JSON.stringify(cookiesPreferences), {
       expires: 365,
+      path: "/",
     });
+
+    document.body.classList.remove("no-scroll");
+
+    if (cookiesPreferences.marketing) {
+      document.body.classList.remove("hide-chatbase");
+      loadChatbase();
+    } else {
+      document.body.classList.add("hide-chatbase");
+    }
+
     setIsVisible(false);
   };
 
   const handlePreferenceChange = (e) => {
     const { name, checked } = e.target;
-    setCookiesPreferences((prevState) => ({
-      ...prevState,
+
+    setCookiesPreferences((prev) => ({
+      ...prev,
       [name]: checked,
     }));
   };
@@ -58,42 +107,72 @@ const CookieConsent = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="cookie-banner">
-      <p>{t("cookieBannerMessage")}</p>
-      <div className="cookie-options">
-        <div>
-          <input
-            type="checkbox"
-            name="essential"
-            checked={cookiesPreferences.essential}
-            disabled
-          />
-          <label>{t("essentialCookies")}</label>
+    <>
+      <div className="cookie-overlay"></div>
+
+      <div
+        className="cookie-bar"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cookie-title"
+      >
+        <div className="cookie-left">
+          <strong id="cookie-title">
+            {t("cookieTitle") || "We use cookies"}
+          </strong>
+
+          <p>
+            {t("cookieBannerMessage") ||
+              "We use cookies to improve your experience. Please choose your preferences:"}
+          </p>
         </div>
-        <div>
-          <input
-            type="checkbox"
-            name="analytics"
-            checked={cookiesPreferences.analytics}
-            onChange={handlePreferenceChange}
-          />
-          <label>{t("analyticsCookies")}</label>
+
+        <div className="cookie-options">
+          <label>
+            <input type="checkbox" checked disabled />
+            {t("essentialCookies") || "Essential Cookies"}
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="analytics"
+              checked={cookiesPreferences.analytics}
+              onChange={handlePreferenceChange}
+            />
+            {t("analyticsCookies") || "Analytics Cookies"}
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="marketing"
+              checked={cookiesPreferences.marketing}
+              onChange={handlePreferenceChange}
+            />
+            {t("marketingCookies") || "Marketing Cookies"}
+          </label>
         </div>
-        <div>
-          <input
-            type="checkbox"
-            name="marketing"
-            checked={cookiesPreferences.marketing}
-            onChange={handlePreferenceChange}
-          />
-          <label>{t("marketingCookies")}</label>
+
+        <div className="cookie-buttons">
+          <button
+            type="button"
+            className="cookie-save-btn"
+            onClick={handleSavePreferences}
+          >
+            {t("savePreferences") || "Save"}
+          </button>
+
+          <button
+            type="button"
+            className="cookie-accept-btn"
+            onClick={handleAcceptAll}
+          >
+            {t("acceptAll") || "Accept all"}
+          </button>
         </div>
       </div>
-      <div className="cookie-banner-button">
-        <button onClick={handleSavePreferences}>{t("savePreferences")}</button>
-        <button onClick={handleAcceptAll}>{t("acceptAll")}</button>
-      </div>
-    </div>
+    </>
   );
 };
 
