@@ -14,50 +14,68 @@ function Jobs() {
   const [searchTerm, setSearchTerm] = useState("");
   const [applications, setApplications] = useState([]);
   const [showMessage, setShowMessage] = useState(false);
+  const [loadingApplications, setLoadingApplications] = useState(true);
   const navigate = useNavigate();
 
-  // Filtrimi i punëve sipas search term
   const filteredJobs = jobListings.filter((job) =>
     t(job.titleKey).toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
-  // Kontrollo nëse ka rezultate
   useEffect(() => {
-    if (filteredJobs.length === 0) setShowMessage(true);
-    else setShowMessage(false);
-  }, [searchTerm, filteredJobs]);
+    setShowMessage(filteredJobs.length === 0);
+  }, [filteredJobs]);
 
-  // Marrja e aplikimeve të përdoruesit nga backend
   useEffect(() => {
     const fetchApplications = async () => {
-      if (!user || user.email === "erahidaj@gmail.com") return;
+      if (!user || user.email === "erahidaj@gmail.com") {
+        setApplications([]);
+        setLoadingApplications(false);
+        return;
+      }
 
       try {
+        setLoadingApplications(true);
+
         const response = await fetch(
-          `${process.env.REACT_APP_API_BASE}/api/get-application.php?email=${user.email}`,
+          `${process.env.REACT_APP_API_BASE}/api/get-application.php?email=${encodeURIComponent(user.email)}`,
         );
         const data = await response.json();
-        if (data.success) setApplications(data.applications);
-        else setApplications([]);
+
+        if (data.success) {
+          setApplications(data.applications);
+        } else {
+          setApplications([]);
+        }
       } catch (error) {
         console.error("Error fetching applications:", error);
         setApplications([]);
+      } finally {
+        setLoadingApplications(false);
       }
     };
 
     fetchApplications();
   }, [user]);
 
-  // Navigimi në faqen e aplikimit
   const handleApplyNow = (jobTitle) => {
     navigate("/application", { state: { jobTitle } });
+  };
+
+  const ApplicationSkeleton = () => {
+    return (
+      <div className="application-card skeleton-card">
+        <div className="skeleton skeleton-title"></div>
+        <div className="skeleton skeleton-line"></div>
+        <div className="skeleton skeleton-line"></div>
+        <div className="skeleton skeleton-status"></div>
+      </div>
+    );
   };
 
   return (
     <div>
       <Header />
 
-      {/* Search */}
       <div className="search-container">
         <div className="search-wrapper">
           <input
@@ -71,8 +89,8 @@ function Jobs() {
         </div>
       </div>
 
-      {/* Lista e punëve */}
       <h2>{t("OpenPositions")}</h2>
+
       <div className="job-listings">
         {filteredJobs.map((job) => (
           <div className="job-card" key={job.id}>
@@ -89,14 +107,12 @@ function Jobs() {
         ))}
       </div>
 
-      {/* Mesazh kur nuk ka punë */}
       {showMessage && (
         <div className="no-jobs-message">
           <p>{t("noJobsFound")}</p>
         </div>
       )}
 
-      {/* Aplikimet e përdoruesit */}
       <div className="applications-section">
         <h2>{t("yourApplications")}:</h2>
 
@@ -108,6 +124,12 @@ function Jobs() {
               )}
             </p>
           </div>
+        ) : loadingApplications ? (
+          <>
+            <ApplicationSkeleton />
+            <ApplicationSkeleton />
+            <ApplicationSkeleton />
+          </>
         ) : applications.length === 0 ? (
           <div className="no-applications-wrapper">
             <p>
