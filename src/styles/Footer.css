@@ -1,6 +1,6 @@
 /* ===================== Footer – Enterprise Level ===================== */
 .footer {
-  background: linear-gradient(180deg, #020617 0%, #0b1120 100%);
+  background: linear-gradient(180deg, #020617 0%, #071225 55%, #0b1120 100%);
   padding: 80px 24px 36px;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
   font-family: "Inter", sans-serif;
   color: #e5e7eb;
   width: 100%;
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.18);
+  box-shadow: rgba(255, 255, 255, 0.08);
 }
 
 /* ===================== Footer Content Grid ===================== */

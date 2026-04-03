@@ -2,9 +2,8 @@
 
 export const translations = {
   en: {
-    welcome: "Welcome to our website!",
-    heroSubtitle:
-      "Delivering innovative projects with quality, safety, and precision.",
+    welcome: "Building the future.",
+    heroSubtitle: "Quality. Precision. Trust.",
     services: "Services",
     ourActivity: "Our Activity",
     ourValues: "Our Values",
@@ -82,7 +81,7 @@ export const translations = {
     jobs: "Jobs",
     reviews: "Reviews",
     contact: "Contact",
-    SigIn: "SigIn",
+    signIn: "Sign in",
     //Footer
     contacts: "Contacts",
     address:
@@ -606,9 +605,8 @@ export const translations = {
   },
 
   sq: {
-    welcome: "Mirësevini në faqen tonë!",
-    heroSubtitle:
-      "Realizojmë projekte inovative me cilësi, siguri dhe precizion.",
+    welcome: "Ndërtojmë të ardhmen.",
+    heroSubtitle: "Cilësi. Precizion. Besim.",
     services: "Shërbimet",
     ourActivity: "Aktiviteti Ynë",
     ourValues: "Vlerat Tona",
@@ -686,7 +684,7 @@ export const translations = {
     jobs: "Punët",
     reviews: "Rishikimet",
     contact: "Kontakt",
-    SigIn: "Logohu",
+    signIn: "Logohu",
     //Footer
     contacts: "Kontakti",
     address: "Rruga Kajo Karafili, Ndërtesa BimBashi, Kat 4, Tiranë, Shqipëri",
