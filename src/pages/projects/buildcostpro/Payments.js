@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "../../../styles/Payments.css";
-import paypalLogo from "../../../assets/images/paypal-logo.png";
-import stripeLogo from "../../../assets/images/stripe-logo.png";
+import "../../../styles/payments-page.css";
+import paypalLogo from "../../../assets/images/payment-paypal-logo.webp";
+import stripeLogo from "../../../assets/images/payment-stripe-logo.webp";
 
 const Payments = () => {
   const location = useLocation();
@@ -35,7 +35,7 @@ const Payments = () => {
           console.error("Error saving payment:", error);
         });
     },
-    [selectedMethod, totalCost, objectType, area]
+    [selectedMethod, totalCost, objectType, area],
   );
 
   const renderPayPalButton = useCallback(() => {
@@ -197,8 +197,3 @@ const Payments = () => {
 };
 
 export default Payments;
-
-
-
-
-

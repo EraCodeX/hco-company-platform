@@ -1,80 +1,80 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import CookieConsent from "./components/CookieConsent";
-import DisableBrowserBack from "./components/DisableBrowserBack";
-
+import CookieConsentBanner from "./components/CookieConsentBanner";
 import HomePage from "./pages/home/HomePage";
-import Features from "./pages/home/Features";
-import Dashboard from "./pages/home/Dashboard";
+import FeaturesSection from "./pages/home/FeaturesSection";
+import DashboardPage from "./pages/home/DashboardPage";
 
-import Projects from "./pages/projects/Projects";
-import CostCalculator from "./pages/projects/BuildCostPro";
-import Materials from "./pages/projects/Materials";
-import Calendar from "./pages/projects/Calendar";
+import ProjectsPage from "./pages/projects/ProjectsPage";
+import BuildCostCalculator from "./pages/projects/BuildCostCalculator";
+import MaterialsPage from "./pages/projects/MaterialsPage";
+import ProjectCalendar from "./pages/projects/ProjectCalendar";
 import Payments from "./pages/projects/buildcostpro/Payments";
 import Confirmation from "./pages/projects/buildcostpro/Confirmation";
 
-import Jobs from "./pages/Jobs";
-import Contact from "./pages/Contact";
-import Reviews from "./pages/Reviews";
-import About from "./pages/About";
-import Help from "./pages/help/Help";
+import JobsPage from "./pages/JobsPage";
+import ContactPage from "./pages/ContactPage";
+import ReviewsPage from "./pages/ReviewsPage";
+import AboutPage from "./pages/AboutPage";
+import HelpPage from "./pages/help/HelpPage";
 
-import Application from "./features/Applications/Application";
+import ApplicationForm from "./features/Applications/ApplicationForm";
 import ApplicationsList from "./features/Applications/ApplicationsList";
 
 import { AuthProvider } from "./context/AuthContext";
 import { LanguageProvider } from "./context/LanguageContext";
 
-import "./styles/index.css";
+import "./styles/global.css";
 
 function App() {
   useEffect(() => {
-  if (window.AOS) {
-    window.AOS.init({
-      duration: 3000,
-      easing: "ease-in-out",
-      once: true,
-    });
-  }
-}, []);
+    const isMobile = window.innerWidth <= 768;
+
+    if (window.AOS && !isMobile) {
+      window.AOS.init({
+        duration: 700,
+        easing: "ease-out",
+        once: true,
+        offset: 80,
+      });
+    }
+  }, []);
 
   return (
-    <Router>
-      <DisableBrowserBack />
+    <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+      <Router>
+        <LanguageProvider>
+          <AuthProvider>
+            <CookieConsentBanner />
 
-      <LanguageProvider>
-        <AuthProvider>
-          <CookieConsent />
-
-          <div className="main-content">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/buildcostpro" element={<CostCalculator />} />
-              <Route path="/materials" element={<Materials />} />
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/features" element={<Features />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/jobs" element={<Jobs />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/application" element={<Application />} />
-              <Route path="/applications" element={<ApplicationsList />} />
-              <Route path="/payments" element={<Payments />} />
-              <Route path="/reviews" element={<Reviews />} />
-              <Route path="/help" element={<Help />} />
-              <Route path="/confirmation" element={<Confirmation />} />
-            </Routes>
-          </div>
-        </AuthProvider>
-      </LanguageProvider>
-    </Router>
+            <div className="main-content">
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/projects" element={<ProjectsPage />} />
+                <Route path="/buildcostpro" element={<BuildCostCalculator />} />
+                <Route path="/materials" element={<MaterialsPage />} />
+                <Route path="/calendar" element={<ProjectCalendar />} />
+                <Route path="/features" element={<FeaturesSection />} />
+                <Route path="/dashboard" element={<DashboardPage />} />
+                <Route path="/jobs" element={<JobsPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/application" element={<ApplicationForm />} />
+                <Route path="/applications" element={<ApplicationsList />} />
+                <Route path="/payments" element={<Payments />} />
+                <Route path="/reviews" element={<ReviewsPage />} />
+                <Route path="/help" element={<HelpPage />} />
+                <Route path="/confirmation" element={<Confirmation />} />
+              </Routes>
+            </div>
+          </AuthProvider>
+        </LanguageProvider>
+      </Router>
+    </GoogleOAuthProvider>
   );
 }
 
 export default App;
-
-

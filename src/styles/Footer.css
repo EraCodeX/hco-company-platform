@@ -1,85 +1,109 @@
 /* ===================== Footer – Enterprise Level ===================== */
 .footer {
-  background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
-  padding: 80px 20px 40px 20px;
+  background: linear-gradient(180deg, #020617 0%, #071225 55%, #0b1120 100%);
+  padding: 80px 24px 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 4px solid #ffdd57;
-  font-family: 'Inter', sans-serif;
+  border-top: 2px solid rgba(250, 204, 21, 0.95);
+  font-family: "Inter", sans-serif;
   color: #e5e7eb;
+  width: 100%;
+  box-shadow: rgba(255, 255, 255, 0.08);
 }
 
-/* Footer Content Grid */
+/* ===================== Footer Content Grid ===================== */
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 50px;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 48px;
   width: 100%;
   max-width: 1400px;
-  margin-bottom: 50px;
+  margin-bottom: 42px;
 }
 
+/* ===================== Footer Column ===================== */
 .footer-column {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* Logo Column */
 .footer-column h1 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   color: #ffffff;
+  letter-spacing: 0.2px;
 }
 
-.logo img {
-  max-width: 160px;
-  object-fit: contain;
-  filter: brightness(1.1);
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.logo img:hover {
-  transform: scale(1.08);
-  filter: brightness(1.2);
-}
-
-/* Headings in Columns */
 .footer-column h3,
 .footer-column h4 {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 20px;
-  color: #ffdd57;
-  letter-spacing: 0.5px;
+  margin: 0 0 20px;
+  color: #facc15;
+  letter-spacing: 0.3px;
 }
 
-/* Paragraphs and Contact Info */
-.footer-column p {
+/* ===================== Logo ===================== */
+.footer .logo {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+}
+
+.footer .logo img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.footer .logo img:hover {
+  transform: scale(1.03);
+  opacity: 0.96;
+}
+
+/* ===================== Text / Contact ===================== */
+.footer-column p {
+  display: flex;
+  align-items: flex-start;
   gap: 10px;
   margin: 10px 0;
   font-size: 15px;
   font-weight: 500;
-  color: #d1d5db;
-  line-height: 1.7;
-  transition: color 0.3s ease, transform 0.2s ease;
+  color: #cbd5e1;
+  line-height: 1.75;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-column p:hover {
+  color: #ffffff;
 }
 
 .footer-column p i {
   font-size: 16px;
-  color: #ffdd57;
-  min-width: 20px;
+  color: #facc15;
+  min-width: 18px;
+  margin-top: 4px;
 }
 
-/* Navigation Links */
+/* ===================== Footer Navigation ===================== */
+.footer-nav {
+  width: 100%;
+}
+
 .footer-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .footer-nav li {
@@ -88,70 +112,79 @@
 
 .footer-nav a {
   text-decoration: none;
-  color: #d1d5db;
+  color: #dbe4ee;
   font-size: 15px;
   font-weight: 500;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-nav a i {
+  color: #facc15;
+  min-width: 18px;
 }
 
 .footer-nav a:hover {
-  color: #ffdd57;
-  transform: translateX(6px);
+  color: #facc15;
+  transform: translateX(4px);
 }
 
-/* Map Container */
+/* ===================== Map ===================== */
 .map-container {
-  margin-top: 20px;
-  border-radius: 20px;
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: #0f172a;
 }
 
 .map-container iframe {
   width: 100%;
   height: 320px;
   border: none;
-  transition: transform 0.3s ease;
+  display: block;
 }
 
-.map-container iframe:hover {
-  transform: scale(1.02);
-}
-
-/* Footer Bottom */
+/* ===================== Footer Bottom ===================== */
 .footer-bottom {
-  text-align: center;
-  margin-top: 60px;
   width: 100%;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  padding: 15px 0;
+  max-width: 1400px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 18px;
+  text-align: center;
   font-size: 14px;
-  color: #d1d5db;
-  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: #94a3b8;
+  letter-spacing: 0.2px;
 }
 
-/* ===================== Responsive ===================== */
-@media (max-width: 1024px) {
-  .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
-    padding: 20px;
+/* ===================== Tablet ===================== */
+@media (max-width: 1100px) {
+  .footer {
+    padding: 64px 22px 30px;
   }
 
-  .footer-column h1,
+  .footer-content {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 34px;
+  }
+
+  .footer-column h1 {
+    font-size: 20px;
+  }
+
   .footer-column h3,
   .footer-column h4 {
-    font-size: 16px;
-    color: #ffdd57;
+    font-size: 17px;
   }
 
-  .footer-column p {
-    font-size: 14px;
-  }
-
+  .footer-column p,
   .footer-nav a {
     font-size: 14px;
   }
@@ -161,17 +194,71 @@
   }
 }
 
-@media (max-width: 600px) {
+/* ===================== Mobile ===================== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 56px 18px 28px;
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 30px;
+    margin-bottom: 32px;
   }
 
-  .logo img {
-    max-width: 140px;
+  .footer-column {
+    align-items: flex-start;
   }
 
-  .footer-column h1,
+  .footer-column h1 {
+    font-size: 19px;
+    margin-bottom: 16px;
+  }
+
+  .footer-column h3,
+  .footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .footer-column p,
+  .footer-nav a {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .footer .logo img {
+    max-width: 135px;
+  }
+
+  .map-container {
+    border-radius: 16px;
+  }
+
+  .map-container iframe {
+    height: 240px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+    padding-top: 16px;
+  }
+}
+
+/* ===================== Small Mobile ===================== */
+@media (max-width: 480px) {
+  .footer {
+    padding: 48px 16px 24px;
+  }
+
+  .footer-content {
+    gap: 26px;
+  }
+
+  .footer-column h1 {
+    font-size: 18px;
+  }
+
   .footer-column h3,
   .footer-column h4 {
     font-size: 15px;

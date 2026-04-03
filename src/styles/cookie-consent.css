@@ -1,0 +1,230 @@
+/* ===================== Cookie Bar ===================== */
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 10000;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.08);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  box-sizing: border-box;
+}
+
+/* ===================== Left Text ===================== */
+.cookie-left {
+  flex: 1;
+  min-width: 220px;
+  max-width: 460px;
+}
+
+.cookie-left strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.cookie-left p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* ===================== Options ===================== */
+.cookie-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex: 1;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.cookie-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  cursor: pointer;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.cookie-options input {
+  width: 16px;
+  height: 16px;
+  accent-color: #111827;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.cookie-options input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===================== Buttons ===================== */
+.cookie-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* reset default browser styles */
+.cookie-buttons button {
+  appearance: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  height: 42px;
+  padding: 0 18px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+/* Save */
+.cookie-save-btn {
+  background: #ffffff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.cookie-save-btn:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+  color: #111827;
+}
+
+/* Accept */
+.cookie-accept-btn {
+  background: #111827;
+  color: white;
+  border: 1px solid #111827;
+}
+
+.cookie-accept-btn:hover {
+  background: #000000;
+}
+
+/* ===================== hide chatbase until consent ===================== */
+.hide-chatbase iframe[src*="chatbase"],
+.hide-chatbase #chatbase-bubble-button,
+.hide-chatbase #chatbase-bubble-window,
+.hide-chatbase .chatbase-bubble,
+.hide-chatbase .chatbase-button {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* ===================== Large Tablet ===================== */
+@media (max-width: 1200px) {
+  .cookie-bar {
+    padding: 18px 24px;
+    gap: 16px;
+  }
+
+  .cookie-left {
+    max-width: 100%;
+  }
+
+  .cookie-options {
+    gap: 16px;
+    flex-wrap: wrap;
+    white-space: normal;
+    justify-content: flex-start;
+  }
+}
+
+/* ===================== Tablet ===================== */
+@media (max-width: 992px) {
+  .cookie-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .cookie-options {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .cookie-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* ===================== Mobile ===================== */
+@media (max-width: 600px) {
+  .cookie-bar {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .cookie-left strong {
+    font-size: 14px;
+  }
+
+  .cookie-left p {
+    font-size: 13px;
+  }
+
+  .cookie-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .cookie-options label {
+    font-size: 13px;
+  }
+
+  .cookie-buttons {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .cookie-buttons button {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+}
