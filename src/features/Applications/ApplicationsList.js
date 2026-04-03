@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/ApplicationList.css";
+import "../../styles/application-list.css";
 
 function ApplicationsList() {
   const [applications, setApplications] = useState([]);
@@ -53,8 +53,9 @@ function ApplicationsList() {
   const handleSendEmail = () => {
     if (selectedApp) {
       const emailBody = `Hello,\n\nI have received the application of ${selectedApp.name} for the position of ${selectedApp.jobTitle}.\n\nYou can contact them at the email address: ${selectedApp.email}\n\nThank you!`;
-      const mailtoLink = `mailto:?subject=Application for ${selectedApp.jobTitle
-        }&body=${encodeURIComponent(emailBody)}`;
+      const mailtoLink = `mailto:?subject=Application for ${
+        selectedApp.jobTitle
+      }&body=${encodeURIComponent(emailBody)}`;
       window.location.href = mailtoLink;
     }
   };
@@ -108,7 +109,7 @@ function ApplicationsList() {
                   <td>
                     <a
                       href={`${process.env.REACT_APP_API_BASE}/api/uploads/${encodeURIComponent(
-                        app.resume.split("/").pop()
+                        app.resume.split("/").pop(),
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"

@@ -10,7 +10,7 @@ import {
   doc,
 } from "firebase/firestore";
 import { Bell, X } from "lucide-react";
-import "../styles/notificationDropdown.css";
+import "../styles/notification-dropdown.css";
 import { useLanguage } from "../context/LanguageContext";
 import { AuthContext } from "../context/AuthContext";
 
@@ -58,6 +58,7 @@ export const NotificationDropdown = ({
       if (window.innerWidth > 1024) {
         setShowFullPage(false);
         document.body.classList.remove("notifications-open");
+        document.body.style.overflow = "";
       }
     };
 
@@ -80,19 +81,6 @@ export const NotificationDropdown = ({
     };
   }, [showFullPage]);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isMobile()) return;
-
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        setOpenMenu(null);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [setOpenMenu]);
-
   const markVisibleAsRead = async () => {
     if (!dropdownRef.current) return;
 
@@ -113,24 +101,34 @@ export const NotificationDropdown = ({
     }
   };
 
-  const handleDropdownOpen = () => {
+  const handleDropdownOpen = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
     closeProfileMenu?.();
 
     if (isMobile()) {
-      closeMobileMenu?.();
-      setOpenMenu(null);
       setShowFullPage(true);
+      setOpenMenu(null);
+
+      setTimeout(() => {
+        closeMobileMenu?.();
+      }, 0);
+
       return;
     }
 
-    if (isOpen) {
-      setOpenMenu(null);
-    } else {
-      setOpenMenu("notifications");
-      setTimeout(() => {
-        markVisibleAsRead();
-      }, 100);
-    }
+    setOpenMenu((prev) => {
+      const nextValue = prev === "notifications" ? null : "notifications";
+
+      if (nextValue === "notifications") {
+        setTimeout(() => {
+          markVisibleAsRead();
+        }, 100);
+      }
+
+      return nextValue;
+    });
   };
 
   const handleMarkAllRead = async () => {
@@ -144,7 +142,8 @@ export const NotificationDropdown = ({
     setUnreadCount(0);
   };
 
-  const handleCloseFullPage = () => {
+  const handleCloseFullPage = (e) => {
+    e?.stopPropagation?.();
     setShowFullPage(false);
   };
 
@@ -157,19 +156,21 @@ export const NotificationDropdown = ({
     return fallback;
   };
 
+  const handleNotificationClick = (notif) => {
+    if (!notif.read) {
+      const ref = doc(db, "notifications", notif.id);
+      updateDoc(ref, { read: true }).catch((error) =>
+        console.error("Error marking notification as read:", error),
+      );
+    }
+  };
+
   const renderNotificationItem = (notif) => (
     <div
       key={notif.id}
       data-id={notif.id}
       className={`notification-item ${notif.read ? "read" : "unread"}`}
-      onClick={() => {
-        if (!notif.read) {
-          const ref = doc(db, "notifications", notif.id);
-          updateDoc(ref, { read: true }).catch((error) =>
-            console.error("Error marking notification as read:", error),
-          );
-        }
-      }}
+      onClick={() => handleNotificationClick(notif)}
     >
       <strong>{getTranslatedValue(notif.title, "Notification")}</strong>
       <p>{getTranslatedValue(notif.body, "You have a new update.")}</p>
@@ -178,11 +179,21 @@ export const NotificationDropdown = ({
 
   const desktopDropdown =
     !isMobile() && isOpen ? (
-      <div className="notification-dropdown" ref={dropdownRef}>
+      <div
+        className="notification-dropdown"
+        ref={dropdownRef}
+        onClick={(e) => e.stopPropagation()}
+        onMouseDown={(e) => e.stopPropagation()}
+      >
         <div className="dropdown-notification">
           <span className="notify">{t("Notifications")}</span>
+
           {notifications.length > 0 && unreadCount > 0 && (
-            <button className="mark-read" onClick={handleMarkAllRead}>
+            <button
+              type="button"
+              className="mark-read"
+              onClick={handleMarkAllRead}
+            >
               {t("markAllRead") || "Mark all as read"}
             </button>
           )}
@@ -201,7 +212,10 @@ export const NotificationDropdown = ({
   const mobileFullPage =
     showFullPage && isMobile()
       ? createPortal(
-          <div className="fullpage-notifications">
+          <div
+            className="fullpage-notifications"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="mobile-header">
               <button
                 className="back-btn"
@@ -242,24 +256,18 @@ export const NotificationDropdown = ({
   return (
     <>
       <div className="notification-wrapper" ref={wrapperRef}>
-        <div
+        <button
+          type="button"
           className="bell-container"
           onClick={handleDropdownOpen}
-          role="button"
-          tabIndex={0}
           aria-label="Open notifications"
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              handleDropdownOpen();
-            }
-          }}
+          aria-expanded={isOpen || showFullPage}
         >
           <Bell className="bell-icon" />
           {unreadCount > 0 && (
             <span className="notif-badge">{unreadCount}</span>
           )}
-        </div>
+        </button>
 
         {desktopDropdown}
       </div>
