@@ -99,7 +99,9 @@ const HeaderContent = () => {
         console.error("Error fetching user info:", err);
       }
     },
-    onError: () => console.log("Google Login Failed"),
+    onError: () => {
+      console.log("Google Login Failed");
+    },
   });
 
   useEffect(() => {
@@ -200,9 +202,13 @@ const HeaderContent = () => {
 
   return (
     <header className="header">
-      <HeaderLogo />
+      <div className="header-left">
+        <HeaderLogo />
+      </div>
 
-      <MobileMenuToggle menuOpen={menuOpen} toggleMenu={toggleMenu} />
+      <div className="header-mobile-toggle">
+        <MobileMenuToggle menuOpen={menuOpen} toggleMenu={toggleMenu} />
+      </div>
 
       {menuOpen && (
         <div
@@ -212,26 +218,32 @@ const HeaderContent = () => {
       )}
 
       <div className={`header-nav-shell ${menuOpen ? "open" : ""}`}>
-        <HeaderNav
-          t={t}
-          dropdowns={dropdowns}
-          toggleDropdown={toggleDropdown}
-          isActive={isActive}
-          handleLinkClick={handleLinkClick}
-        />
+        <div className="header-right">
+          <div className="header-nav-wrap">
+            <HeaderNav
+              t={t}
+              dropdowns={dropdowns}
+              toggleDropdown={toggleDropdown}
+              isActive={isActive}
+              handleLinkClick={handleLinkClick}
+            />
+          </div>
 
-        <HeaderActions
-          t={t}
-          language={language}
-          changeLanguage={changeLanguage}
-          user={user}
-          openMenu={openMenu}
-          setOpenMenu={setOpenMenu}
-          closeMobileMenu={closeMobileMenu}
-          handleLinkClick={handleLinkClick}
-          handleLogout={handleLogout}
-          googleLogin={googleLogin}
-        />
+          <div className="header-actions-wrap">
+            <HeaderActions
+              t={t}
+              language={language}
+              changeLanguage={changeLanguage}
+              user={user}
+              openMenu={openMenu}
+              setOpenMenu={setOpenMenu}
+              closeMobileMenu={closeMobileMenu}
+              handleLinkClick={handleLinkClick}
+              handleLogout={handleLogout}
+              googleLogin={googleLogin}
+            />
+          </div>
+        </div>
       </div>
     </header>
   );
