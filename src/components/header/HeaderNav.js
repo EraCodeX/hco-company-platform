@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import {
+  ChevronDown,
+  FolderKanban,
+  Building2,
+  BriefcaseBusiness,
+  CalendarDays,
+} from "lucide-react";
 
 export default function HeaderNav({
   t,
@@ -43,34 +49,41 @@ export default function HeaderNav({
               className={isActive("/projects")}
               onClick={handleLinkClick}
             >
-              {t("Projects")}
+              <FolderKanban className="dropdown-link-icon" />
+              <span>{t("Projects")}</span>
             </Link>
           </li>
+
           <li>
             <Link
               to="/buildcostpro"
               className={isActive("/buildcostpro")}
               onClick={handleLinkClick}
             >
-              {t("ProBuild")}
+              <BriefcaseBusiness className="dropdown-link-icon" />
+              <span>{t("ProBuild")}</span>
             </Link>
           </li>
+
           <li>
             <Link
               to="/materials"
               className={isActive("/materials")}
               onClick={handleLinkClick}
             >
-              {t("materials")}
+              <Building2 className="dropdown-link-icon" />
+              <span>{t("materials")}</span>
             </Link>
           </li>
+
           <li>
             <Link
               to="/calendar"
               className={isActive("/calendar")}
               onClick={handleLinkClick}
             >
-              {t("calendar")}
+              <CalendarDays className="dropdown-link-icon" />
+              <span>{t("calendar")}</span>
             </Link>
           </li>
         </ul>

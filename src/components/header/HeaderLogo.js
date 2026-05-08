@@ -7,8 +7,6 @@ export default function HeaderLogo() {
       <img
         src={logo}
         alt="H&O Company Logo"
-        width="180"
-        height="60"
         loading="eager"
         fetchPriority="high"
         decoding="async"

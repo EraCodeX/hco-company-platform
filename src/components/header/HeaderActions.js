@@ -19,9 +19,9 @@ export default function HeaderActions({
   googleLogin,
 }) {
   return (
-    <div className="header-actions">
-      <div className="header-actions-top">
-        <div className="menu-icon-item">
+    <>
+      <div className="header-actions">
+        <div className="menu-icon-item menu-notification-item">
           <NotificationDropdown
             isOpen={openMenu === "notifications"}
             setOpenMenu={setOpenMenu}
@@ -32,7 +32,6 @@ export default function HeaderActions({
             }
             closeMobileMenu={closeMobileMenu}
           />
-          <ToastContainer />
         </div>
 
         <div className="menu-icon-item menu-help-item">
@@ -52,9 +51,7 @@ export default function HeaderActions({
             onLanguageChange={changeLanguage}
           />
         </div>
-      </div>
 
-      <div className="header-actions-bottom">
         <div className="menu-signin-item">
           {user ? (
             <>
@@ -98,18 +95,28 @@ export default function HeaderActions({
             </button>
           )}
         </div>
+
+        {user && openMenu === "mobileProfile" && (
+          <ProfileMenu
+            user={user}
+            t={t}
+            openMenu={openMenu}
+            setOpenMenu={setOpenMenu}
+            handleLogout={handleLogout}
+            handleLinkClick={handleLinkClick}
+          />
+        )}
       </div>
 
-      {user && openMenu === "mobileProfile" && (
-        <ProfileMenu
-          user={user}
-          t={t}
-          openMenu={openMenu}
-          setOpenMenu={setOpenMenu}
-          handleLogout={handleLogout}
-          handleLinkClick={handleLinkClick}
-        />
-      )}
-    </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="light"
+      />
+    </>
   );
 }
