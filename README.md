@@ -18,24 +18,21 @@ This project reflects a real-world business application built with **scalability
 
 ## 📸 Application Preview
 
-<table>
+<table align="center">
   <tr>
-    <td align="center">
-      <img src="screenshots/dashboard.png" alt="Dashboard" width="300"/><br/>
-      <strong>Dashboard Overview</strong>
-    </td>
-    <td align="center">
-      <img src="screenshots/application.png" alt="Application" width="300"/><br/>
-      <strong>Application</strong>
-    </td>
+    <td><img src="screenshots/homepage.png" width="450"></td>
+    <td><img src="screenshots/dashboard.png" width="450"></td>
   </tr>
+
   <tr>
-    <td align="center">
-      <img src="screenshots/payment.png" alt="Payment" width="300"/><br/>
-      <strong>Payment</strong>
-    </td>
+    <td><img src="screenshots/application.png" width="450"></td>
+    <td><img src="screenshots/payment.png" width="450"></td>
   </tr>
 </table>
+
+<p align="center">
+  <img src="screenshots/build.png" width="450">
+</p>
 
 ## 🧩 Business Context
 
