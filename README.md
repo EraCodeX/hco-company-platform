@@ -20,20 +20,29 @@ This project reflects a real-world business application built with **scalability
 
 <table align="center">
   <tr>
-    <td><img src="screenshots/homepage.png" width="450"></td>
-    <td><img src="screenshots/dashboard.png" width="450"></td>
+    <td>
+      <img src="screenshots/homepage.jpg" alt="Homepage" width="450">
+    </td>
+    <td>
+      <img src="screenshots/dashboard.jpg" alt="Dashboard" width="450">
+    </td>
   </tr>
 
   <tr>
-    <td><img src="screenshots/application.png" width="450"></td>
-    <td><img src="screenshots/payment.png" width="450"></td>
+    <td>
+      <img src="screenshots/application.jpg" alt="Application" width="450">
+    </td>
+    <td>
+      <img src="screenshots/payment.jpg" alt="Payment" width="450">
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" align="center">
+      <img src="screenshots/build.jpg" alt="Build Feature" width="450">
+    </td>
   </tr>
 </table>
-
-<p align="center">
-  <img src="screenshots/build.png" width="450">
-</p>
-
 ## 🧩 Business Context
 
 Construction companies typically manage job applications, scheduling, payments, and customer communication through disconnected tools or manual processes.
