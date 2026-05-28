@@ -8,42 +8,61 @@
 ![PayPal](https://img.shields.io/badge/PayPal-integration-blue)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-**Production-ready web platform designed to digitalize construction company operations, customer interactions, and internal workflows.**
+---
 
-This project reflects a real-world business application built with **scalability, maintainability, and performance in mind** — not a demo or tutorial project.
+**Production-ready web platform designed to digitalize construction company operations, customer interactions, and internal workflows.**
 
 🌐 **Live Demo:** [hocompany1.com](https://hocompany1.com/)
 
 ---
 
-## 📸 Application Preview
+# 📸 Application Preview
 
-<table align="center">
-  <tr>
-    <td>
-      <img src="screenshots/homepage.jpg" alt="Homepage" width="450">
-    </td>
-    <td>
-      <img src="screenshots/dashboard.jpg" alt="Dashboard" width="450">
-    </td>
-  </tr>
+<div align="center">
 
-  <tr>
-    <td>
-      <img src="screenshots/application.jpg" alt="Application" width="450">
-    </td>
-    <td>
-      <img src="screenshots/payment.jpg" alt="Payment" width="450">
-    </td>
-  </tr>
+<table>
+<tr>
+<td align="center">
+<img src="screenshots/homepage.jpg" alt="Homepage" width="450">
+<br/><br/>
+<b>Responsive Homepage Interface</b>
+</td>
 
-  <tr>
-    <td colspan="2" align="center">
-      <img src="screenshots/build.jpg" alt="Build Feature" width="450">
-    </td>
-  </tr>
+<td align="center">
+<img src="screenshots/dashboard.jpg" alt="Dashboard" width="450">
+<br/><br/>
+<b>Admin Dashboard System</b>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<img src="screenshots/application.jpg" alt="Application" width="450">
+<br/><br/>
+<b>Job Application Workflow</b>
+</td>
+
+<td align="center">
+<img src="screenshots/payment.jpg" alt="Payment" width="450">
+<br/><br/>
+<b>Secure Payment Integration</b>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<img src="screenshots/build.jpg" alt="Build Feature" width="450">
+<br/><br/>
+<b>Construction Service Platform</b>
+</td>
+</tr>
 </table>
-## 🧩 Business Context
+
+</div>
+
+---
+
+# 🧩 Business Context
 
 Construction companies typically manage job applications, scheduling, payments, and customer communication through disconnected tools or manual processes.
 
@@ -55,7 +74,7 @@ This fragmentation leads to:
 
 ---
 
-## 💡 Solution Overview
+# 💡 Solution Overview
 
 H&O Company centralizes these workflows into a single web platform that enables:
 
@@ -69,7 +88,7 @@ The focus is on **real usability, clean UX, and long-term maintainability**, sim
 
 ---
 
-## ⚙️ Technical Architecture & Decisions
+# ⚙️ Technical Architecture & Decisions
 
 - **React** for a modular, component-driven frontend architecture
 - **RESTful PHP API** with **MySQL** for backend data handling
@@ -79,7 +98,7 @@ The focus is on **real usability, clean UX, and long-term maintainability**, sim
 - **PayPal integration** for payments
 - **React Big Calendar** for scheduling
 
-**Development priorities:**
+## Development Priorities
 
 - Predictable data flow
 - Reusable and isolated components
@@ -88,7 +107,7 @@ The focus is on **real usability, clean UX, and long-term maintainability**, sim
 
 ---
 
-## ✨ Core Functionality
+# ✨ Core Functionality
 
 - Google authentication
 - Job application submission & tracking
@@ -99,7 +118,7 @@ The focus is on **real usability, clean UX, and long-term maintainability**, sim
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
 ```text
 api/                # PHP REST API
@@ -118,40 +137,120 @@ src/
 
 screenshots/
 .env.example
-
 ```
 
-## 💻 Installation & Setup
+---
 
-### 1. Clone Repository
+# 💻 Installation & Setup
 
-```
+## 1. Clone Repository
+
+```bash
 git clone https://github.com/EraCodeX/hco-company-platform.git
+
 cd hco-company-platform
-
-
 ```
 
-2. Install Dependencies
+---
 
-```
+## 2. Install Dependencies
+
+### Using npm
+
+```bash
 npm install
 ```
 
-3. Setup Environment Variables
+### Using yarn
 
-```
-Create a .env file at the project root:
-
-- REACT_APP_FIREBASE_API_KEY=your_api_key
-- REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
-- REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-- REACT_APP_PAYPAL_CLIENT_ID=your_paypal_client_id
-
+```bash
+yarn install
 ```
 
-4. Run Locally
+---
 
+## 3. Setup Environment Variables
+
+Create a `.env` file at the project root:
+
+```env
+REACT_APP_FIREBASE_API_KEY=your_api_key
+
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+
+REACT_APP_PAYPAL_CLIENT_ID=your_paypal_client_id
 ```
+
+---
+
+# ▶️ Run Locally
+
+### Using npm
+
+```bash
 npm start
 ```
+
+### Using yarn
+
+```bash
+yarn start
+```
+
+---
+
+# 📱 Responsive Design
+
+The platform is optimized for:
+
+- Desktop Devices
+- Tablets
+- Mobile Devices
+- Large Screens
+
+The UI adapts seamlessly across different resolutions while maintaining accessibility and performance.
+
+---
+
+# 🔒 Authentication & Security
+
+- Firebase Authentication
+- Google OAuth Login
+- Protected User Sessions
+- Secure Payment Processing
+- Role-Based Access Control
+
+---
+
+# 🚀 Engineering Focus
+
+This project was developed with emphasis on:
+
+- Scalable frontend architecture
+- Reusable UI components
+- Clean project organization
+- Maintainable code structure
+- Real-world business workflows
+- Responsive user experience
+
+---
+
+# 👩‍💻 Developer
+
+### Era Hidaj
+
+Frontend Developer focused on building scalable, responsive, and production-ready web applications with modern UI architecture and real-world functionality.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
