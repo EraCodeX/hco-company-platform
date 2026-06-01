@@ -146,9 +146,9 @@ screenshots/
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/EraCodeX/hco-company-platform.git
+git clone https://github.com/EraCodeX/hco-company.git
 
-cd hco-company-platform
+cd company-platform
 ```
 
 ---
