@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Footer from "../../components/SiteFooter";
 import "../../styles/help-section.css";
-import logo1 from "../../assets/images/brand-logo.webp";
+import logo1 from "../../assets/images/help-logo.webp";
 import { useLanguage } from "../../context/LanguageContext";
 import { helpCategories } from "../../utils/Data";
 import { Link } from "react-router-dom";

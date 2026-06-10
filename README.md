@@ -1,18 +1,16 @@
-# H&O Company — Construction Business Platform
+# H&O Construction Platform
 
 ![Status](https://img.shields.io/badge/status-production-green)
 ![React](https://img.shields.io/badge/react-18.3.1-blue)
-![Node](https://img.shields.io/badge/node-18.x-lightgreen)
 ![PHP](https://img.shields.io/badge/php-8.x-purple)
-![Firebase](https://img.shields.io/badge/firebase-12.4.0-yellow)
-![PayPal](https://img.shields.io/badge/PayPal-integration-blue)
+![MySQL](https://img.shields.io/badge/mysql-database-blue)
+![Firebase](https://img.shields.io/badge/firebase-authentication-yellow)
+![PayPal](https://img.shields.io/badge/paypal-integration-blue)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
----
+Production-ready construction management platform designed to streamline customer interactions, job applications, scheduling, payments, and administrative workflows through a centralized digital experience.
 
-**Production-ready web platform designed to digitalize construction company operations, customer interactions, and internal workflows.**
-
-🌐 **Live Demo:** [hocompany1.com](https://hocompany1.com/)
+🌐 **Live Demo:** https://hocompany1.com/
 
 ---
 
@@ -24,35 +22,35 @@
 <tr>
 <td align="center">
 <img src="screenshots/homepage.jpg" alt="Homepage" width="450">
-<br/><br/>
-<b>Responsive Homepage Interface</b>
+<br><br>
+<b>Responsive Homepage Experience</b>
 </td>
 
 <td align="center">
 <img src="screenshots/dashboard.jpg" alt="Dashboard" width="450">
-<br/><br/>
-<b>Admin Dashboard System</b>
+<br><br>
+<b>Administrative Dashboard</b>
 </td>
 </tr>
 
 <tr>
 <td align="center">
-<img src="screenshots/application.jpg" alt="Application" width="450">
-<br/><br/>
-<b>Job Application Workflow</b>
+<img src="screenshots/application.jpg" alt="Application System" width="450">
+<br><br>
+<b>Job Application Management</b>
 </td>
 
 <td align="center">
-<img src="screenshots/payment.jpg" alt="Payment" width="450">
-<br/><br/>
-<b>Secure Payment Integration</b>
+<img src="screenshots/payment.jpg" alt="Payment System" width="450">
+<br><br>
+<b>PayPal Payment Integration</b>
 </td>
 </tr>
 
 <tr>
 <td colspan="2" align="center">
-<img src="screenshots/build.jpg" alt="Build Feature" width="450">
-<br/><br/>
+<img src="screenshots/build.jpg" alt="Construction Services" width="450">
+<br><br>
 <b>Construction Service Platform</b>
 </td>
 </tr>
@@ -62,186 +60,256 @@
 
 ---
 
-# 🧩 Business Context
+# 🏗 Business Problem
 
-Construction companies typically manage job applications, scheduling, payments, and customer communication through disconnected tools or manual processes.
+Construction companies often manage applications, customer communication, scheduling, and payments across multiple disconnected systems.
 
-This fragmentation leads to:
+This approach typically results in:
 
-- operational inefficiency
-- lack of visibility
-- poor user experience for both clients and administrators
+- Manual administrative work
+- Fragmented customer experiences
+- Reduced operational visibility
+- Inefficient workflow management
+- Increased communication overhead
 
 ---
 
-# 💡 Solution Overview
+# 💡 Solution
 
-H&O Company centralizes these workflows into a single web platform that enables:
+H&O Construction Platform centralizes business operations into a single web application that supports both customers and administrators.
 
-- Structured job application management
-- Role-based access and administration
-- Scheduling and calendar coordination
+The platform enables:
+
+- Online job applications
+- Administrative workflow management
+- Appointment scheduling
 - Secure online payments
-- Transparent ratings and feedback
+- Customer ratings and feedback
+- Role-based user experiences
 
-The focus is on **real usability, clean UX, and long-term maintainability**, similar to production environments.
-
----
-
-# ⚙️ Technical Architecture & Decisions
-
-- **React** for a modular, component-driven frontend architecture
-- **RESTful PHP API** with **MySQL** for backend data handling
-- **Axios** for API communication
-- **React Context + custom hooks** for state management
-- **Google OAuth** for authentication
-- **PayPal integration** for payments
-- **React Big Calendar** for scheduling
-
-## Development Priorities
-
-- Predictable data flow
-- Reusable and isolated components
-- Proper loading and error handling
-- Responsive design across devices
+The goal is to provide a scalable and maintainable foundation for modern construction businesses.
 
 ---
 
-# ✨ Core Functionality
+# 🚀 Business Impact
 
-- Google authentication
-- Job application submission & tracking
-- Role-based UI (Admin / User)
-- Ratings & feedback system
-- Calendar scheduling
-- Secure payment handling
+- Centralized customer and administrative workflows
+- Reduced manual application processing
+- Improved scheduling organization
+- Digital payment processing
+- Enhanced user experience across all devices
+- Increased operational transparency
 
 ---
 
-# 📁 Project Structure
+# 🛠 Tech Stack
+
+## Frontend
+
+- React
+- JavaScript
+- React Router
+- Axios
+- CSS
+- Firebase SDK
+
+## Backend
+
+- PHP
+- MySQL
+- REST API
+
+## Integrations
+
+- Firebase Authentication
+- Google OAuth
+- PayPal
+- React Big Calendar
+
+---
+
+# ⚙️ Technical Architecture
+
+The application follows a component-based architecture focused on maintainability, scalability, and predictable data flow.
+
+### Key Architectural Decisions
+
+- Modular React component structure
+- RESTful API communication
+- Custom React Hooks
+- Context-based state management
+- Reusable UI components
+- Responsive-first design
+- Separation of concerns
+
+### Development Priorities
+
+- Scalability
+- Maintainability
+- Performance
+- User Experience
+- Clean Code Practices
+
+---
+
+# ✨ Core Features
+
+## Authentication
+
+- Google OAuth Login
+- Firebase Authentication
+- Protected User Sessions
+
+## Administration
+
+- Role-Based Access Control
+- Dashboard Management
+- User Activity Monitoring
+
+## Applications
+
+- Job Application Submission
+- Application Tracking
+- Administrative Review Workflow
+
+## Scheduling
+
+- Calendar Management
+- Appointment Coordination
+- Event Organization
+
+## Payments
+
+- Secure PayPal Integration
+- Payment Processing Workflow
+
+## Feedback
+
+- Ratings System
+- Customer Reviews
+- Feedback Collection
+
+---
+
+# 📂 Project Structure
 
 ```text
-api/                # PHP REST API
-public/             # Static assets
+api/
+│
+├── config/
+├── controllers/
+├── models/
+├── routes/
+└── database/
+
+public/
+│
+├── assets/
+├── images/
+└── favicon/
 
 src/
- ├─ components/
- ├─ pages/
- ├─ features/
- ├─ hooks/
- ├─ context/
- ├─ styles/
- ├─ App.js
- ├─ index.js
- └─ firebase.js
+│
+├── components/
+├── pages/
+├── features/
+├── hooks/
+├── context/
+├── services/
+├── styles/
+├── utils/
+│
+├── App.js
+├── index.js
+└── firebase.js
 
 screenshots/
+
 .env.example
 ```
 
 ---
 
-# 💻 Installation & Setup
+# 🔒 Security
 
-## 1. Clone Repository
+The platform incorporates multiple security-focused practices:
 
-```bash
-git clone https://github.com/erahidaj/hco-company.git
-
-cd company-platform
-```
-
----
-
-## 2. Install Dependencies
-
-### Using npm
-
-```bash
-npm install
-```
-
-### Using yarn
-
-```bash
-yarn install
-```
-
----
-
-## 3. Setup Environment Variables
-
-Create a `.env` file at the project root:
-
-```env
-REACT_APP_FIREBASE_API_KEY=your_api_key
-
-REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
-
-REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-
-REACT_APP_PAYPAL_CLIENT_ID=your_paypal_client_id
-```
-
----
-
-# ▶️ Run Locally
-
-### Using npm
-
-```bash
-npm start
-```
-
-### Using yarn
-
-```bash
-yarn start
-```
+- Firebase Authentication
+- Google OAuth Integration
+- Protected Routes
+- Role-Based Authorization
+- Secure API Communication
+- Secure Payment Processing
 
 ---
 
 # 📱 Responsive Design
 
-The platform is optimized for:
+Optimized for:
 
 - Desktop Devices
+- Laptops
 - Tablets
 - Mobile Devices
-- Large Screens
+- Large Displays
 
-The UI adapts seamlessly across different resolutions while maintaining accessibility and performance.
-
----
-
-# 🔒 Authentication & Security
-
-- Firebase Authentication
-- Google OAuth Login
-- Protected User Sessions
-- Secure Payment Processing
-- Role-Based Access Control
+The interface adapts seamlessly across screen sizes while maintaining usability and accessibility.
 
 ---
 
-# 🚀 Engineering Focus
+# 💻 Installation
 
-This project was developed with emphasis on:
+## Clone Repository
 
-- Scalable frontend architecture
-- Reusable UI components
-- Clean project organization
-- Maintainable code structure
-- Real-world business workflows
-- Responsive user experience
+```bash
+git clone https://github.com/erahidaj/hco-construction.git
+
+cd hco-construction
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Configure Environment Variables
+
+Create a `.env` file:
+
+```env
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_PAYPAL_CLIENT_ID=your_paypal_client_id
+```
+
+## Run Development Server
+
+```bash
+npm start
+```
 
 ---
 
-# 👩‍💻 Developer
+# 🎯 Engineering Highlights
+
+- Production-ready architecture
+- Responsive UI implementation
+- Modular React design
+- REST API integration
+- Authentication workflows
+- Payment processing integration
+- Business-oriented functionality
+- Reusable component ecosystem
+
+---
+
+# 👨‍💻 Author
 
 ### Era Hidaj
 
-Frontend Developer focused on building scalable, responsive, and production-ready web applications with modern UI architecture and real-world functionality.
+Frontend Developer specializing in modern web applications, scalable UI architecture, and business-focused digital solutions.
 
 ---
 
@@ -253,4 +321,4 @@ This project is licensed under the MIT License.
 
 # ⭐ Support
 
-If you like this project, consider giving it a ⭐ on GitHub.
+If you found this project useful, consider giving it a star.

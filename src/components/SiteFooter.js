@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/company-about-hero.webp";
+import logo from "../assets/images/brand-logo.webp";
 import "../styles/footer.css";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="logo">
             <img
               src={logo}
-              alt="H&O Construction company logo"
+              alt="H&O Construction logo"
               width="160"
               height="60"
               loading="lazy"
