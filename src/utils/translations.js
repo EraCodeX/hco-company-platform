@@ -2,7 +2,7 @@
 
 export const translations = {
   en: {
-    welcome: "Building the future.",
+    welcome: "Constructing the Future..",
     heroSubtitle: "Quality. Precision. Trust.",
     services: "Services",
     ourActivity: "Our Activity",
@@ -354,16 +354,17 @@ export const translations = {
     tax: "Tax (%)",
     totalCost: "Total Estimated Cost",
     buyProject: "Buy Project",
-    introTitle: "🏗️ Plan smarter, build better.",
+    introTitle: "Plan smarter, build better.",
     introText:
       "Estimate your construction costs in seconds – transparent, easy, and reliable.",
+    howItWorks: "How It Works",
     step1: "Step 1: Choose the object type.",
     step2: "Step 2: Enter the area.",
     step3: "Step 3: Select the quality and review auto-filled costs.",
     step4: "Step 4: Calculate the total cost.",
-    factTitle: "💡 Did you know?",
+    factTitle: " Professional Estimation?",
     factText:
-      "On average, construction costs can vary up to 30% depending on quality and location.",
+      "Generate transparent and reliable construction cost estimates to support better planning and decision-making.",
     errorMessage: "You have to login!",
     //Features
     highQualityTitle: "High-Quality Materials",
@@ -674,15 +675,15 @@ export const translations = {
     //Home
     home: "Faqja",
     mainHome: "Faqja Kryesore",
-    features: "Karakteristikat",
+    features: "Vecori",
     dashboard: "Paneli",
-    projects: "Projektet",
+    projects: "Projekt",
     ProBuild: "Preventiv",
     materials: "Materialet",
     calendar: "Kalendar",
     about: "Rreth Nesh",
     jobs: "Punët",
-    reviews: "Rishikimet",
+    reviews: "Vleresime",
     contact: "Kontakt",
     signIn: "Logohu",
     //Footer
@@ -956,17 +957,18 @@ export const translations = {
     tax: "Taksa (%)",
     totalCost: "Kosto totale e llogaritur",
     buyProject: "Blej Projektin",
-    introTitle: "🏗️ Planifikoni më zgjuar, ndërtoni më mirë.",
+    introTitle: " Planifikoni më zgjuar, ndërtoni më mirë.",
     introText:
       "Llogaritni shpejt kostot e ndërtimit – transparente, të thjeshta dhe të besueshme.",
+    howItWorks: "Si Funksionon",
     step1: "Hapi 1: Zgjidhni llojin e objektit.",
     step2: "Hapi 2: Futni sipërfaqen.",
     step3:
       "Hapi 3: Zgjidhni cilësinë dhe kontrolloni kostot e llogaritura automatikisht.",
     step4: "Hapi 4: Llogaritni koston totale.",
-    factTitle: "💡 A e dinit?",
+    factTitle: "Vlerësim Profesional?",
     factText:
-      "Mesatarisht, kostot e ndërtimit mund të ndryshojnë deri në 30% në varësi të cilësisë dhe vendndodhjes.",
+      "Gjeneroni vlerësime të sakta dhe transparente të kostos së ndërtimit për planifikim dhe vendimmarrje më të mirë.",
     errorMessage: "Ju duhet te logoheni!",
     //Features
     highQualityTitle: "Materiale me Cilësi të Lartë",
