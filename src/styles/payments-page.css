@@ -1,145 +1,103 @@
-/* =========================
-   PAYMENT METHODS CARD
-========================= */
-.payment-methods {
-  width: 50%;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.04);
+/* =========================================
+   PAYMENTS PAGE 
+========================================= */
+
+.payments-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  position: relative;
+  padding: 40px 0;
 }
 
-.payment-methods h2 {
-  margin: 0 0 22px;
-  font-size: 22px;
-  font-weight: 600;
-  color: #111827;
-  text-align: center;
-  border-bottom: none;
-  padding-bottom: 0;
-}
+/* =========================================
+   LAYOUT
+========================================= */
 
-/* container i opsioneve */
-.payment-methods .form-group {
+.payment-container {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin: 0;
-}
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
 
-/* =========================
-   SINGLE PAYMENT OPTION
-========================= */
-.payment-option {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  width: 100%;
-  padding: 18px 18px;
-  background: #ffffff;
-  border: 1px solid #dbe1e7;
-  border-radius: 14px;
-  cursor: pointer;
+  max-width: 1280px;
+  margin: 60px auto;
+  padding: 0 24px;
   box-sizing: border-box;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
 }
 
-.payment-option:hover {
-  border-color: #c7d0da;
-  background: #fcfcfd;
-  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.04);
-}
+/* =========================================
+   PAYMENT SUMMARY
+========================================= */
 
-/* hiq çdo stil të vjetër që e prish */
-.form-group label {
-  margin-bottom: 0;
-}
-
-/* radio clean */
-.payment-option input[type="radio"] {
-  margin: 0;
-  flex: 0 0 auto;
-  accent-color: #111827;
-  width: 16px;
-  height: 16px;
-}
-
-/* logo */
-.payment-logo {
-  width: 44px;
-  height: 28px;
-  object-fit: contain;
-  display: block;
-  margin-right: 0;
-}
-
-/* text */
-.payment-option span {
-  font-size: 15px;
-  font-weight: 500;
-  color: #111827;
-  line-height: 1.4;
-}
-
-/* gjendja active kur zgjedhet opsioni */
-.payment-option:has(input[type="radio"]:checked) {
-  border-color: #111827;
-  background: #f9fafb;
-  box-shadow: 0 0 0 2px rgba(17, 24, 39, 0.05);
-}
-
-/* fallback nëse :has nuk supportohet nga ndonjë browser,
-   prapë do duket clean pa problem */
-
-/* =========================
-   SUMMARY TITLES LESS BOLD
-========================= */
-.payment-summary h2,
-.payment-methods h2 {
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-
-/* =========================
-   PAYMENT SUMMARY CLEANER
-========================= */
 .payment-summary {
   width: 48%;
-  padding: 28px;
+
   background: #ffffff;
   border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.04);
+  border-radius: 20px;
+
+  padding: 32px;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(17, 24, 39, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.payment-summary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.05),
+    0 20px 40px rgba(17, 24, 39, 0.08);
+}
+
+.payment-summary::before {
+  content: "Secure Payment";
+  display: inline-block;
+
+  padding: 6px 12px;
+  margin-bottom: 18px;
+
+  background: #f3f4f6;
+  color: #111827;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  border-radius: 999px;
 }
 
 .payment-summary h2 {
+  margin: 0 0 28px;
+
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+
   color: #111827;
-  margin-bottom: 22px;
-  padding-bottom: 0;
-  border-bottom: none;
   text-align: center;
 }
 
 .payment-summary ul {
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin: 0 0 22px;
 }
 
 .payment-summary li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  padding: 16px 0;
-  border-bottom: 1px solid #eef2f7;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #f1f5f9;
+
   font-size: 15px;
-  color: #4b5563;
 }
 
 .payment-summary li:last-child {
@@ -147,111 +105,305 @@
 }
 
 .payment-summary li strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+.payment-summary li span {
+  color: #111827;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* =========================================
+   PAYMENT METHODS
+========================================= */
+
+.payment-methods {
+  width: 48%;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+
+  padding: 32px;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(17, 24, 39, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.payment-methods:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.05),
+    0 20px 40px rgba(17, 24, 39, 0.08);
+}
+
+.payment-methods h2 {
+  margin: 0 0 28px;
+
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+
+  color: #111827;
+  text-align: center;
+}
+
+.payment-methods .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================================
+   PAYMENT OPTION CARD
+========================================= */
+
+.payment-option {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;
+
+  padding: 20px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.payment-option:hover {
+  border-color: #d1d5db;
+  background: #fafafa;
+  transform: translateY(-1px);
+}
+
+.payment-option:has(input[type="radio"]:checked) {
+  border: 2px solid #111827;
+  background: #f8fafc;
+
+  box-shadow: 0 0 0 4px rgba(17, 24, 39, 0.06);
+}
+
+.payment-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+
+  margin: 0;
+
+  accent-color: #111827;
+  cursor: pointer;
+}
+
+.payment-logo {
+  width: 56px;
+  height: 34px;
+
+  object-fit: contain;
+  display: block;
+}
+
+.payment-option span {
   font-size: 15px;
   font-weight: 600;
   color: #111827;
 }
 
-.payment-summary li span {
-  font-size: 18px;
-  font-weight: 600;
-  color: #111827;
+/* =========================================
+   PAYPAL CONTAINER
+========================================= */
+
+#paypal-button-container {
+  width: 100%;
+  margin-top: 24px;
+  padding-top: 12px;
 }
 
-/* =========================
-   PAYPAL / STRIPE BUTTON AREA
-========================= */
-#paypal-button-container {
-  margin-top: 12px;
-  width: 100%;
+/* =========================================
+   STRIPE BUTTON
+========================================= */
+
+.stripe-form {
+  margin-top: 20px;
 }
 
 .stripe-form .button {
   width: 100%;
-  background: #111827;
+  height: 56px;
+
   border: none;
+  border-radius: 14px;
+
+  background: #111827;
   color: #ffffff;
-  padding: 13px 18px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+
   cursor: pointer;
-  transition: background 0.2s ease;
+
+  transition: all 0.25s ease;
 }
 
 .stripe-form .button:hover {
   background: #000000;
+  transform: translateY(-1px);
 }
 
-/* =========================
-   LAYOUT
-========================= */
-.payment-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 24px;
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-  box-shadow: none;
-  border-radius: 0;
+.stripe-form .button:active {
+  transform: translateY(0);
 }
 
-/* =========================
+/* =========================================
    BACK BUTTON
-========================= */
+========================================= */
+
 .back-button-payments {
   position: absolute;
-  top: 24px;
-  left: 24px;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
+
+  top: 30px;
+  left: 30px;
+
+  width: 48px;
+  height: 48px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+
+  background: #ffffff;
   color: #111827;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.05);
+
+  transition: all 0.25s ease;
 }
 
 .back-button-payments:hover {
-  background: #f9fafb;
+  transform: translateY(-2px);
+
   border-color: #d1d5db;
+
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.08);
 }
 
-/* =========================
+/* =========================================
+   SUCCESS MODAL
+========================================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(17, 24, 39, 0.55);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 420px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.15);
+}
+
+.modal-content h2 {
+  margin-bottom: 12px;
+
+  color: #111827;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.modal-content p {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* =========================================
    RESPONSIVE
-========================= */
-@media (max-width: 799px) {
+========================================= */
+
+@media (max-width: 992px) {
   .payment-container {
     flex-direction: column;
-    gap: 18px;
-    padding: 0 16px;
-    margin: 30px auto;
   }
 
   .payment-summary,
   .payment-methods {
     width: 100%;
-    padding: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .payments-page {
+    padding-top: 70px;
+  }
+
+  .payment-container {
+    gap: 20px;
+    margin: 20px auto;
+    padding: 0 16px;
+  }
+
+  .payment-summary,
+  .payment-methods {
+    padding: 24px;
+    border-radius: 18px;
   }
 
   .payment-summary h2,
   .payment-methods h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .payment-option {
-    padding: 16px;
+    padding: 18px;
   }
 
   .payment-logo {
-    width: 40px;
-    height: 26px;
+    width: 48px;
+    height: 30px;
+  }
+
+  .back-button-payments {
+    top: 15px;
+    left: 15px;
+
+    width: 44px;
+    height: 44px;
   }
 }
