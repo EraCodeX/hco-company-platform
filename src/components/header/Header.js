@@ -22,10 +22,6 @@ const HeaderContent = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
-  const [dropdowns, setDropdowns] = useState({
-    home: false,
-    projects: false,
-  });
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -38,19 +34,11 @@ const HeaderContent = () => {
 
   const closeMobileMenu = () => {
     setMenuOpen(false);
-    setDropdowns({
-      home: false,
-      projects: false,
-    });
+    setOpenMenu(null);
   };
 
-  const toggleDropdown = (dropdownName) => {
-    if (isMobile()) {
-      setDropdowns((prev) => ({
-        ...prev,
-        [dropdownName]: !prev[dropdownName],
-      }));
-    }
+  const toggleDropdown = (menuName) => {
+    setOpenMenu((prev) => (prev === menuName ? null : menuName));
   };
 
   const isActive = (path) => (location.pathname === path ? "active" : "");
@@ -151,10 +139,7 @@ const HeaderContent = () => {
         !clickedInsideNotification
       ) {
         setMenuOpen(false);
-        setDropdowns({
-          home: false,
-          projects: false,
-        });
+        setOpenMenu(null);
       }
     };
 
@@ -166,10 +151,7 @@ const HeaderContent = () => {
     const handleResize = () => {
       if (window.innerWidth > 1024) {
         setMenuOpen(false);
-        setDropdowns({
-          home: false,
-          projects: false,
-        });
+        setOpenMenu(null);
       }
       setOpenMenu(null);
     };
@@ -222,7 +204,7 @@ const HeaderContent = () => {
           <div className="header-nav-wrap">
             <HeaderNav
               t={t}
-              dropdowns={dropdowns}
+              openMenu={openMenu}
               toggleDropdown={toggleDropdown}
               isActive={isActive}
               handleLinkClick={handleLinkClick}

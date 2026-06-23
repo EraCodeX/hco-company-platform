@@ -71,7 +71,7 @@ section h2::after {
   position: relative;
   width: 100%;
   max-width: 100%;
-  margin: 0 0 96px;
+  margin: 0 0 48px;
   padding: 0;
   overflow: hidden;
   background: #101828;
@@ -102,7 +102,7 @@ section h2::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: min(880px, calc(100% - 40px));
+  width: min(1200px, calc(100% - 40px));
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2;
@@ -110,12 +110,11 @@ section h2::after {
 
 .overlay-content h1 {
   margin: 0 0 18px;
-  font-size: clamp(2.7rem, 5vw, 5rem);
-  font-weight: 800;
-  line-height: 1.02;
-  letter-spacing: -0.05em;
+  font-size: clamp(2.5rem, 4.5vw, 4.8rem);
+  font-weight: 600;
   color: #ffffff;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  white-space: nowrap;
 }
 
 .overlay-content p {
@@ -345,10 +344,11 @@ section h2::after {
 
 .btn1:hover,
 .btn1.active-btn {
-  background: #fffaf0;
-  border-color: rgba(199, 154, 43, 0.18);
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
+  color: var(--bg-main);
 }
 
 /* ================= Values ================= */

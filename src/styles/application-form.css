@@ -17,7 +17,9 @@
   background-color: #f9f9f9;
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .application-left:hover {
@@ -68,7 +70,9 @@
   padding: 10px 15px;
   font-weight: 600;
   color: #444;
-  transition: color 0.3s ease, transform 0.2s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .back-btn-jobs:hover {
@@ -84,7 +88,9 @@
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   padding: 2.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .application-right:hover {
@@ -121,7 +127,9 @@
   border: 1.5px solid #ddd;
   border-radius: 12px;
   font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .application-right input:focus {
@@ -139,7 +147,10 @@
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
 }
 
 .application-right button:hover {
@@ -207,7 +218,7 @@
 .modal-content i {
   margin-bottom: 15px;
   font-size: 60px;
-  color: #4CAF50;
+  color: #4caf50;
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
 }
 
@@ -249,7 +260,6 @@
   }
 }
 
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .application-container {
@@ -265,7 +275,6 @@
 }
 
 @media (max-width: 600px) {
-
   .application-right input[type="text"],
   .application-right input[type="email"],
   .application-right input[type="file"],

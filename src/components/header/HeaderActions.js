@@ -49,6 +49,8 @@ export default function HeaderActions({
           <LanguageSelector
             language={language}
             onLanguageChange={changeLanguage}
+            openMenu={openMenu}
+            setOpenMenu={setOpenMenu}
           />
         </div>
 
