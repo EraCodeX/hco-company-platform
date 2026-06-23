@@ -7,11 +7,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  flex: 0 0 44px;
-  margin-left: 50px;
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  margin: 0;
   padding: 0;
   background: transparent;
   border: none;
@@ -30,31 +30,28 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  flex: 0 0 44px;
-  margin-left: 0;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  flex: 0 0 36px;
+  margin: 0;
   padding: 0;
   background: transparent;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 12px;
   box-shadow: none;
   box-sizing: border-box;
   transition:
     background 0.25s ease,
-    transform 0.2s ease;
-}
-
-.bell-container:hover {
-  background: rgba(255, 255, 255, 0.05);
-  transform: translateY(-1px);
+    transform 0.2s ease,
+    border-color 0.25s ease;
 }
 
 .bell-icon {
   color: #ffffff;
   width: 21px;
   height: 21px;
+  flex-shrink: 0;
   transition:
     transform 0.2s ease,
     color 0.2s ease;
@@ -98,7 +95,7 @@
   max-height: 380px;
   background: #ffffff;
   border: 1px solid #e7ebf0;
-  border-radius: 18px;
+  border-radius: 5px;
   box-shadow:
     0 22px 46px rgba(2, 6, 23, 0.18),
     0 8px 20px rgba(2, 6, 23, 0.08);
@@ -348,12 +345,13 @@
   .notification-wrapper {
     width: 46px;
     height: 46px;
+    min-width: 46px;
     flex: 0 0 46px;
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
-    margin-left: 25px;
+    margin: 0;
   }
 
   .notification-wrapper:hover {
@@ -363,6 +361,8 @@
   .bell-container {
     width: 46px;
     height: 46px;
+    min-width: 46px;
+    flex: 0 0 46px;
     border-radius: 14px;
     background: transparent;
     padding: 0;
@@ -389,6 +389,7 @@
   .bell-container {
     width: 42px;
     height: 42px;
+    min-width: 42px;
     flex: 0 0 42px;
   }
 

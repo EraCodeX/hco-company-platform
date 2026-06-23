@@ -16,9 +16,9 @@ const translateComment = async (text, targetLang) => {
         q: text,
         source: "auto",
         target: targetLang,
-        format: "text"
+        format: "text",
       }),
-      headers: { "Content-Type": "application/json" }
+      headers: { "Content-Type": "application/json" },
     });
 
     const data = await response.json();
@@ -50,7 +50,7 @@ const EventCalendar = () => {
     const fetchEvents = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_BASE}/api/calendar.php`
+          `${process.env.REACT_APP_API_BASE}/api/calendar.php`,
         );
         const data = await response.json();
         const formattedEvents = data.map((event) => ({
@@ -72,8 +72,15 @@ const EventCalendar = () => {
     const translateAll = async () => {
       const promises = events.map(async (e) => {
         const translatedTitle = await translateComment(e.title, language);
-        const translatedDescription = await translateComment(e.description, language);
-        return { ...e, title: translatedTitle, description: translatedDescription };
+        const translatedDescription = await translateComment(
+          e.description,
+          language,
+        );
+        return {
+          ...e,
+          title: translatedTitle,
+          description: translatedDescription,
+        };
       });
       const results = await Promise.all(promises);
       setTranslatedEvents(results);
@@ -101,7 +108,7 @@ const EventCalendar = () => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(eventToSave),
-        }
+        },
       );
       const result = await response.json();
       if (result.success) {
@@ -140,7 +147,7 @@ const EventCalendar = () => {
   };
 
   const eventsForCurrentMonth = translatedEvents.filter((event) =>
-    moment(event.start).isSame(currentDate, "month")
+    moment(event.start).isSame(currentDate, "month"),
   );
 
   return (
@@ -264,12 +271,3 @@ const EventCalendar = () => {
 };
 
 export default EventCalendar;
-
-
-
-
-
-
-
-
-

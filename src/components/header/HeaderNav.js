@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  ChevronDown,
   FolderKanban,
   Building2,
   BriefcaseBusiness,
@@ -10,7 +9,7 @@ import {
 
 export default function HeaderNav({
   t,
-  dropdowns,
+  openMenu,
   toggleDropdown,
   isActive,
   handleLinkClick,
@@ -33,13 +32,19 @@ export default function HeaderNav({
         </Link>
       </li>
 
-      <li className={`has-dropdown ${dropdowns.projects ? "open" : ""}`}>
-        <span onClick={() => toggleDropdown("projects")}>
+      <li className={`has-dropdown ${openMenu === "projects" ? "open" : ""}`}>
+        <span
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleDropdown("projects");
+          }}
+        >
           {t("projects")}
-          <ChevronDown
-            size={18}
-            className={`arrow-icon ${dropdowns.projects ? "rotate" : ""}`}
-          />
+          <span
+            className={`projects-arrow ${openMenu === "projects" ? "open" : ""}`}
+          >
+            ▼
+          </span>
         </span>
 
         <ul className="dropdown">

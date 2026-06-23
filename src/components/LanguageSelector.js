@@ -1,30 +1,60 @@
 import React from "react";
-import { useLanguage } from "../context/LanguageContext";
 import flagAL from "../assets/images/flagAL.webp";
 import flagEN from "../assets/images/flagEN.webp";
 import "../styles/language-selector.css";
 
-const LanguageSelector = () => {
-  const { language, changeLanguage } = useLanguage();
+const LanguageSelector = ({
+  language,
+  onLanguageChange,
+  openMenu,
+  setOpenMenu,
+}) => {
+  const isOpen = openMenu === "language";
+
+  const handleLanguageChange = (lang) => {
+    onLanguageChange(lang);
+    setOpenMenu(null);
+  };
 
   return (
-    <div className="language-selector">
+    <div className="language-dropdown">
       <button
         type="button"
-        className={`language-button ${language === "en" ? "active" : ""}`}
-        onClick={() => changeLanguage("en")}
-        aria-label="English"
+        className="language-trigger"
+        onClick={(e) => {
+          e.stopPropagation();
+
+          setOpenMenu((prev) => (prev === "language" ? null : "language"));
+        }}
       >
-        <img src={flagEN} alt="English" />
+        <span className="language-text">
+          {language === "en" ? "English" : "Albania"}
+        </span>
+
+        <span className={`language-arrow ${isOpen ? "open" : ""}`}>▼</span>
       </button>
-      <button
-        type="button"
-        className={`language-button ${language === "sq" ? "active" : ""}`}
-        onClick={() => changeLanguage("sq")}
-        aria-label="Shqip"
-      >
-        <img src={flagAL} alt="Albanian" />
-      </button>
+
+      {isOpen && (
+        <div className="language-menu" onClick={(e) => e.stopPropagation()}>
+          <button
+            type="button"
+            className="language-option"
+            onClick={() => handleLanguageChange("en")}
+          >
+            <img src={flagEN} alt="English" className="language-option-flag" />
+            <span>English</span>
+          </button>
+
+          <button
+            type="button"
+            className="language-option"
+            onClick={() => handleLanguageChange("sq")}
+          >
+            <img src={flagAL} alt="Albania" className="language-option-flag" />
+            <span>Albania</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 };

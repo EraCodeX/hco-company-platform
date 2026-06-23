@@ -1,15 +1,23 @@
 /* ===================== Footer – Enterprise Level ===================== */
 .footer {
-  background: linear-gradient(180deg, #020617 0%, #071225 55%, #0b1120 100%);
-  padding: 80px 24px 36px;
+  background: linear-gradient(180deg, #0f2238 0%, #0c1c30 50%, #081320 100%);
+
+  padding: 64px 24px 28px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 2px solid rgba(250, 204, 21, 0.95);
-  font-family: "Inter", sans-serif;
-  color: #e5e7eb;
+
   width: 100%;
-  box-shadow: rgba(255, 255, 255, 0.08);
+
+  color: #e5e7eb;
+  font-family: "Inter", sans-serif;
+
+  border-top: 1px solid rgba(250, 204, 21, 0.35);
+
+  box-shadow:
+    0 -1px 0 rgba(250, 204, 21, 0.08),
+    0 -20px 40px rgba(0, 0, 0, 0.18);
 }
 
 /* ===================== Footer Content Grid ===================== */
@@ -30,20 +38,20 @@
 }
 
 .footer-column h1 {
-  font-size: 22px;
-  font-weight: 800;
-  margin: 0 0 20px;
-  color: #ffffff;
-  letter-spacing: 0.2px;
+  font-size: 18px;
+  color: #a97d17;
 }
 
 .footer-column h3,
 .footer-column h4 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
   margin: 0 0 20px;
-  color: #facc15;
-  letter-spacing: 0.3px;
+
+  color: #a97d17;
 }
 
 /* ===================== Logo ===================== */
@@ -54,7 +62,7 @@
 }
 
 .footer .logo img {
-  max-width: 150px;
+  max-width: 180px;
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -89,7 +97,7 @@
 
 .footer-column p i {
   font-size: 16px;
-  color: #facc15;
+  color: #a97d17;
   min-width: 18px;
   margin-top: 4px;
 }
@@ -124,24 +132,32 @@
 }
 
 .footer-nav a i {
-  color: #facc15;
+  color: #a97d17;
   min-width: 18px;
 }
 
 .footer-nav a:hover {
-  color: #facc15;
+  color: #a97d17;
   transform: translateX(4px);
+
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.25);
 }
 
 /* ===================== Map ===================== */
 .map-container {
   width: 100%;
   margin-top: 12px;
+
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+  background: rgba(255, 255, 255, 0.03);
+
   border: 1px solid rgba(255, 255, 255, 0.06);
-  background: #0f172a;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .map-container iframe {
@@ -155,12 +171,18 @@
 .footer-bottom {
   width: 100%;
   max-width: 1400px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
   padding-top: 18px;
+
   text-align: center;
+
   font-size: 14px;
   font-weight: 500;
-  color: #94a3b8;
+
+  color: #a5b4c7;
+
   letter-spacing: 0.2px;
 }
 
