@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "../../styles/header.css";
+import "./Header.css";
 import { useLanguage } from "../../context/LanguageContext";
 import { useGoogleLogin } from "@react-oauth/google";
 import { AuthContext } from "../../context/AuthContext";
@@ -11,10 +11,10 @@ import {
 } from "../../firebase";
 import { toast } from "react-toastify";
 
-import HeaderLogo from "./HeaderLogo";
-import MobileMenuToggle from "./MobileMenuToggle";
-import HeaderNav from "./HeaderNav";
-import HeaderActions from "./HeaderActions";
+import Logo from "./Logo";
+import MobileMenuToggle from "./MobileMenu";
+import Navigation from "./Navigation";
+import Actions from "./Actions";
 
 const HeaderContent = () => {
   const { t, language, changeLanguage } = useLanguage();
@@ -185,7 +185,7 @@ const HeaderContent = () => {
   return (
     <header className="header">
       <div className="header-left">
-        <HeaderLogo />
+        <Logo />
       </div>
 
       <div className="header-mobile-toggle">
@@ -202,7 +202,7 @@ const HeaderContent = () => {
       <div className={`header-nav-shell ${menuOpen ? "open" : ""}`}>
         <div className="header-right">
           <div className="header-nav-wrap">
-            <HeaderNav
+            <Navigation
               t={t}
               openMenu={openMenu}
               toggleDropdown={toggleDropdown}
@@ -212,7 +212,7 @@ const HeaderContent = () => {
           </div>
 
           <div className="header-actions-wrap">
-            <HeaderActions
+            <Actions
               t={t}
               language={language}
               changeLanguage={changeLanguage}

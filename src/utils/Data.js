@@ -1,63 +1,66 @@
 import React from "react";
 import { Hammer, DollarSign, Phone } from "lucide-react";
 
-import constructionSite1 from "../assets/images/activity-construction-site-1.webp";
-import constructionSite2 from "../assets/images/activity-construction-site-2.webp";
-import constructionSite3 from "../assets/images/activity-construction-site-3.webp";
+import constructionSite1 from "../assets/activities/activity-construction-site-1.webp";
+import constructionSite2 from "../assets/activities/activity-construction-site-2.webp";
+import constructionSite3 from "../assets/activities/activity-construction-site-3.webp";
 
-import engineeringPlanning1 from "../assets/images/activity-engineering-planning-1.webp";
-import engineeringPlanning2 from "../assets/images/activity-engineering-planning-2.webp";
-import engineeringPlanning3 from "../assets/images/activity-engineering-planning-3.webp";
+import engineeringPlanning1 from "../assets/activities/activity-engineering-planning-1.webp";
+import engineeringPlanning2 from "../assets/activities/activity-engineering-planning-2.webp";
+import engineeringPlanning3 from "../assets/activities/activity-engineering-planning-3.webp";
 
-import finishedProject1 from "../assets/images/activity-finished-project-1.webp";
-import finishedProject2 from "../assets/images/activity-finished-project-2.webp";
-import finishedProject3 from "../assets/images/activity-finished-project-3.webp";
+import finishedProject1 from "../assets/activities/activity-finished-project-1.webp";
+import finishedProject2 from "../assets/activities/activity-finished-project-2.webp";
+import finishedProject3 from "../assets/activities/activity-finished-project-3.webp";
 
 //Projects
-import tiranaCielo from "../assets/images/project-residential-tirana-cielo.webp";
-import samiFrasheri from "../assets/images/project-residential-sami-frasheri.webp";
-import lakeView from "../assets/images/project-residential-lake-view.webp";
-import deltaResidence from "../assets/images/project-residential-delta-residence.webp";
-import katedraljaRingjallja from "../assets/images/project-religious-katedralja-ringjallja.webp";
-import hotelLuaniArte from "../assets/images/project-hotel-luani-arte.webp";
-import spaWellness from "../assets/images/project-spa-wellness-center.webp";
-import aeroportiNeneTereza from "../assets/images/project-infrastructure-tirana-airport-nene-tereza.webp";
+
+import tiranaCielo from "../assets/projects/project-residential-tirana-cielo.webp";
+import samiFrasheri from "../assets/projects/project-residential-sami-frasheri.webp";
+import lakeView from "../assets/projects/project-residential-lake-view.webp";
+import deltaResidence from "../assets/projects/project-residential-delta-residence.webp";
+import katedraljaRingjallja from "../assets/projects/project-religious-katedralja-ringjallja.webp";
+import hotelLuaniArte from "../assets/projects/project-hotel-luani-arte.webp";
+import spaWellness from "../assets/projects/project-spa-wellness-center.webp";
+import aeroportiNeneTereza from "../assets/projects/project-infrastructure-tirana-airport-nene-tereza.webp";
 
 //Features
-import highQualityImage from "../assets/images/feature-high-quality-construction.webp";
-import timelyCompletionImage from "../assets/images/feature-on-time-project-delivery.webp";
-import skilledTeamImage from "../assets/images/feature-skilled-construction-team.webp";
-import budgetFriendlyImage from "../assets/images/feature-cost-effective-construction.webp";
-import customerSatisfactionImage from "../assets/images/feature-client-satisfaction.webp";
+
+import planningDesignImage from "../assets/features/planning-design.webp";
+import engineeringTeamImage from "../assets/features/engineering-team.webp";
+import constructionSiteImage from "../assets/features/construction-site.webp";
+import premiumMaterialsImage from "../assets/features/premium-materials.webp";
+import completedProjectsImage from "../assets/features/completed-projects.webp";
+
 //Materials
 
-import woodImage from "../assets/images/material-wood.webp";
-import concreteImage from "../assets/images/material-concrete.webp";
-import steelImage from "../assets/images/material-structural-steel.webp";
-import glassImage from "../assets/images/material-glass.webp";
-import tilesImage from "../assets/images/material-ceramic-tiles.webp";
-import graniteImage from "../assets/images/material-granite.webp";
-import brickImage from "../assets/images/material-brick.webp";
-import marbleImage from "../assets/images/material-marble.webp";
-import aluminumImage from "../assets/images/material-aluminum.webp";
-import pvcImage from "../assets/images/material-pvc.webp";
-import sandImage from "../assets/images/material-construction-sand.webp";
-import cementImage from "../assets/images/material-cement.webp";
-import plasterboardImage from "../assets/images/material-plasterboard.webp";
-import asphaltImage from "../assets/images/material-asphalt.webp";
-import insulationImage from "../assets/images/material-thermal-insulation.webp";
-import roofingImage from "../assets/images/material-roofing.webp";
-import adhesivesImage from "../assets/images/material-construction-adhesives.webp";
-import ceramicsImage from "../assets/images/material-ceramics.webp";
-import gypsumImage from "../assets/images/material-gypsum.webp";
-import paintsImage from "../assets/images/material-paints.webp";
-import pipesImage from "../assets/images/material-pipes.webp";
-import electricalImage from "../assets/images/material-electrical-components.webp";
-import timberImage from "../assets/images/material-timber.webp";
-import stoneImage from "../assets/images/material-natural-stone.webp";
-import metalSheetsImage from "../assets/images/material-metal-sheets.webp";
-import compositeImage from "../assets/images/material-composite.webp";
-import fiberCementImage from "../assets/images/material-fiber-cement.webp";
+import woodImage from "../assets/materials/material-wood.webp";
+import concreteImage from "../assets/materials/material-concrete.webp";
+import steelImage from "../assets/materials/material-structural-steel.webp";
+import glassImage from "../assets/materials/material-glass.webp";
+import tilesImage from "../assets/materials/material-ceramic-tiles.webp";
+import graniteImage from "../assets/materials/material-granite.webp";
+import brickImage from "../assets/materials/material-brick.webp";
+import marbleImage from "../assets/materials/material-marble.webp";
+import aluminumImage from "../assets/materials/material-aluminum.webp";
+import pvcImage from "../assets/materials/material-pvc.webp";
+import sandImage from "../assets/materials/material-construction-sand.webp";
+import cementImage from "../assets/materials/material-cement.webp";
+import plasterboardImage from "../assets/materials/material-plasterboard.webp";
+import asphaltImage from "../assets/materials/material-asphalt.webp";
+import insulationImage from "../assets/materials/material-thermal-insulation.webp";
+import roofingImage from "../assets/materials/material-roofing.webp";
+import adhesivesImage from "../assets/materials/material-construction-adhesives.webp";
+import ceramicsImage from "../assets/materials/material-ceramics.webp";
+import gypsumImage from "../assets/materials/material-gypsum.webp";
+import paintsImage from "../assets/materials/material-paints.webp";
+import pipesImage from "../assets/materials/material-pipes.webp";
+import electricalImage from "../assets/materials/material-electrical-components.webp";
+import timberImage from "../assets/materials/material-timber.webp";
+import stoneImage from "../assets/materials/material-natural-stone.webp";
+import metalSheetsImage from "../assets/materials/material-metal-sheets.webp";
+import compositeImage from "../assets/materials/material-composite.webp";
+import fiberCementImage from "../assets/materials/material-fiber-cement.webp";
 
 export const imagesData = [
   [
@@ -226,7 +229,8 @@ export const valuesData = [
   },
 ];
 
-// Array me të gjithë projektet
+// Projects
+
 export const projectsData = [
   {
     id: 1,
@@ -278,7 +282,8 @@ export const projectsData = [
   },
 ];
 
-// src/utils/Data.js
+// JobListings
+
 export const jobListings = [
   {
     titleKey: "constructionEngineerTitle",
@@ -465,40 +470,43 @@ export const objectTypes = [
   },
 ];
 
-//Features
+// Features
+
 export const featuresData = [
   {
     id: 1,
-    image: highQualityImage,
-    titleKey: "highQualityTitle",
-    descriptionKey: "highQualityDesc",
+    image: planningDesignImage,
+    titleKey: "planningDesignTitle",
+    descriptionKey: "planningDesignDesc",
   },
   {
     id: 2,
-    image: timelyCompletionImage,
-    titleKey: "timelyCompletionTitle",
-    descriptionKey: "timelyCompletionDesc",
+    image: engineeringTeamImage,
+    titleKey: "engineeringTeamTitle",
+    descriptionKey: "engineeringTeamDesc",
   },
   {
     id: 3,
-    image: skilledTeamImage,
-    titleKey: "skilledTeamTitle",
-    descriptionKey: "skilledTeamDesc",
+    image: constructionSiteImage,
+    titleKey: "constructionSiteTitle",
+    descriptionKey: "constructionSiteDesc",
   },
   {
     id: 4,
-    image: budgetFriendlyImage,
-    titleKey: "budgetFriendlyTitle",
-    descriptionKey: "budgetFriendlyDesc",
+    image: premiumMaterialsImage,
+    titleKey: "premiumMaterialsTitle",
+    descriptionKey: "premiumMaterialsDesc",
   },
   {
     id: 5,
-    image: customerSatisfactionImage,
-    titleKey: "customerSatisfactionTitle",
-    descriptionKey: "customerSatisfactionDesc",
+    image: completedProjectsImage,
+    titleKey: "completedProjectsTitle",
+    descriptionKey: "completedProjectsDesc",
   },
 ];
+
 //Materials
+
 export const materials = [
   {
     name: "Wood",
@@ -657,7 +665,9 @@ export const materials = [
       "Durable and fire-resistant fiber cement boards for walls and cladding.",
   },
 ];
+
 //Help
+
 export const helpCategories = {
   projects: {
     icon: <Hammer size={20} />,

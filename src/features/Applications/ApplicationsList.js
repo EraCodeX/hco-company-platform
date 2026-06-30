@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/application-list.css";
+import "./ApplicationList.css";
 
 function ApplicationsList() {
   const [applications, setApplications] = useState([]);
