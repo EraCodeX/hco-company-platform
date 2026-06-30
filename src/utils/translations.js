@@ -1,14 +1,14 @@
-// src/utils/translations.js
-
 export const translations = {
   en: {
-    welcome: "Constructing the Future..",
+    welcome: "Constructing the Future.",
     heroSubtitle: "Quality. Precision. Trust.",
     services: "Services",
     ourActivity: "Our Activity",
     ourValues: "Our Values",
     partners: " Our Partners",
+
     // Services
+
     service1_title: "Excavation Works",
     service1_description:
       "We provide expert excavation services, from site clearing to trench digging, ensuring your project starts on solid ground.",
@@ -59,6 +59,7 @@ export const translations = {
       "Our licensed electricians offer reliable electrical installations, repairs, and maintenance for both residential and commercial properties.",
 
     // Values
+
     value1_title: "Excellence and Quality",
     value1_description:
       "We make the best efforts with endless passion and a challenging spirit to meet and exceed every expectation, to become the best in every way.",
@@ -68,12 +69,15 @@ export const translations = {
     value3_title: "Teamwork & Collaboration",
     value3_description:
       "We work together towards a common goal, making what we do better and improving every day.",
+
     //Home
+
     home: "Home",
     mainHome: "Main Home",
     features: "Features",
     dashboard: "Dashboard",
     projects: "Projects",
+    allProjects: "All Projects",
     ProBuild: "ProBuild",
     materials: "Materials",
     calendar: "Calendar",
@@ -82,7 +86,9 @@ export const translations = {
     reviews: "Reviews",
     contact: "Contact",
     signIn: "Sign in",
+
     //Footer
+
     contacts: "Contacts",
     address:
       "Kajo Karafili Street, BimBashi Building, Floor 4, Tirana, Albania",
@@ -91,7 +97,9 @@ export const translations = {
     location: "Location",
     locationText: "Floor 4, Tirana, Albania",
     rightsReserved: 'All Rights Reserved by "H&O"',
+
     //Contact
+
     contactUs: "Contact Us",
     contactDirect: "Contact us directly at:",
     name: "Name",
@@ -100,7 +108,9 @@ export const translations = {
     formSuccess: "Thank you! We will get back to you shortly.",
     formError: "Oops! There was an issue sending the form.",
     contactImageAlt: "Contact Us Image",
+
     //About
+
     companyName: "H&O Company",
     aboutTitle: "About H&O",
     aboutIntro:
@@ -123,7 +133,9 @@ export const translations = {
     safetyExample3: "Safety precaution example 3",
     safetyExample4: "Safety precaution example 4",
     shareExperience: "Share your experience",
+
     //Reviews
+
     User: "User",
     logout: "Logout",
     loginFailed: "Login Failed",
@@ -135,7 +147,9 @@ export const translations = {
     topReviews: "Top Reviews",
     basedOnReviews: "Based on {{count}} reviews",
     whatCustomersSay: "What our customers say",
+
     //Pojects
+
     ourProjects: "OUR PROJECTS",
     seeMore: "See More",
     tiranaCieloTitle: "TIRANA CIELO",
@@ -157,7 +171,9 @@ export const translations = {
     aeroportiTitle: "AEROPORTI NENE TEREZA",
     aeroportiDesc:
       'The international airport "Nënë Tereza" is the airport of ...',
+
     // General
+
     backToAllJobs: "← Back to All Jobs",
     searchPlaceholder: "Search",
     OpenPositions: "Open Positions",
@@ -176,7 +192,9 @@ export const translations = {
     fillAllFields: "Please fill all fields and upload your resume.",
     Submit: "Submit",
     applicationSuccess: "Your application has been successfully submitted!",
+
     // Construction Engineer
+
     constructionEngineerTitle: "Construction Engineer",
     constructionEngineerDescription:
       "As a Construction Engineer, you will oversee project design and implementation, ensuring compliance with safety and quality standards.",
@@ -198,6 +216,7 @@ export const translations = {
       "Proficiency in AutoCAD, Revit, or similar design software.",
 
     // Construction Worker
+
     constructionWorkerTitle: "Construction Worker",
     constructionWorkerDescription:
       "We are seeking motivated Construction Workers to join our team in executing high-quality construction projects.",
@@ -217,6 +236,7 @@ export const translations = {
       "Basic understanding of construction procedures and tools.",
 
     // Construction Foreman
+
     constructionForemanTitle: "Construction Foreman",
     constructionForemanDescription:
       "The Construction Foreman will lead and coordinate teams of workers, ensuring that all operations are completed safely, efficiently, and on schedule.",
@@ -238,6 +258,7 @@ export const translations = {
       "Ability to read blueprints and technical drawings.",
 
     // Construction Archaeologist
+
     constructionArchaeologistTitle: "Construction Archaeologist",
     constructionArchaeologistDescription:
       "As a Construction Archaeologist, you will assess and monitor construction projects to identify and preserve archaeological findings.",
@@ -259,6 +280,7 @@ export const translations = {
       "Attention to detail and respect for cultural heritage.",
 
     // Architectural Designer
+
     architecturalDesignerTitle: "Architectural Designer",
     architecturalDesignerDescription:
       "We are looking for a creative Architectural Designer to produce innovative designs for residential and commercial projects. ",
@@ -280,6 +302,7 @@ export const translations = {
       "Excellent communication and teamwork skills.",
 
     // Project Coordinator
+
     projectCoordinatorTitle: "Project Coordinator",
     projectCoordinatorDescription:
       "As a Project Coordinator, you will assist in planning, executing, and finalizing projects within budget and deadlines. ",
@@ -301,6 +324,7 @@ export const translations = {
       "Knowledge of project management software is a plus.",
 
     // Structural Engineer
+
     structuralEngineerTitle: "Structural Engineer",
     structuralEngineerDescription:
       "The Structural Engineer will design, plan, and oversee the construction of load-bearing structures. ",
@@ -322,6 +346,7 @@ export const translations = {
       "Attention to detail and problem-solving mindset.",
 
     // Installation Foreman
+
     installationForemanTitle: "Installation Foreman",
     installationForemanDescription:
       "We are seeking an experienced Installation Foreman to supervise the installation of mechanical, electrical, and plumbing systems.",
@@ -343,6 +368,7 @@ export const translations = {
       "Knowledge of MEP systems and technical drawings.",
 
     //BuildCostpro
+
     objectType: "Object Type",
     area: "Area (m²)",
     enterArea: "Enter total area",
@@ -366,26 +392,34 @@ export const translations = {
     factText:
       "Generate transparent and reliable construction cost estimates to support better planning and decision-making.",
     errorMessage: "You have to login!",
-    //Features
-    highQualityTitle: "High-Quality Materials",
-    highQualityDesc:
-      "We use only certified and durable materials, ensuring excellent results in every project. Material quality is our priority to ensure longevity and high performance.",
-    timelyCompletionTitle: "Timely Completion",
-    timelyCompletionDesc:
-      "We are committed to completing every project within the agreed timelines. Our use of advanced technologies and efficient project management allows us to meet all client requirements.",
-    skilledTeamTitle: "Skilled and Professional Team",
-    skilledTeamDesc:
-      "Our team consists of highly qualified professionals with extensive experience in the construction field. Each team member is dedicated to providing top-level services.",
-    budgetFriendlyTitle: "Budget-Friendly Solutions",
-    budgetFriendlyDesc:
-      "We understand the importance of staying within budget. Our services are designed to provide cost-effective solutions without compromising on quality.",
-    customerSatisfactionTitle: "Customer Satisfaction",
-    customerSatisfactionDesc:
-      "We prioritize customer satisfaction by ensuring clear communication, excellent service, and top-quality results in every project.",
-    featuresHeaderTitle: "Our Construction Services Features",
+
+    // Features
+
+    planningDesignTitle: "Planning & Design",
+    planningDesignDesc:
+      "We provide detailed planning and professional design services for every construction project.",
+
+    engineeringTeamTitle: "Engineering Team",
+    engineeringTeamDesc:
+      "Our experienced engineers and specialists ensure reliable and efficient project execution.",
+
+    constructionSiteTitle: "Construction Site",
+    constructionSiteDesc:
+      "We manage every construction phase with high-quality standards and on-time delivery.",
+
+    premiumMaterialsTitle: "Premium Materials",
+    premiumMaterialsDesc:
+      "We use certified, high-quality materials to ensure durable and long-lasting results.",
+
+    completedProjectsTitle: "Completed Projects",
+    completedProjectsDesc:
+      "Our completed projects demonstrate our expertise, quality, and commitment to excellence.",
+    featuresHeaderTitle: "Our Construction Features",
     featuresHeaderDesc:
-      "We offer a wide range of construction services that meet the needs of every project, ensuring high quality and efficiency.",
+      "Discover the key strengths that make our construction services reliable, efficient, and high quality.",
+
     //Cookis
+
     cookieTitle: "We use cookies",
     cookieBannerMessage:
       "We use cookies to improve your experience. Please choose your preferences:",
@@ -394,14 +428,18 @@ export const translations = {
     marketingCookies: "Marketing Cookies",
     savePreferences: "Save",
     acceptAll: "Accept all",
+
     //Aplication
+
     applyingFor: "Applying for",
     resume: "Resume",
     somethingWrong: "Something went wrong.",
     serverError: "An error occurred. Please try again later.",
     invalidEmail: "Please enter a valid email address.",
     seeApplications: "See Applications",
+
     // Event Calendar
+
     eventCalendar: "Event Calendar",
     back: "Back",
     prev: "Prev",
@@ -416,7 +454,9 @@ export const translations = {
     eventsIn: "Events in",
     noEventsMonth: "No events for this month.",
     errorAddingEvent: "Error adding event",
+
     //Materials
+
     exploreMaterials: "Explore Materials",
     materialsIntro: "Here you can find information about our materials...",
     Wood: "Wood",
@@ -526,10 +566,14 @@ export const translations = {
     "Fiber Cement Boards": "Fiber Cement Boards",
     "Durable and fire-resistant fiber cement boards for walls and cladding.":
       "Durable and fire-resistant fiber cement boards for walls and cladding.",
+
     //Notifications
+
     notifications: "Notifications",
     noNotifications: "No notifications",
+
     //Help
+
     welcomeMessage:
       "Welcome! For account access, please use the main header login.",
     categories: "Categories",
@@ -566,7 +610,8 @@ export const translations = {
     faq_project_6_a:
       "Yes, our team will work with you to customize your project design.",
 
-    // FAQs - Payments & Contracts
+    // Payments & Contracts
+
     faq_payment_1_q: "What payment methods do you accept?",
     faq_payment_1_a: "We accept bank transfer, credit card, and cash payments.",
 
@@ -586,7 +631,8 @@ export const translations = {
     faq_payment_5_a:
       "Yes, detailed invoices are issued for every payment made.",
 
-    // FAQs - Contact & Support
+    // Contact & Support
+
     faq_support_1_q: "How can I contact the company?",
     faq_support_1_a: "You can contact us via the contact form or by phone.",
 
@@ -612,7 +658,9 @@ export const translations = {
     ourActivity: "Aktiviteti Ynë",
     ourValues: "Vlerat Tona",
     partners: "Partnerët Tanë",
+
     // Services
+
     service1_title: "Punime Ekskavimi",
     service1_description:
       "Ofrojmë shërbime profesionale ekskavimi, nga pastrimi i vendit deri te gropat, duke siguruar që projekti juaj të fillojë në bazë të fortë.",
@@ -663,6 +711,7 @@ export const translations = {
       "Elektricistët tanë të licencuar ofrojnë instalime, riparime dhe mirëmbajtje të besueshme elektrike për ndërtesa rezidenciale dhe komerciale.",
 
     // Values
+
     value1_title: "Ekselencë dhe Cilësi",
     value1_description:
       "Bëjmë përpjekjet më të mira me pasion të pafund dhe shpirt sfidues për të përmbushur dhe tejkaluar çdo pritshmëri, për të qenë më të mirët në çdo mënyrë.",
@@ -672,12 +721,15 @@ export const translations = {
     value3_title: "Puna në Grup & Bashkëpunimi",
     value3_description:
       "Punojmë së bashku drejt një qëllimi të përbashkët, duke përmirësuar gjithçka që bëjmë dhe duke u përmirësuar çdo ditë.",
+
     //Home
+
     home: "Faqja",
     mainHome: "Faqja Kryesore",
     features: "Vecori",
     dashboard: "Paneli",
     projects: "Projekt",
+    allProjects: "Projektet",
     ProBuild: "Preventiv",
     materials: "Materialet",
     calendar: "Kalendar",
@@ -686,7 +738,9 @@ export const translations = {
     reviews: "Vleresime",
     contact: "Kontakt",
     signIn: "Logohu",
+
     //Footer
+
     contacts: "Kontakti",
     address: "Rruga Kajo Karafili, Ndërtesa BimBashi, Kat 4, Tiranë, Shqipëri",
     phone: "+355 69 20 73 347",
@@ -694,7 +748,9 @@ export const translations = {
     location: "Vendndodhja",
     locationText: "Kat 4, Tiranë, Shqipëri",
     rightsReserved: 'Të gjitha të drejtat e rezervuara nga "H&O"',
+
     //Contact
+
     contactUs: "Na Kontaktoni",
     contactDirect: "Kontaktoni drejtpërdrejt në:",
     name: "Emri",
@@ -703,7 +759,9 @@ export const translations = {
     formSuccess: "Faleminderit! Do t'ju kontaktojmë së shpejti.",
     formError: "Ops! Ka pasur një problem gjatë dërgimit të formularit.",
     contactImageAlt: "Na Kontaktoni",
+
     //About
+
     companyName: "H&O Kompania",
     aboutTitle: "Rreth H&O",
     aboutIntro:
@@ -725,6 +783,7 @@ export const translations = {
     safetyExample2: "Shembull sigurie 2",
     safetyExample3: "Shembull sigurie 3",
     safetyExample4: "Shembull sigurie 4",
+
     //Reviews
 
     User: "Përdorues",
@@ -738,7 +797,9 @@ export const translations = {
     topReviews: "Vlerësimet Kryesore",
     basedOnReviews: "Bazuar në {{count}} vlerësime",
     whatCustomersSay: "Çfarë thonë klientët tanë",
+
     //Projects
+
     ourProjects: "PROJEKTET TONA",
     seeMore: "Shiko më shumë",
     tiranaCieloTitle: "TIRANA CIELO",
@@ -759,7 +820,9 @@ export const translations = {
       "Ndërtesa ndodhet në qytetin e Shkodrës, me standard të lartë...",
     aeroportiTitle: "AEROPORTI NENE TEREZA",
     aeroportiDesc: 'Aeroporti ndërkombëtar "Nënë Tereza" është aeroporti i ...',
+
     //Jobs
+
     backToAllJobs: "← Kthehu tek të gjitha pozicionet",
     searchPlaceholder: "Kërko",
     OpenPositions: "Pozicionet e Lira në Ndërtim",
@@ -780,6 +843,7 @@ export const translations = {
     Submit: "Dergo",
 
     // Construction Engineer
+
     constructionEngineerTitle: "Inxhinier Ndërtimi",
     constructionEngineerDescription:
       "Si Inxhinier Ndërtimi, do të mbikëqyrni dizajnin dhe zbatimin e projekteve, duke siguruar përputhshmëri me standardet e sigurisë dhe cilësisë.",
@@ -801,6 +865,7 @@ export const translations = {
       "Njohuri në AutoCAD, Revit ose softuer të ngjashëm dizajni.",
 
     // Construction Worker
+
     constructionWorkerTitle: "Punëtor Ndërtimi",
     constructionWorkerDescription:
       "Kërkojmë Punëtorë Ndërtimi të motivuar për t'u bashkuar me ekipin tonë në zbatimin e projekteve të ndërtimit me cilësi të lartë.",
@@ -821,6 +886,7 @@ export const translations = {
       "Kuptim bazik i procedurave dhe mjeteve të ndërtimit.",
 
     // Construction Foreman
+
     constructionForemanTitle: "Kryeinspektor Ndërtimi",
     constructionForemanDescription:
       "Kryeinspektori i Ndërtimit do të udhëheqë dhe koordinojë ekipet e punëtorëve, duke siguruar që të gjitha operacionet të përfundojnë në mënyrë të sigurt, efikase dhe sipas afatit.",
@@ -842,6 +908,7 @@ export const translations = {
       "Aftësi për të lexuar planet dhe vizatimet teknike.",
 
     // Construction Archaeologist
+
     constructionArchaeologistTitle: "Arkeolog Ndërtimi",
     constructionArchaeologistDescription:
       "Si Arkeolog Ndërtimi, do të vlerësoni dhe monitoroni projektet e ndërtimit për të identifikuar dhe ruajtur gjetjet arkeologjike.",
@@ -863,6 +930,7 @@ export const translations = {
       "Vëmendje ndaj detajeve dhe respekt për trashëgiminë kulturore.",
 
     // Architectural Designer
+
     architecturalDesignerTitle: "Dizajner Arkitekture",
     architecturalDesignerDescription:
       "Kërkojmë një Dizajner Arkitekture kreativ për të prodhuar dizajne inovative për projekte rezidenciale dhe komerciale. ",
@@ -884,6 +952,7 @@ export const translations = {
       "Aftësi të shkëlqyera komunikimi dhe punë në grup.",
 
     // Project Coordinator
+
     projectCoordinatorTitle: "Koordinator Projekti",
     projectCoordinatorDescription:
       "Si Koordinator Projekti, do të ndihmoni në planifikimin, zbatimin dhe finalizimin e projekteve brenda buxhetit dhe afateve.",
@@ -905,6 +974,7 @@ export const translations = {
       "Njohuri të softuerëve të menaxhimit të projekteve është plus.",
 
     // Structural Engineer
+
     structuralEngineerTitle: "Inxhinier Struktural",
     structuralEngineerDescription:
       "Inxhinieri Struktural do të dizajnojë, planifikojë dhe mbikëqyrë ndërtimin e strukturave mbajtëse. ",
@@ -926,6 +996,7 @@ export const translations = {
       "Vëmendje ndaj detajeve dhe aftësi për zgjidhjen e problemeve.",
 
     // Installation Foreman
+
     installationForemanTitle: "Kryeinspektor Instalimi",
     installationForemanDescription:
       "Kërkojmë një Kryeinspektor Instalimi me përvojë për të mbikëqyrur instalimin e sistemeve mekanike, elektrike dhe hidraulike.",
@@ -945,7 +1016,9 @@ export const translations = {
       "Aftësi të forta udhëheqëse dhe organizative.",
     requirementInstallationForeman4:
       "Njohuri të sistemeve MEP dhe vizatimeve teknike.",
+
     //Kalkulatori
+
     objectType: "Lloji i objektit",
     area: "Sipërfaqja (m²)",
     enterArea: "Shkruani sipërfaqen totale",
@@ -970,26 +1043,34 @@ export const translations = {
     factText:
       "Gjeneroni vlerësime të sakta dhe transparente të kostos së ndërtimit për planifikim dhe vendimmarrje më të mirë.",
     errorMessage: "Ju duhet te logoheni!",
+
     //Features
-    highQualityTitle: "Materiale me Cilësi të Lartë",
-    highQualityDesc:
-      "Ne përdorim vetëm materiale të certifikuara dhe të qëndrueshme, duke siguruar rezultate të shkëlqyera në çdo projekt. Cilësia e materialeve është prioritet për të garantuar qëndrueshmëri dhe performancë të lartë.",
-    timelyCompletionTitle: "Përfundim në Kohë",
-    timelyCompletionDesc:
-      "Jemi të përkushtuar të përfundojmë çdo projekt brenda afateve të dakorduara. Përdorimi i teknologjive të avancuara dhe menaxhimi efikas i projekteve na lejon të përmbushim të gjitha kërkesat e klientëve.",
-    skilledTeamTitle: "Ekip i Aftë dhe Profesional",
-    skilledTeamDesc:
-      "Ekipi ynë përbëhet nga profesionistë të kualifikuar me përvojë të gjerë në fushën e ndërtimit. Çdo anëtar i ekipit është i përkushtuar të ofrojë shërbime të nivelit të lartë.",
-    budgetFriendlyTitle: "Zgjidhje të Përballueshme",
-    budgetFriendlyDesc:
-      "Ne kuptojmë rëndësinë e qëndrimit brenda buxhetit. Shërbimet tona janë të dizajnuara për të ofruar zgjidhje me kosto efektive pa kompromentuar cilësinë.",
-    customerSatisfactionTitle: "Kënaqësia e Klientit",
-    customerSatisfactionDesc:
-      "Prioriteti ynë është kënaqësia e klientit duke siguruar komunikim të qartë, shërbim të shkëlqyer dhe rezultate të larta në çdo projekt.",
-    featuresHeaderTitle: "Karakteristikat e Shërbimeve tona të Ndërtimit",
+
+    planningDesignTitle: "Planifikim & Projektim",
+    planningDesignDesc:
+      "Ofrojmë planifikim të detajuar dhe projektim profesional për të siguruar që çdo projekt të realizohet sipas standardeve më të larta.",
+
+    engineeringTeamTitle: "Ekip Inxhinierësh",
+    engineeringTeamDesc:
+      "Ekipi ynë i inxhinierëve dhe specialistëve punon me përkushtim për të garantuar zgjidhje të sigurta, moderne dhe efikase.",
+
+    constructionSiteTitle: "Zbatim në Terren",
+    constructionSiteDesc:
+      "Menaxhojmë dhe realizojmë çdo fazë të ndërtimit me profesionalizëm, duke respektuar afatet dhe cilësinë e punimeve.",
+
+    premiumMaterialsTitle: "Materiale Premium",
+    premiumMaterialsDesc:
+      "Përdorim materiale ndërtimi të certifikuara dhe me cilësi të lartë për të garantuar qëndrueshmëri dhe rezultate afatgjata.",
+
+    completedProjectsTitle: "Projekte të Përfunduara",
+    completedProjectsDesc:
+      "Portofoli ynë përfshin projekte të realizuara me sukses që dëshmojnë përvojën, cilësinë dhe besueshmërinë tonë.",
+    featuresHeaderTitle: "Karakteristikat Tona",
     featuresHeaderDesc:
-      "Ofrojmë një gamë të gjerë shërbimesh ndërtimi që plotësojnë nevojat e çdo projekti, duke siguruar cilësi dhe efikasitet të lartë.",
+      "Zbuloni pikat kryesore që e bëjnë kompaninë tonë të besueshme, profesionale dhe të përkushtuar ndaj cilësisë.",
+
     //Cookie
+
     cookieTitle: "Ne përdorim cookies",
     cookieBannerMessage:
       "Ne përdorim cookies për të përmirësuar eksperiencën tuaj. Ju lutem zgjidhni preferencat tuaja:",
@@ -998,7 +1079,9 @@ export const translations = {
     marketingCookies: "Cookies marketingu",
     savePreferences: "Ruaj",
     acceptAll: "Prano të gjitha",
+
     //Aplication
+
     applyingFor: "Duke aplikuar për",
     resume: "CV",
     submitApplication: "Dërgo aplikimin",
@@ -1008,7 +1091,9 @@ export const translations = {
     serverError: "Ndodhi një gabim. Ju lutem provoni më vonë.",
     invalidEmail: "Ju lutem shkruani një email të vlefshëm.",
     seeApplications: "Shiko aplikimet",
+
     // Event Calendar
+
     eventCalendar: "Kalendari i Ngjarjeve",
     back: "Kthehu",
     prev: "Mëparshëm",
@@ -1023,7 +1108,9 @@ export const translations = {
     eventsIn: "Ngjarjet në",
     noEventsMonth: "Nuk ka ngjarje për këtë muaj.",
     errorAddingEvent: "Gabim gjatë shtimit të ngjarjes",
+
     //Materials
+
     exploreMaterials: "Zbuloni Materialet",
     materialsIntro: "Këtu mund të gjeni informacion për materialet tona...",
     Wood: "Druri",
@@ -1133,10 +1220,13 @@ export const translations = {
     "Fiber Cement Boards": "Pllaka Fiber-Cement",
     "Durable and fire-resistant fiber cement boards for walls and cladding.":
       "Pllaka fiber-cement të qëndrueshme dhe rezistente ndaj zjarrit për mure dhe fasada.",
+
     //Njoftime
     Notifications: "Njoftimet",
     noNotifications: "Nuk ka njoftime",
+
     //Help
+
     welcomeMessage:
       "Mirësevini! Për qasje në llogari përdorni hyrjen kryesore.",
     categories: "Kategoritë",
@@ -1149,7 +1239,9 @@ export const translations = {
     "Payments & Billing": "Pagesat & Faturimi",
     "Account Settings": "Cilësimet e Llogarisë",
     "Technical Issues": "Çështje Teknike",
-    // FAQs - Projects & Services
+
+    // Projects & Services
+
     faq_project_1_q: "Si mund të filloj një projekt ndërtimi?",
     faq_project_1_a:
       'Plotësoni formularin e projektit nën "Shërbimet", dhe ekipi ynë do t\'ju kontaktojë.',
@@ -1174,7 +1266,8 @@ export const translations = {
     faq_project_6_a:
       "Po, ekipi ynë do të punojë me ju për të personalizuar dizajnin e projektit.",
 
-    // FAQs - Payments & Contracts
+    //Payments & Contracts
+
     faq_payment_1_q: "Çfarë mënyrash pagese pranoni?",
     faq_payment_1_a:
       "Pranojmë transfer bankar, kartë krediti dhe pagesa me para.",
@@ -1195,7 +1288,8 @@ export const translations = {
     faq_payment_5_a:
       "Po, faturat e hollësishme lëshohen për çdo pagesë të kryer.",
 
-    // FAQs - Contact & Support
+    // Contact & Support
+
     faq_support_1_q: "Si mund të kontaktoj kompaninë?",
     faq_support_1_a:
       "Mund të na kontaktoni përmes formularit të kontaktit ose telefonit.",

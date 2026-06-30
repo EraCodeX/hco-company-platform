@@ -5,7 +5,9 @@ import { useState } from "react";
 export const useAuth = () => {
   const savedUser = JSON.parse(localStorage.getItem("user"));
   const [user, setUser] = useState(savedUser || null);
-  const [hasRated, setHasRated] = useState(localStorage.getItem("hasRated") === "true");
+  const [hasRated, setHasRated] = useState(
+    localStorage.getItem("hasRated") === "true",
+  );
 
   const login = (userData) => {
     setUser(userData);
@@ -19,6 +21,7 @@ export const useAuth = () => {
     setHasRated(false);
     localStorage.removeItem("user");
     localStorage.removeItem("hasRated");
+    window.location.href = "/";
   };
 
   return { user, hasRated, login, logout, setHasRated };

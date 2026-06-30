@@ -49,14 +49,19 @@ export const useRatings = (user, hasRated, setHasRated) => {
           setRatings((prevRatings) => [...prevRatings, ratingData]);
           setHasRated(true);
           localStorage.setItem("hasRated", true);
-          localStorage.setItem("ratings", JSON.stringify([...ratings, ratingData]));
+          localStorage.setItem(
+            "ratings",
+            JSON.stringify([...ratings, ratingData]),
+          );
         } else {
           setMessage(data.message);
         }
       })
       .catch((error) => {
         console.error("Error submitting rating:", error);
-        setMessage("There was an error submitting your rating. Please try again later.");
+        setMessage(
+          "There was an error submitting your rating. Please try again later.",
+        );
       });
   };
   useEffect(() => {

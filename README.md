@@ -194,38 +194,48 @@ The application follows a component-based architecture focused on maintainabilit
 # 📂 Project Structure
 
 ```text
-api/
+hco-construction/
 │
-├── config/
-├── controllers/
-├── models/
-├── routes/
-└── database/
-
-public/
+├── api/
+├── public/
+├── screenshots/
 │
-├── assets/
-├── images/
-└── favicon/
-
-src/
+├── src/
+│   ├── assets/
+│   │   ├── about/
+│   │   ├── activities/
+│   │   ├── branding/
+│   │   ├── contact/
+│   │   ├── features/
+│   │   ├── flags/
+│   │   ├── hero/
+│   │   ├── materials/
+│   │   ├── partners/
+│   │   ├── payments/
+│   │   └── projects/
+│   │
+│   ├── components/
+│   │   ├── ChatbaseLoader/
+│   │   ├── CookieConsent/
+│   │   ├── Footer/
+│   │   ├── Header/
+│   │   ├── LanguageSelector/
+│   │   └── Notifications/
+│   │
+│   ├── context/
+│   ├── features/
+│   ├── hooks/
+│   ├── pages/
+│   ├── sections/
+│   ├── styles/
+│   ├── utils/
+│   │
+│   ├── App.js
+│   └── App.test.js
 │
-├── components/
-├── pages/
-├── features/
-├── hooks/
-├── context/
-├── services/
-├── styles/
-├── utils/
-│
-├── App.js
-├── index.js
-└── firebase.js
-
-screenshots/
-
-.env.example
+├── .env.example
+├── package.json
+└── README.md
 ```
 
 ---

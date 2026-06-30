@@ -1,12 +1,12 @@
 import { useContext, useState, useEffect, useRef } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { useLocation, Link, useNavigate } from "react-router-dom";
-import "../../styles/application-form.css";
-import Footer from "../../components/SiteFooter";
-import Header from "../../components/SiteHeader";
+import "./ApplicationForm.css";
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 import { useLanguage } from "../../context/LanguageContext";
 import emailjs from "@emailjs/browser";
-import { jobListings } from "../../utils/Data";
+import { jobListings } from "../../utils/data";
 
 const SERVICE_ID = "service_a4kq521";
 const TEMPLATE_AUTO_REPLY = "template_i17ojkq";
