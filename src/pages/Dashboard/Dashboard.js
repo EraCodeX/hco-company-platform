@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext, useMemo } from "react";
+import { NavLink } from "react-router-dom";
 
 import "./Dashboard.css";
 
@@ -103,36 +104,54 @@ const DashboardPage = () => {
         </div>
 
         <nav className="sidebar-nav">
-          <a href="/" className="active">
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             <i className="fa fa-home"></i>
             <span>Dashboard</span>
-          </a>
+          </NavLink>
 
-          <a href="/">
+          <NavLink to="/dashboard/clients" onClick={(e) => e.preventDefault()}>
             <i className="fa fa-users"></i>
             <span>Clients</span>
-          </a>
+          </NavLink>
 
-          <a href="/">
+          <NavLink
+            to="/dashboard/applications"
+            onClick={(e) => e.preventDefault()}
+          >
             <i className="fa fa-briefcase"></i>
             <span>Applications</span>
-          </a>
+          </NavLink>
 
-          <a href="/">
+          <NavLink
+            to="/dashboard/calendar"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <i className="fa fa-calendar"></i>
+            <span>Calendar</span>
+          </NavLink>
+
+          <NavLink to="/dashboard/reviews" onClick={(e) => e.preventDefault()}>
             <i className="fa fa-star"></i>
             <span>Reviews</span>
-          </a>
+          </NavLink>
 
-          <a href="/">
+          <NavLink
+            to="/dashboard/analytics"
+            onClick={(e) => e.preventDefault()}
+          >
             <i className="fa fa-chart-line"></i>
             <span>Analytics</span>
-          </a>
+          </NavLink>
 
-          <a href="/">
+          <NavLink to="/dashboard/settings" onClick={(e) => e.preventDefault()}>
             <i className="fa fa-cog"></i>
             <span>Settings</span>
-          </a>
+          </NavLink>
         </nav>
+
         <div className="sidebar-footer">
           <button className="logout-btn" onClick={logout}>
             <i className="fa-solid fa-right-from-bracket"></i>

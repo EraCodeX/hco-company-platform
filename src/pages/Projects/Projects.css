@@ -1,21 +1,4 @@
 /* =========================
-   PROJECTS PAGE
-========================= */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f8fafc;
-  color: #111827;
-}
-
-/* =========================
    PROJECTS SECTION
 ========================= */
 .projects-section {
@@ -144,7 +127,6 @@ body {
 }
 
 .see-more-button:hover {
-  background: #000000;
   box-shadow: 0 10px 24px rgba(17, 24, 39, 0.14);
 }
 

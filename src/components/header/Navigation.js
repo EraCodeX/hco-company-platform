@@ -1,11 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  FolderKanban,
-  Building2,
-  BriefcaseBusiness,
-  CalendarDays,
-} from "lucide-react";
+import { FolderKanban, Building2, BriefcaseBusiness } from "lucide-react";
 
 export default function HeaderNav({
   t,
@@ -78,17 +73,6 @@ export default function HeaderNav({
             >
               <Building2 className="dropdown-link-icon" />
               <span>{t("materials")}</span>
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="/calendar"
-              className={isActive("/calendar")}
-              onClick={handleLinkClick}
-            >
-              <CalendarDays className="dropdown-link-icon" />
-              <span>{t("calendar")}</span>
             </Link>
           </li>
         </ul>

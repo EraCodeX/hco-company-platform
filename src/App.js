@@ -56,14 +56,17 @@ function App() {
                 <Route path="/projects" element={<ProjectsPage />} />
                 <Route path="/buildcostpro" element={<BuildCostCalculator />} />
                 <Route path="/materials" element={<Materials />} />
-                <Route path="/calendar" element={<EventCalendar />} />
+                <Route path="/dashboard/calendar" element={<EventCalendar />} />
                 <Route path="/features" element={<Features />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/jobs" element={<Jobs />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/application" element={<ApplicationForm />} />
-                <Route path="/applications" element={<ApplicationsList />} />
+                <Route
+                  path="/dashboard/applications"
+                  element={<ApplicationsList />}
+                />
                 <Route path="/payments" element={<Payments />} />
                 <Route path="/reviews" element={<Reviews />} />
                 <Route path="/help" element={<Help />} />

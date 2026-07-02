@@ -148,16 +148,15 @@
   border-color: #111827;
   box-shadow: 0 0 0 2px rgba(17, 24, 39, 0.08);
 }
-
 /* =========================
    BUTTON
 ========================= */
 button[type="submit"] {
   width: 100%;
-  border: none;
   border-radius: 10px;
-  background: #111827;
-  color: #ffffff;
+  background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
+  border: 1px solid #d0d7e2;
+  color: #0f172a;
   font-size: 15px;
   font-weight: 600;
   padding: 14px 18px;
@@ -168,13 +167,12 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background: #000000;
+  background: white;
 }
 
 button[type="submit"]:active {
   transform: scale(0.99);
 }
-
 /* =========================
    STATUS MESSAGE
 ========================= */
