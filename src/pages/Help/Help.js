@@ -6,6 +6,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import { helpCategories } from "../../utils/data";
 import { Link } from "react-router-dom";
 import { Search } from "lucide-react";
+
 const Help = () => {
   const [activeCategory, setActiveCategory] = useState("projects");
   const [search, setSearch] = useState("");
@@ -22,14 +23,14 @@ const Help = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Filtrimi i FAQs
+  // Filtered
   const filteredFAQs = helpCategories[activeCategory].faqKeys
     .map((f) => ({ question: t(f.q), answer: t(f.a) }))
     .filter((faq) => faq.question.toLowerCase().includes(search.toLowerCase()));
 
   return (
     <div className="help-page">
-      {/* Header profesional me scroll */}
+      {/* Header */}
       <header className={`help-header ${scrolled ? "scrolled" : ""}`}>
         <div className="header-left">
           <Link to="/">

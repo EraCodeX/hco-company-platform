@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect, useRef } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { useLocation, Link, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./ApplicationForm.css";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -74,6 +74,7 @@ function ApplicationForm() {
       setMessage(t("applicationSuccess"));
       setName("");
       setResume(null);
+
       if (resumeInputRef.current) resumeInputRef.current.value = "";
       document.body.classList.add("modal-open");
       setModalVisible(true);
@@ -102,6 +103,7 @@ function ApplicationForm() {
 
       <div className="application-container">
         {/* LEFT SIDE — Job Description */}
+
         <div className="application-left">
           {selectedJob ? (
             <>
@@ -133,6 +135,7 @@ function ApplicationForm() {
         </div>
 
         {/* RIGHT SIDE — Application Form */}
+
         <div className="application-right">
           <h3>{t(selectedJob?.titleKey || "job")}</h3>
           <form onSubmit={handleSubmit}>
@@ -168,6 +171,7 @@ function ApplicationForm() {
       </div>
 
       {/* Modal */}
+
       {modalVisible && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -182,13 +186,6 @@ function ApplicationForm() {
             <p>{message}</p>
           </div>
         </div>
-      )}
-
-      {/* Admin link */}
-      {user?.email === "erahidaj@gmail.com" && (
-        <Link to="/applications" className="admin-link">
-          {t("seeApplications")}
-        </Link>
       )}
 
       <Footer />
