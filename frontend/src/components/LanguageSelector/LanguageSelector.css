@@ -1,0 +1,314 @@
+/* ==================================================
+   LANGUAGE SELECTOR — ENTERPRISE / RESPONSIVE
+================================================== */
+
+.language-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.language-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 0;
+  height: 44px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ho-white);
+  box-shadow: none !important;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.language-trigger:hover {
+  background: rgba(255, 255, 255, 0.055);
+  transform: none !important;
+}
+
+.language-text {
+  display: inline-block;
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.language-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 12px;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+  position: static;
+  top: auto;
+  font-size: 9px;
+  line-height: 1;
+  transform: none;
+  transform-origin: 50% 50%;
+  transition: transform 0.2s ease;
+}
+
+.language-arrow.open {
+  transform: rotate(180deg);
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  left: auto;
+  width: 176px;
+  min-width: 176px;
+  max-width: calc(100vw - 24px);
+  padding: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: #0f2238;
+  box-shadow: 0 18px 42px rgba(2, 6, 23, 0.32), 0 6px 16px rgba(2, 6, 23, 0.16);
+  z-index: 9999;
+  transform-origin: top right;
+  animation: languageDropdown 0.16s ease both;
+}
+
+.language-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 100%;
+  height: 10px;
+}
+
+@keyframes languageDropdown {
+  from { opacity: 0; transform: translateY(-5px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.language-option {
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ho-white);
+  box-shadow: none !important;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.18s ease;
+}
+
+.language-option:hover {
+  background: rgba(255, 255, 255, 0.075);
+  transform: none !important;
+}
+
+.language-option-content {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-option-content span {
+  white-space: nowrap;
+}
+
+.language-option-flag,
+.language-option img {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.language-check {
+  flex: 0 0 auto;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ho-brand-gold-bright);
+}
+
+@media (max-width: 1024px) {
+  .language-dropdown {
+    max-width: 100%;
+  }
+
+  .language-trigger {
+    height: 42px;
+    padding: 0 10px;
+    gap: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.055);
+  }
+
+  .language-text {
+    font-size: 13px;
+  }
+
+  .language-arrow {
+    flex-basis: 11px;
+    width: 11px;
+    height: 11px;
+    font-size: 8px;
+  }
+
+  .language-menu {
+    top: calc(100% + 8px);
+    right: 0;
+    left: auto;
+    width: 158px;
+    min-width: 158px;
+    max-width: min(240px, calc(100vw - 28px));
+    transform: none;
+    animation: languageDropdown 0.16s ease both;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-trigger {
+    min-width: 92px;
+    height: 42px;
+    padding-inline: 9px;
+  }
+
+  .language-menu {
+    width: 154px;
+    min-width: 154px;
+    max-width: calc(100vw - 32px);
+  }
+
+  .language-option {
+    min-height: 40px;
+    padding: 8px 9px;
+    font-size: 12px;
+  }
+}
+
+/* ==================================================
+   MOBILE LANGUAGE MENU — FINAL POSITIONING
+   Desktop is intentionally untouched.
+================================================== */
+@media (max-width: 1024px) {
+  .language-dropdown {
+    width: auto;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .language-trigger {
+    min-width: 96px;
+    max-width: 128px;
+    height: 42px;
+    padding: 0 10px;
+    gap: 6px;
+    justify-content: space-between;
+  }
+
+  .language-text {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .language-arrow {
+    flex: 0 0 11px;
+    width: 11px;
+    min-width: 11px;
+    position: static !important;
+    margin: 0 !important;
+  }
+
+  .language-menu {
+    top: auto !important;
+    bottom: calc(100% + 8px) !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 160px !important;
+    min-width: 160px !important;
+    max-width: min(220px, calc(100vw - 32px)) !important;
+    transform-origin: bottom right !important;
+    z-index: 10050 !important;
+  }
+
+  .language-menu::before {
+    top: auto !important;
+    bottom: -8px !important;
+    height: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-trigger {
+    min-width: 90px;
+    max-width: 112px;
+    height: 40px;
+    padding: 0 9px;
+    gap: 5px;
+  }
+
+  .language-text {
+    font-size: 12px;
+  }
+
+  .language-menu {
+    width: 154px !important;
+    min-width: 154px !important;
+    max-width: calc(100vw - 28px) !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL MOBILE LANGUAGE DROPDOWN POSITION
+   Keeps the selector on the right and away from Sign in.
+========================================================= */
+@media (max-width: 1024px) {
+  .language-dropdown {
+    position: relative !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+
+  .language-trigger {
+    margin: 0 !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .language-arrow {
+    position: static !important;
+    flex: 0 0 11px !important;
+    width: 11px !important;
+    min-width: 11px !important;
+    margin-left: 4px !important;
+  }
+
+  .language-menu {
+    top: auto !important;
+    bottom: calc(100% + 10px) !important;
+    right: 0 !important;
+    left: auto !important;
+    transform: none !important;
+    transform-origin: bottom right !important;
+    z-index: 10050 !important;
+  }
+}

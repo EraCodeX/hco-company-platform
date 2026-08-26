@@ -1,0 +1,451 @@
+/* ===== Application Page ===== */
+
+.application-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 30px auto 70px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* ===== LEFT SIDE - JOB DETAILS ===== */
+.application-left {
+  flex: 1.7;
+}
+
+.application-left h2 {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--ho-ink);
+  margin-bottom: 18px;
+}
+
+.job-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: var(--ho-slate-50);
+  border: 1px solid var(--ho-gray-200);
+  border-radius: 999px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 28px;
+}
+
+.job-location::before {
+  content: "📍";
+}
+
+.job-description {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--ho-gray-600);
+  margin-bottom: 34px;
+}
+
+.application-left h3 {
+  font-size: 20px;
+  font-weight: 750;
+  margin-top: 34px;
+  margin-bottom: 16px;
+  color: var(--ho-ink);
+}
+
+.application-left ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  color: var(--ho-gray-700);
+}
+
+.application-left li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 14px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.application-left li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(244, 180, 0, 0.14);
+  color: #d99a00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.job-deadline {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #9a3412;
+  font-weight: 600;
+}
+
+/* ===== BACK BUTTON ===== */
+.back-to-jobs {
+  max-width: 1300px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.back-btn-jobs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ho-gray-700);
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.back-btn-jobs:hover {
+  color: #f4b400;
+  cursor: pointer;
+  transform: translateX(-4px);
+}
+
+/* ===== RIGHT SIDE - FORM CARD ===== */
+.application-right {
+  flex: 1;
+  position: sticky;
+  top: 110px;
+  background: var(--ho-white);
+  border-radius: 18px;
+  padding: 35px;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.07);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.application-right:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.1);
+}
+
+.application-right h3 {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--ho-ink);
+  margin-bottom: 28px;
+}
+
+.application-right h3::before {
+  content: "Apply for this Position";
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f4b400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.application-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.application-right label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ho-gray-700);
+}
+
+.application-right input[type="text"],
+.application-right input[type="email"],
+.application-right input[type="file"] {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 13px;
+  border: 1px solid var(--ho-gray-300);
+  background: var(--ho-white);
+  color: var(--ho-ink);
+  font-size: 16px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.application-right input[type="text"],
+.application-right input[type="email"] {
+  height: 56px;
+  padding: 0 18px;
+}
+
+.application-right input[type="email"][readonly] {
+  background: var(--ho-gray-50);
+  color: var(--ho-gray-500);
+  cursor: not-allowed;
+}
+
+.application-right input[type="file"] {
+  min-height: 58px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.application-right input:focus {
+  border-color: #f4b400;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(244, 180, 0, 0.16);
+}
+
+.application-right button {
+  width: 100%;
+  height: 58px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 13px;
+  background: #f4b400;
+  background: linear-gradient(180deg, var(--ho-slate-100) 0%, var(--ho-slate-200) 100%);
+  color: var(--ho-brand-navy-soft);
+
+  border: 1px solid var(--ho-border-medium);
+  border-radius: 999px;
+  cursor: pointer;
+
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.7) inset,
+    0 6px 14px rgba(15, 23, 42, 0.06);
+
+  transition: all 0.25s ease;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.application-right button:hover {
+  background: linear-gradient(180deg, var(--ho-white) 0%, #e8edf5 100%);
+
+  border-color: #c2cad6;
+
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 20px rgba(15, 23, 42, 0.1);
+
+  transform: translateY(-1px);
+}
+
+.application-right button:active {
+  transform: translateY(0);
+}
+
+/* ===== ERROR ===== */
+.error {
+  color: #d9534f;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.58);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.modal-content {
+  position: relative;
+  background: var(--ho-white);
+  border-radius: 20px;
+  padding: 34px 32px;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: var(--ho-ink);
+  transform: scale(0.96);
+  animation: slideUp 0.3s ease forwards;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: 800;
+  color: var(--ho-ink);
+}
+
+.modal-content p {
+  font-size: 15px;
+  color: var(--ho-gray-600);
+  margin-top: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.modal-content i {
+  margin: 8px 0 10px;
+  font-size: 42px !important;
+  color: var(--ho-success) !important;
+  filter: drop-shadow(0 3px 8px rgba(34, 197, 94, 0.25));
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--ho-gray-500);
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.modal-content .close:hover {
+  color: var(--ho-ink);
+  transform: rotate(90deg);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .application-container {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 25px;
+  }
+
+  .application-left,
+  .application-right {
+    width: 100%;
+    flex: unset;
+  }
+
+  .application-right {
+    position: static;
+  }
+
+  .application-left h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .application-container {
+    padding: 0 15px;
+    margin-bottom: 50px;
+  }
+
+  .back-to-jobs {
+    padding: 0 15px;
+  }
+
+  .application-left,
+  .application-right {
+    padding: 26px 22px;
+    border-radius: 16px;
+  }
+
+  .application-left h2 {
+    font-size: 30px;
+  }
+
+  .application-right h3 {
+    font-size: 26px;
+  }
+
+  .job-description {
+    font-size: 16px;
+  }
+
+  .application-left h3 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 480px) {
+  .application-container {
+    padding: 0 12px;
+  }
+
+  .application-left,
+  .application-right {
+    padding: 22px 18px;
+  }
+
+  .application-left h2 {
+    font-size: 27px;
+  }
+
+  .application-right h3 {
+    font-size: 23px;
+  }
+
+  .application-right input[type="text"],
+  .application-right input[type="email"] {
+    height: 52px;
+    font-size: 15px;
+  }
+
+  .application-right button {
+    height: 54px;
+    font-size: 16px;
+  }
+
+  .modal-content {
+    padding: 28px 22px;
+  }
+}
