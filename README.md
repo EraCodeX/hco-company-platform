@@ -20,24 +20,40 @@ This project reflects a real-world business application built with **scalability
 
 <table>
   <tr>
-    <td>
-      <img src="screenshots/dashboard-overview.png" alt="Dashboard Overview" width="300" style="border:2px solid #ddd; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; display:block; margin:auto;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"/>
+    <td align="center">
+      <img src="screenshots/homepage.jpg" alt="Homepage" width="450"/>
+      <br/><br/>
+      <strong>Responsive Homepage Experience</strong>
     </td>
-    <td>
-      <img src="screenshots/job-application-form.png" alt="Job Application Flow" width="300" style="border:2px solid #ddd; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; display:block; margin:auto;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"/>
+
+    <td align="center">
+      <img src="screenshots/dashboard.jpg" alt="Dashboard" width="450"/>
+      <br/><br/>
+      <strong>Administrative Dashboard</strong>
     </td>
+
   </tr>
+
   <tr>
-    <td>
-      <img src="screenshots/pro-build.png" alt="Admin Panel" width="300" style="border:2px solid #ddd; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; display:block; margin:auto;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"/>
+    <td align="center">
+      <img src="screenshots/application.jpg" alt="Application System" width="450"/>
+      <br/><br/>
+      <strong>Job Application Management</strong>
     </td>
-    <td>
-      <img src="screenshots/payment-flow.png" alt="Payment Flow" width="300" style="border:2px solid #ddd; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; display:block; margin:auto;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"/>
+
+    <td align="center">
+      <img src="screenshots/payment.jpg" alt="Payment System" width="450"/>
+      <br/><br/>
+      <strong>PayPal Payment Integration</strong>
     </td>
+
   </tr>
+
   <tr>
-    <td colspan="2">
-     <img src="screenshots/company-reviews.png" alt="H&O Company Customer Reviews" width="620" height="400" style="border:2px solid #ddd; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); display:block; margin:auto; object-fit:cover;"/>
+    <td colspan="2" align="center">
+      <img src="screenshots/build.jpg" alt="Construction Services" width="600"/>
+      <br/><br/>
+      <strong>Construction Service Platform</strong>
     </td>
   </tr>
 </table>
