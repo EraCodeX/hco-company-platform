@@ -51,7 +51,7 @@ This project reflects a real-world business application built with **scalability
 
   <tr>
     <td colspan="2" align="center">
-      <img src="screenshots/build.jpg" alt="Construction Services" width="600"/>
+      <img src="screenshots/build.jpg" alt="Construction Services" width="450"/>
       <br/><br/>
       <strong>Construction Service Platform</strong>
     </td>
